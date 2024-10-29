@@ -1,4 +1,4 @@
-# Object Oriented Programming
+# Object Oriented Programming (OOP)
 --> OOP tasks and much more <-- blah, blah, blah
 
 This repository is full of tasks from  **Object Oriented Programming** seminars in FMI, Sofia.
