@@ -1,3 +1,3 @@
 # Computer Architecture (CA)
 
-This repo contains informartion and questions related to ***Computer Architecture***
+This dir contains informartion and questions related to ***Computer Architecture***
