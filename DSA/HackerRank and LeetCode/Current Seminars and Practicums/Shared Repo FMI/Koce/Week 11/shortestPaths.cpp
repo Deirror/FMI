@@ -27,7 +27,6 @@ int counter(int n, vector<vector<int>>& edges) {
     unordered_map<int, vector<int>> graph;
     for(size_t i = 0; i < edges.size(); i++) {
         graph[edges[i][0]].push_back(edges[i][1]);
-        graph[edges[i][1]].push_back(edges[i][0]);
     }
     bool visited[n + 1]{};
     return dfs(1, graph, visited, n);
