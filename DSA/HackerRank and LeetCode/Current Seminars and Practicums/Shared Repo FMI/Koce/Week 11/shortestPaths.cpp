@@ -1,81 +1,57 @@
-#include <cmath>
-#include <cstdio>
-#include <queue>
-#include <vector>
 #include <iostream>
-#include <algorithm>
-#include <unordered_map>
+#include <vector>
+#include <queue>
 #include <climits>
+#include <unordered_map>
+
 using namespace std;
 
-int dfs(int v, unordered_map<int, vector<int>>& graph, bool* visited, int t) {
-    if(v == t) {
-        return 1;
-    }
-    visited[v] = true;
-    int count = 0;
-    for(auto cv : graph[v]) {
-        if(!visited[cv]) {
-            count += dfs(cv, graph, visited, t);
-        }
-    }
-    visited[v] = false;
-    return count;
-}
+const int MOD = 1e9 + 7;
 
-int counter(int n, vector<vector<int>>& edges) {
-    unordered_map<int, vector<int>> graph;
-    for(size_t i = 0; i < edges.size(); i++) {
-        graph[edges[i][0]].push_back(edges[i][1]);
-    }
-    bool visited[n + 1]{};
-    return dfs(1, graph, visited, n);
-}
+void solve() {
+    int n, m;
+    cin >> n >> m;
+    vector<vector<pair<int, int>>> graph(n + 1);
 
-vector<int> shortestReach(int n, vector<vector<int>>& edges, int s) {
-    unordered_map<int, vector<pair<int, int>>> graph;
-    for(size_t i = 0; i < edges.size(); i++) {
-        graph[edges[i][0]].push_back({edges[i][1], edges[i][2]});
+    for (int i = 0; i < m; i++) {
+        int u, v, w;
+        cin >> u >> v >> w;
+        graph[u].emplace_back(v, w);
     }
-    vector<int> dist(n + 1, INT_MAX);
-    dist[s] = 0;
-    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
-    pq.push({0, s});
-    while(pq.size()) {
-        int cost = pq.top().first;
-        int v = pq.top().second;
+
+    vector<long long> dist(n + 1, LLONG_MAX);
+    vector<int> ways(n + 1, 0);
+    dist[1] = 0;
+    ways[1] = 1;
+
+    priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<>> pq;
+    pq.emplace(0, 1);
+
+    while (!pq.empty()) {
+        auto [d, u] = pq.top();
         pq.pop();
-        if(cost > dist[v]) {
-            continue;
-        }
-        for(auto& cv : graph[v]) {
-            int ch = cv.first;
-            int chCost = cv.second;
-            if(dist[ch] > dist[v] + chCost) {
-                dist[ch] = dist[v] + chCost;
-                pq.push({dist[ch], ch});
+
+        if (d > dist[u]) continue;
+
+        for (auto [v, w] : graph[u]) {
+            if (dist[v] > dist[u] + w) {
+                dist[v] = dist[u] + w;
+                ways[v] = ways[u];
+                pq.emplace(dist[v], v);
+            } else if (dist[v] == dist[u] + w) {
+                ways[v] = (ways[v] + ways[u]) % MOD;
             }
         }
     }
-    return dist;
+
+    if (dist[n] == LLONG_MAX) {
+        cout << "-1 0\n";
+    } else {
+        cout << dist[n] << " " << ways[n] << "\n";
+    }
 }
 
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
-    int v, e;
-    cin >> v >> e;
-    vector<vector<int>> edges;
-    for(int i = 0; i < e; i++) {
-        int x, y, w;
-        cin >> x >> y >> w;
-        edges.push_back({x, y, w});
-    }   
-    vector<int> dist = shortestReach(v, edges, 1);
-    if(dist[v] == INT_MAX) {
-        cout << "-1 0";
-        return 0;
-    }
-    int count = counter(v, edges);
-    cout << dist[v] << ' ' << count;
+    solve();
     return 0;
 }
