@@ -1,20 +1,27 @@
-#include "ModifiableIntegersFunction.h"
-#include <math.h>
+#include "MultiSet.h"
 #include <iostream>
 
 int main()
 {
-	ModifiableIntegersFunction func1([](short x) -> short {return x/2 ;});
+	MultiSet ms(2,2);
 
-	ModifiableIntegersFunction func2([](short x) -> short {return x/2 + 1;});
+	ms.addNumber(1, 3);
 
-	func1.printFunctionInInterval(-10, -10);
+	ms.addNumber(0);
 
-	//func1.excludePoint(0);
+	ms.printMultiSetInMemory();
 
-	//func2.excludePoint(0);
+	MultiSet ms1 = complement(ms);
 
-	//std::cout << (func1 || func2);
+	ms1.printMultiSetInMemory();
+
+	MultiSet msMix = intersection(ms, ms1);
+
+	msMix.printMultiSetInMemory();
+
+	msMix = difference(ms, ms1);
+
+	msMix.printMultiSetInMemory();
 
 	return 0;
 }
