@@ -2,7 +2,7 @@
 
 This repo contains solutions to tasks from subjects, elective course in FMI.
 
-The following subjects are incldued:
+The following subjects are incldued
 -
 
 -  IP -> ***Introduction to programming***
