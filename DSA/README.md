@@ -4,7 +4,7 @@ This dir is full of tasks from **Data Structures And Algorithms** in FMI, Sofia.
 
 Using HackerRank, LeetCode, NeetCode and other websites to learn additionally
 
-Cool resources, info:
+Cool resources, info
 -
 
 - [Cool Lectures for DSA in Bulgarian](https://www.informatika.bg/lectures/all)
