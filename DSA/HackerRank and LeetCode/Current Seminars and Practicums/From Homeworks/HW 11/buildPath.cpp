@@ -8,6 +8,10 @@
 #include <unordered_map>
 using namespace std;
 
+/*
+    1.PRIM ALGORITHM
+*/
+
 struct Path {
     int idx;
     int from, to;
