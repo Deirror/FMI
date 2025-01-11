@@ -8,17 +8,13 @@
 #include <unordered_map>
 using namespace std;
 
-/*
-    1.PRIM ALGORITHM
-*/
-
 struct Path {
     int idx;
-    int from, to;
+    long long from, to;
     long long eff, prize;
     
-    Path(int idx, int from, int to, long long c1, long long c2) : idx(idx), from(from), to(to), eff(c1) {
-        prize = c2 * c1;
+    Path(int idx, long long from, long long to, long long c1, long long c2) : idx(idx), from(from), to(to), eff(c1) {
+        prize = c2;
     }
     
     bool operator<(const Path& other) const {
@@ -33,10 +29,8 @@ struct Path {
 
 unordered_map<int, vector<Path>> graph;
 
-vector<Path> prim() {
+void prim() {
     int n = graph.size();
-    
-    vector<Path> mst;
     
     priority_queue<Path> pq;
     pq.push({0, 1, 1, 0, 0});
@@ -49,14 +43,13 @@ vector<Path> prim() {
             continue;
         }
         visited.insert(path.to);
-        mst.emplace_back(path);
+        if(path.idx != 0) cout << path.idx << '\n';
         for(auto& ng : graph[path.to]) {
             if(!visited.count(ng.to)) {
                 pq.push(ng);
             }
         }
     }
-    return mst;
 }
 
 int main() {
@@ -64,25 +57,14 @@ int main() {
     int n, m;
     cin >> n >> m;
     for(int i = 1; i <= m; i++) {
-        int x, y, c1, c2;
+        long long x, y, c1, c2;
         cin >> x >> y >> c1 >> c2;
         graph[x].emplace_back(i, x, y, c1, c2);
         graph[y].emplace_back(i, y, x, c1, c2);
     }
-    vector<Path> mst = prim();
-    priority_queue<int, vector<int>, greater<int>> pq;
-    for(auto& path : mst) {
-        if(path.idx != 0) {
-            pq.push(path.idx);
-        }
-    }
-    while(pq.size()) {
-        cout << pq.top() << '\n';
-        pq.pop();
-    }
+    prim();
     return 0;
 }
-
 
 /*
     2.KRUSKAL ALGORITHM
@@ -120,22 +102,21 @@ public:
     }
 };
 
-vector<Path> kruskal(int n, int m, vector<Path>& paths) {
+void kruskal(int n, int m, vector<Path>& paths) {
     sort(paths.begin(), paths.end());
     DSU dsu(n);
-    vector<Path> mst;
+    int counter = 0;
     for(int i = 0; i < m; i++) {
-        //cout << paths[i].idx << ' ';
         if(dsu.find(paths[i].from) == dsu.find(paths[i].to)) {
             continue;
         }
         dsu.unionSets(paths[i].from, paths[i].to);
-        mst.emplace_back(paths[i]);
-        if(mst.size() == n - 1) {
+        cout << paths[i].idx << '\n';
+        counter++;
+        if(counter == n - 1) {
             break;
         }
     }
-    return mst;
 }
 
 int main() {
@@ -144,18 +125,10 @@ int main() {
     cin >> n >> m;
     vector<Path> paths;
     for(int i = 1; i <= m; i++) {
-        int x, y, c1, c2;
+        long long x, y, c1, c2;
         cin >> x >> y >> c1 >> c2;
         paths.emplace_back(i, x, y, c1, c2);
     }
-    vector<Path> mst = kruskal(n, m, paths);
-    priority_queue<int, vector<int>, greater<int>> pq;
-    for(auto& path : mst) {
-        pq.push(path.idx);
-    }
-    while(pq.size()) {
-        cout << pq.top() << '\n';
-        pq.pop();
-    }
+    kruskal(n, m, paths);
     return 0;
 }
