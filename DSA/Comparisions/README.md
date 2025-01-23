@@ -42,3 +42,10 @@ Linked List vs Array
 | get_at | O(1) | O(n) | O(n) |
 | find_key | O(n) | O(n) | O(n) |
 | erase_key | O(n) | O(n) | O(n) |
+
+Notes
+---
+
+-  Array has better locality
+-  Linked Lists are used for storing elements, not searching
+
