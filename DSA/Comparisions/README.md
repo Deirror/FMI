@@ -26,3 +26,19 @@ Notes
 | Binary Search | O(1) | O(log(n)) | O(log(n)) |
 | Trinary Search | O(1) | O(log<sub>3</sub>(n)) | O(log<sub>3</sub>(n)) |
 | Jump Search | O(1) | O(sqrt(n)) | O(sqrt(n)) |
+
+# Linked Lists
+
+Linked List vs Array
+---
+
+| Operation | Array | Linked List | Doubly Linked List | 
+| --- | --- | --- | --- |
+| push_front | O(n) | O(1) | O(1) |
+| pop_front | O(n) | O(1) | O(1) |
+| push_back | O(1*) | O(1) | O(1) |
+| pop_back | O(1) | O(n) | O(1) |
+| get_front/end | O(1) | O(1) | O(1) |
+| get_at | O(1) | O(n) | O(n) |
+| find_key | O(n) | O(n) | O(n) |
+| erase_key | O(n) | O(n) | O(n) |
