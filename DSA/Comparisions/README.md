@@ -52,7 +52,13 @@ Notes
 -  Array has better locality
 -  Linked Lists are used for storing elements, not searching
 
-//TO DO Graph Representations Comparisons
+# Graph Representations
+
+| Representation | Space Complexity |
+| --- | --- |
+| Adjacency Matrix | O(v<sup>2</sup>) |
+| Adjacency List | O(v + e) | 
+| Edge List | O(e) | 
 
 # Find Shortest Path
 
