@@ -1,6 +1,6 @@
 # Sorting
 
-| Algorithm | Best Time Complexity | Avarage Time Complexity | Worst Time Complexity | Space Complexity | Comparisions | Swaps | Stable | Local | In-Place |
+| Algorithm | Best Time Complexity | Avarage Time Complexity | Worst Time Complexity | Space Complexity | Comparisons | Swaps | Stable | Local | In-Place |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Bubble Sort | O(n<sup>2</sup>) | O(n<sup>2</sup>) | O(n<sup>2</sup>) | O(1) | O(n<sup>2</sup>) | O(n<sup>2</sup>) | Yes | Yes | Yes |
 | Selection Sort | O(n<sup>2</sup>) | O(n<sup>2</sup>) | O(n<sup>2</sup>) | O(1) | O(n<sup>2</sup>) | O(n) | No | No | Yes |
@@ -8,6 +8,9 @@
 | Merge Sort | O(n*log(n)) | O(n*log(n)) | O(n*log(n)) | O(n) | O(n*log(n)) | O(n*log(n)) | Yes | No | No |
 | Quick Sort | O(n) | O(n*log(n)) | O(n<sup>2</sup>) | O(n) | O(n*log(n)) | O(n*log(n)) | No | Yes | Yes |
 | Counting Sort | O(n + k) | O(n + k) | O(n + k) | O(n + k) | O(1) | O(1) | Yes | Yes | No |
+| Tree Sort | O(n*long(n)) | O(n*long(n)) | O(n*long(n)) | O(n) | O(n*long(n)) | O(1) | No | No | No |
+| Heap Sort | O(n*long(n)) | O(n*long(n)) | O(n*long(n)) | O(n) | O(n*long(n)) | O(n*long(n)) | No | Yes | Yes |
+| Topo Sort | O(v + e) | O(v + e) | O(v + e) | O(v + e) | O(v + e) | O(1) | No | Yes | No |
 
 Notes
 ---
