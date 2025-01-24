@@ -68,3 +68,10 @@ Notes
 | Dijkstra | O(v + e) | O(e*log(v)) | O((v + e)*log(n)) |
 | Bellman-Ford | O(v*e) | O(v*e) | O(v*e) |
 | DAG | O(v + e) | O(v + e) | O(v + e) |
+
+# MST
+
+| Algorithm | Time Complexity |
+| --- | --- |
+| Prim | O(e*log(v)) |
+| Kruskal | O(e*log(e)) |  
