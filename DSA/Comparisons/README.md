@@ -65,7 +65,7 @@ Notes
 | Algorithm | Best Time Complexity | Avarage Time Complexity | Worst Time Complexity |  
 | --- | --- | --- | --- |
 | BFS | O(v + e) | O(v + e) | O(v + e) |
-| Dijkstra | O(v + e) | O(e*log(v)) | O((v + e)*log(n)) |
+| Dijkstra | O(v + e) | O(e*log(v)) | O((v + e)*log(v)) |
 | Bellman-Ford | O(v*e) | O(v*e) | O(v*e) |
 | DAG | O(v + e) | O(v + e) | O(v + e) |
 
