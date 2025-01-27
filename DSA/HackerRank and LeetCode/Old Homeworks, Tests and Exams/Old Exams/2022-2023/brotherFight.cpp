@@ -1,44 +1,36 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+using namespace std;
 
 int main() {
-    int N; 
-    std::cin >> N;
-    
-    std::vector<int> ivancho_stickers(N);
-    std::vector<int> brother_requests(N);
-    
-    for (int i = 0; i < N; ++i) {
-        std::cin >> ivancho_stickers[i];
+    int n;
+    cin >> n;
+    vector<int> ivanchoVec(n);
+    vector<int> brotherVec(n);
+    for(int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        ivanchoVec[i] = x;
+    }    
+    for(int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        brotherVec[i] = x;
     }
-    
-    for (int i = 0; i < N; ++i) {
-        std::cin >> brother_requests[i];
-    }
-    
-    std::unordered_map<int, int> ivancho_collection;
-    int hit_days = 0;
-
-    for (int i = 0; i < N; ++i) {
-        int current_sticker = ivancho_stickers[i];
-        int requested_sticker = brother_requests[i];
-        
-        // Ivancho gets a new sticker, increase its count in the map
-        ivancho_collection[current_sticker]++;
-        
-        // Check if brother's requested sticker is in Ivancho's collection
-        if (ivancho_collection[requested_sticker] > 0) {
-            ivancho_collection[requested_sticker]--;  // Brother takes the sticker
-            if (ivancho_collection[requested_sticker] == 0) {
-                ivancho_collection.erase(requested_sticker);  // Remove from map if count is zero
+    unordered_map<int, int> um;
+    int hits = 0;
+    for(int i = 0; i < n; i++) {
+        um[ivanchoVec[i]]++;
+        if(um.count(brotherVec[i])) {
+            um[brotherVec[i]]--;
+            if(um[brotherVec[i]] < 1) {
+                um.erase(brotherVec[i]);
             }
         } else {
-            ++hit_days;  // Ivancho "gets hit"
+            hits++;
         }
     }
-    
-    std::cout << hit_days << std::endl;
-    
+    cout << hits;
     return 0;
 }
