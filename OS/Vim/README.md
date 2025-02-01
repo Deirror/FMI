@@ -4,27 +4,31 @@
 -
 \\
 
-- Enter mode:
+- Enter mode
   - `i` to insert at your position
   - `I` to insert at the beginning of the line
   - `a` to append at your position
   - `A` to append at the end of the line
   - `o` to start on new line
   - `O` to start on previous line 
-- Exit mode:
+- Exit mode
   - Press `Esc` or `Ctrl+[`
 
-//
+/
 
 --NORMAL--
 -
 
-/
+\
 
-- Enter mode:
+- Enter mode
   - `Esc` or `Ctrl+[` from other modes
-- Exit mode:
+- Exit mode
   - Use the mentioned keys combinations to enter other modes
 
 /
 
+\
+- Movements
+  - `j k` = ↓ | ↑, `h l` = ← | →
+/
