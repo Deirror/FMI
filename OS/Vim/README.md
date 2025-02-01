@@ -12,7 +12,7 @@
   - **`o`** to start on new line
   - **`O`** to start on previous line 
 - Exit mode
-  - Press `Esc` or `Ctrl+[`
+  - Press **`Esc`** or **`Ctrl+[`**
 
 /
 
@@ -22,7 +22,7 @@
 \
 
 - Enter mode
-  - `Esc` or `Ctrl+[` from other modes
+  - **`Esc`** or **`Ctrl+[`** from other modes
 - Exit mode
   - Use the mentioned keys combinations to enter other modes
 
@@ -30,5 +30,5 @@
 
 \
 - Movements
-  - `j k` = ↓ | ↑, `h l` = ← | →
+  - **`j k`** = **↓** | **↑**, `h l` = **←** | **→**
 /
