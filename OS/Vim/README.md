@@ -11,7 +11,6 @@
   - `o` to start on new line
   - `O` to start on previous line 
 
--
 - To exit press `Esc` or `Ctrl+[`
 
 --NORMAL--
