@@ -14,7 +14,7 @@
 - Exit mode:
   - Press `Esc` or `Ctrl+[`
 
-/
+\
 
 --NORMAL--
 -
