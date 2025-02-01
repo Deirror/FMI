@@ -54,6 +54,9 @@
   - **`Shift+$/^`** => going respectively to the end and the beginning of the current line
   - **`Shift+#/n`** => iterating through all same words on the given position
   - **`f/t+<char>`** => going to the next charachter/one character before
+  - **`Shift+=`** => **↓** in the beginning of the line
+  - **`_`** => **↑** in the beginning of the line
+  - **`Shift+%`** => going to the beginning/end
   - **`Shift+g`** => going to the end of the file
   - **`gg`** => going to the beginning of the file
 
@@ -65,4 +68,9 @@
     - **`cc`** => coping and deleting the row 
     - **`Shift+c`** => coping and deleting everything after the given position on the row
     - **`<integer>+cc/Shift+c`** => coping and deleting "X" rows/based on the position
-  
+    - **`x`** => removes charachter by charachter
+  - **Coping/Pasting**
+    - **`yy/YY`** => coping the line
+    - **`p`** => pasting the copied line
+    - **`Shift+p`** => pasting the copied line without moving the cursor
+    - **`u`** => undoing changes
