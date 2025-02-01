@@ -10,9 +10,9 @@
   - `A` to append at the end of the line
   - `o` to start on new line
   - `O` to start on previous line 
-
-
 - To exit press `Esc` or `Ctrl+[`
+
+/
 
 --NORMAL--
 -
