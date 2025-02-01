@@ -2,7 +2,7 @@
 
 --INSERT--
 -
-/
+\
 
 - Enter mode:
   - `i` to insert at your position
@@ -14,7 +14,7 @@
 - Exit mode:
   - Press `Esc` or `Ctrl+[`
 
-\
+/
 
 --NORMAL--
 -
