@@ -1,7 +1,7 @@
 # Vim Motions in VS Code
 
 --INSERT--
----
+-
 
 - Enter mode
   - **`i`** to insert at your position
