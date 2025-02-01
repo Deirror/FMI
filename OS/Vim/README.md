@@ -21,6 +21,14 @@
 
 - **Utilities**
   - **`Ctrl+d/t`** => indentying the given line backwards/forwards
+ 
+--REPLACE--
+-
+
+- **Enter mode**
+  - **`Shift+r`** => to enter mode
+- **Exit mode**
+  - Press **`Esc`** or **`Ctrl+[`**
 
 --NORMAL--
 -
@@ -57,6 +65,7 @@
     - **`dd`** => deleting the row
     - **`Shift+d`** => deleting everything after the given position on the row
     - **`<integer>+dd/Shift+d`** => deleting "X" rows/based on the position
-    - **`cc`** => copying and deleting the row 
-    - **`Shift+c`** => copying and deleting everything after the given position on the row
-    - **`<integer>+cc/Shift+c`** => copying and deleting "X" rows/based on the position
+    - **`cc`** => coping and deleting the row 
+    - **`Shift+c`** => coping and deleting everything after the given position on the row
+    - **`<integer>+cc/Shift+c`** => coping and deleting "X" rows/based on the position
+  - ****
