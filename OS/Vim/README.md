@@ -15,6 +15,11 @@
 - Exit mode
   - Press **`Esc`** or **`Ctrl+[`**
 
+---
+
+- Utilities
+  - **`Ctrl+d/t`** => indentying the given line backwards/forwards
+
 --NORMAL--
 -
 
@@ -27,18 +32,19 @@
 
 - Movements
   - **`j k`** => **↓** | **↑**
-  - **`h l`** => **←** | **→**
+  - **`h l`** => **←** | **→** 
   - **`<integer> h/j/k/l`** => moving the corresponding direction "X" times
+  - **`)`** => moving to the beginning og the line
   - **`w/W`** => spacing forwards to the beginning of a word
   - **`e/E`** => spacing forwards to the end of a word
   - **`b/B`** => spacing backwards to the end of a word
-  - **`Shiff+{/}`** => spacing through paragraphs(empty lines)
-  - **`Shiff+(/)`** => spacing through paragraphs and their beginning
+  - **`Shift+{/}`** => spacing through paragraphs(empty lines)
+  - **`Shift+(/)`** => spacing through paragraphs and their beginning
   - **`Ctrl+F/B`** => spacing half through the page respectively **↓**  | **↑**
   - **`Ctrl+D/U`** => spacing increasingly through the page, starting from *10* lines, respectively **↓**  | **↑**
   - **`Shift+$/^`** => going respectively to the end and the beginning of the current line
-  - **`Shift+#`** => iterating through all same words on the given position
-  - **`f+<char>`** => going to the next charachter
+  - **`Shift+#/n`** => iterating through all same words on the given position
+  - **`f/t+<char>`** => going to the next charachter/one character before
   - **`Shift+g`** => going to the end of the file
   - **`gg`** => going to the beginning of the file
 
@@ -49,3 +55,6 @@
     - **`dd`** => deleting the row
     - **`Shift+d`** => deleting everything after the given position on the row
     - **`<integer>+dd/Shift+d`** => deleting "X" rows/based on the position
+    - **`cc`** => copying and deleting the row 
+    - **`Shift+c`** => copying and deleting everything after the given position on the row
+    - **`<integer>+cc/Shift+c`** => copying and deleting "X" rows/based on the position
