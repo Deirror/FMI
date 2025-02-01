@@ -1,5 +1,4 @@
 # Vim Motions in VS Code
----
 
 --INSERT--
 -
@@ -37,5 +36,13 @@
   - **`Shiff+(/)`** => spacing through paragraphs and their beginning
   - **`Ctrl+F/B`** => spacing half through the page respectively **↓**  | **↑**
   - **`Ctrl+D/U`** => spacing increasingly through the page, starting from *10* lines, respectively **↓**  | **↑**
-  - 
+  - **`Shift+$/^`** => going respectively to the end and the beginning of the current line
+  - **`Shift+#`** => iterating through all same words on the given position
+  - **`Shift+g`** => going to the end of the file
+  - **`gg`** => going to the beginning of the file
+
+---
+
+- Editing text
+  -   
   
