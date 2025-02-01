@@ -3,6 +3,7 @@
 --INSERT--
 -
 /
+
 - Different ways to enter mode:
   - `i` to insert at your position
   - `I` to insert at the beginning of the line
@@ -12,6 +13,7 @@
   - `O` to start on previous line 
 - To exit mode:
   - Press `Esc` or `Ctrl+[`
+
 /
 
 --NORMAL--
