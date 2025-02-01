@@ -74,3 +74,8 @@
     - **`p`** => pasting the copied line
     - **`Shift+p`** => pasting the copied line without moving the cursor
     - **`u`** => undoing changes
+
+--VISUAL--
+-
+
+//TODO
