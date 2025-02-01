@@ -69,6 +69,8 @@
     - **`Shift+c`** => coping and deleting everything after the given position on the row
     - **`<integer>+cc/Shift+c`** => coping and deleting "X" rows/based on the position
     - **`x`** => removes charachter by charachter
+    - **`dw`** => deleting the word, the cursor pointing to
+    - //TODO
   - **Coping/Pasting**
     - **`yy/YY`** => coping the line
     - **`p`** => pasting the copied line
@@ -78,4 +80,11 @@
 --VISUAL--
 -
 
-//TODO
+- **Enter mode**
+  - Press **`v`**
+    
+- **Exit mode**
+  - Press **`Esc`** or **`Ctrl+[`**
+
+- **Marking**
+  - **`a/i+`**
