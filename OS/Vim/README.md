@@ -9,7 +9,9 @@
   - **`a`** to append at your position
   - **`A`** to append at the end of the line
   - **`o`** to start on new line
-  - **`O`** to start on previous line 
+  - **`O`** to start on previous line
+  - **`s`** to delete first char and then insert on your position
+  - **`S`** to empty the line and start on fresh line
 - Exit mode
   - Press **`Esc`** or **`Ctrl+[`**
 
@@ -21,7 +23,7 @@
 - Exit mode
   - Use the mentioned keys combinations to enter other modes
 
-/---\
+---
 
 - Movements
   - **`j k`** => **↓** | **↑**
