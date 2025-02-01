@@ -27,12 +27,13 @@
   - Use the mentioned keys combinations to enter other modes
 
 /
-
 \
 
 - Movements
-  - **`j k`** = **↓** | **↑**
-  - **`h l`** = **←** | **→**
-  - 
+  - **`j k`** => **↓** | **↑**
+  - **`h l`** => **←** | **→**
+  - **`w`** => spacing forwards to the beginning of a word
+  - **`e`** => spacing forwards to the end of a word
+  - **`b`** => spacing backwards to the end of a word
   
 /
