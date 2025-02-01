@@ -5,12 +5,12 @@
 \\
 
 - Enter mode
-  - ***`i`*** to insert at your position
-  - ***`I`*** to insert at the beginning of the line
-  - ***`a`*** to append at your position
-  - ***`A`*** to append at the end of the line
-  - ***`o`*** to start on new line
-  - ***`O`*** to start on previous line 
+  - **`i`** to insert at your position
+  - **`I`** to insert at the beginning of the line
+  - **`a`** to append at your position
+  - **`A`** to append at the end of the line
+  - **`o`** to start on new line
+  - **`O`** to start on previous line 
 - Exit mode
   - Press `Esc` or `Ctrl+[`
 
