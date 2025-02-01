@@ -4,14 +4,14 @@
 -
 /
 
-- Different ways to enter mode:
+- Enter mode:
   - `i` to insert at your position
   - `I` to insert at the beginning of the line
   - `a` to append at your position
   - `A` to append at the end of the line
   - `o` to start on new line
   - `O` to start on previous line 
-- To exit mode:
+- Exit mode:
   - Press `Esc` or `Ctrl+[`
 
 /
@@ -20,9 +20,11 @@
 -
 
 /
-- To enter mode:
+
+- Enter mode:
   - `Esc` or `Ctrl+[` from other modes
-- To exit mode:
-  - Exit other mode as using the mentioned keys combinations for other modes
+- Exit mode:
+  - Use the mentioned keys combinations to enter other modes
+
 /
 
