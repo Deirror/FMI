@@ -25,7 +25,7 @@
 -
 
 - **Enter mode**
-  - **`Shift+r`** => to enter mode
+  - Press **`Shift+r`**
     
 - **Exit mode**
   - Press **`Esc`** or **`Ctrl+[`**
