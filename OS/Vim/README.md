@@ -14,10 +14,9 @@
   - **`O`** to start on previous line
   - **`s`** to delete first char and then insert on your position
   - **`S`** to empty the line and start on fresh line
+    
 - **Exit mode**
   - Press **`Esc`** or **`Ctrl+[`**
-
----
 
 - **Utilities**
   - **`Ctrl+d/t`** => indentying the given line backwards/forwards
@@ -27,6 +26,7 @@
 
 - **Enter mode**
   - **`Shift+r`** => to enter mode
+    
 - **Exit mode**
   - Press **`Esc`** or **`Ctrl+[`**
 
@@ -35,11 +35,10 @@
 
 - **Enter mode**
   - **`Esc`** or **`Ctrl+[`** from other modes
+  
 - **Exit mode**
   - Use the mentioned keys combinations to enter other modes
-
----
-
+    
 - **Movements**
   - **`j k`** => **↓** | **↑**
   - **`h l`** => **←** | **→** 
@@ -58,8 +57,6 @@
   - **`Shift+g`** => going to the end of the file
   - **`gg`** => going to the beginning of the file
 
----
-
 - **Editing text**
   - **Deleting**
     - **`dd`** => deleting the row
@@ -68,4 +65,4 @@
     - **`cc`** => coping and deleting the row 
     - **`Shift+c`** => coping and deleting everything after the given position on the row
     - **`<integer>+cc/Shift+c`** => coping and deleting "X" rows/based on the position
-  - ****
+  
