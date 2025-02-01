@@ -5,7 +5,7 @@
 --INSERT--
 -
 
-- **Enter mode**
+- ***Enter mode***
   - **`i`** to insert at your position
   - **`I`** to insert at the beginning of the line
   - **`a`** to append at your position
@@ -14,25 +14,25 @@
   - **`O`** to start on previous line
   - **`s`** to delete first char and then insert on your position
   - **`S`** to empty the line and start on fresh line
-- **Exit mode**
+- ***Exit mode***
   - Press **`Esc`** or **`Ctrl+[`**
 
 ---
 
-- **Utilities**
+- ***Utilities***
   - **`Ctrl+d/t`** => indentying the given line backwards/forwards
 
 --NORMAL--
 -
 
-- **Enter mode**
+- ***Enter mode***
   - **`Esc`** or **`Ctrl+[`** from other modes
-- **Exit mode**
+- ***Exit mode***
   - Use the mentioned keys combinations to enter other modes
 
 ---
 
-- **Movements**
+- ***Movements***
   - **`j k`** => **↓** | **↑**
   - **`h l`** => **←** | **→** 
   - **`<integer> h/j/k/l`** => moving the corresponding direction "X" times
@@ -52,8 +52,8 @@
 
 ---
 
-- **Editing text**
-  - Deleting
+- ***Editing text***
+  - **Deleting**
     - **`dd`** => deleting the row
     - **`Shift+d`** => deleting everything after the given position on the row
     - **`<integer>+dd/Shift+d`** => deleting "X" rows/based on the position
