@@ -102,4 +102,4 @@
   - Press **`Esc`** or **`Ctrl+[`**
 
 - **Marking**
-  - **`a/i+`**
+  - **`a/i+{/}/(/)/p/w`** => marking the given section
