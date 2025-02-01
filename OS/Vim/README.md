@@ -2,7 +2,7 @@
 
 --INSERT--
 -
-\
+---
 
 - Enter mode
   - **`i`** to insert at your position
@@ -14,21 +14,19 @@
 - Exit mode
   - Press **`Esc`** or **`Ctrl+[`**
 
-/
+---
 
 --NORMAL--
 -
 
-\
+---
 
 - Enter mode
   - **`Esc`** or **`Ctrl+[`** from other modes
 - Exit mode
   - Use the mentioned keys combinations to enter other modes
 
-/
-
-\
+---
 
 - Movements
   - **`j k`** => **↓** | **↑**
@@ -39,4 +37,4 @@
   - **`Shiff+{/}`** => spacing through paragraphs(empty lines)
   - **`Shiff+(/)`** => spacing through paragraphs and their beginning
   
-/
+---
