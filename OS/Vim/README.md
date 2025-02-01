@@ -1,6 +1,6 @@
 # Vim Motions in VS Code
 
-![Vimlogo svg](https://github.com/user-attachments/assets/d55c5e5d-8128-49ec-80fd-c40f07e1a110)
+<img src="https://github.com/user-attachments/assets/d55c5e5d-8128-49ec-80fd-c40f07e1a110" width="100" height="100">
 
 --INSERT--
 -
