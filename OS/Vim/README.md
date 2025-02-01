@@ -27,6 +27,7 @@
   - Use the mentioned keys combinations to enter other modes
 
 /
+|
 \
 
 - Movements
