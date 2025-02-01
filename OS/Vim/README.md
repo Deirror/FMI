@@ -16,7 +16,7 @@
   - Press **`Esc`** or **`Ctrl+[`**
 
 --NORMAL--
----
+-
 
 - Enter mode
   - **`Esc`** or **`Ctrl+[`** from other modes
@@ -38,11 +38,14 @@
   - **`Ctrl+D/U`** => spacing increasingly through the page, starting from *10* lines, respectively **↓**  | **↑**
   - **`Shift+$/^`** => going respectively to the end and the beginning of the current line
   - **`Shift+#`** => iterating through all same words on the given position
+  - **`f+<char>`** => going to the next charachter
   - **`Shift+g`** => going to the end of the file
   - **`gg`** => going to the beginning of the file
 
 ---
 
 - Editing text
-  -   
-  
+  - Deleting
+    - **`dd`** => deleting the row
+    - **`Shift+d`** => deleting everything after the given position on the row
+    - **`<integer>+dd/Shift+d`** => deleting "X" rows/based on the position
