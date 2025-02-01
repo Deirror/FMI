@@ -33,4 +33,5 @@
   - **`b/B`** => spacing backwards to the end of a word
   - **`Shiff+{/}`** => spacing through paragraphs(empty lines)
   - **`Shiff+(/)`** => spacing through paragraphs and their beginning
+  - **`Ctrl+F/B`** => spacing through paragraphs ...
   
