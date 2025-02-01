@@ -33,8 +33,10 @@
 - Movements
   - **`j k`** => **↓** | **↑**
   - **`h l`** => **←** | **→**
-  - **`w`** => spacing forwards to the beginning of a word
-  - **`e`** => spacing forwards to the end of a word
-  - **`b`** => spacing backwards to the end of a word
+  - **`w/W`** => spacing forwards to the beginning of a word
+  - **`e/E`** => spacing forwards to the end of a word
+  - **`b/B`** => spacing backwards to the end of a word
+  - **`Shiff+{/}`** => spacing through paragraphs(empty lines)
+  - **`Shiff+(/)`** => spacing through paragraphs and their beginning
   
 /
