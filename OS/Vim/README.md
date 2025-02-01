@@ -69,13 +69,28 @@
     - **`Shift+c`** => coping and deleting everything after the given position on the row
     - **`<integer>+cc/Shift+c`** => coping and deleting "X" rows/based on the position
     - **`x`** => removes charachter by charachter
-    - **`dw`** => deleting the word, the cursor pointing to
-    - //TODO
+    - **`Shift+x`** => removes charachter by charachter and moves with backwards
+    - **`da/i`** => getting ready to delete a section
+    - **`da/i+w`** => deleting the word, the cursor pointing to
+    - **`da/i+p`** => deleting the paragraph, the cursor pointing to
+    - **`ca/i`** => getting ready to copy and delete a section
+    - **`ca/i+w`** => copying and deleting the word, the cursor pointing to
+    - **`ca/i+p`** => copying and deleting the paragraph, the cursor pointing to
   - **Coping/Pasting**
     - **`yy/YY`** => coping the line
     - **`p`** => pasting the copied line
     - **`Shift+p`** => pasting the copied line without moving the cursor
     - **`u`** => undoing changes
+  - **Additional**
+    - **`Ctrl+|`** => Opening new window
+    - **`Ctrl+/`** => Commenting a line
+    - **`Shift+<<`** => Indenting a line to left
+    - **`Shift+>>`** => Indenting a line to right
+    - **`Shift+zz`** => Closing a window
+    - **`:w`** => Saving a file
+    - **`:wq`** => Saving and closing a file
+    - **`:qa`** => Closing all windows
+    - **`:q`** => Closing a window
 
 --VISUAL--
 -
