@@ -33,5 +33,6 @@
   - **`b/B`** => spacing backwards to the end of a word
   - **`Shiff+{/}`** => spacing through paragraphs(empty lines)
   - **`Shiff+(/)`** => spacing through paragraphs and their beginning
-  - **`Ctrl+F/B`** => spacing through paragraphs ...
+  - **`Ctrl+F/B`** => spacing half through the page respectively **↓**  | **↑**
+  - **`Ctrl+D/U`** => spacing increasingly through the page, starting from *10*, respectively **↓**  | **↑** 
   
