@@ -43,7 +43,7 @@
   - **`j k`** => **↓** | **↑**
   - **`h l`** => **←** | **→** 
   - **`<integer> h/j/k/l`** => moving the corresponding direction "X" times
-  - **`)`** => moving to the beginning og the line
+  - **`)`** => moving to the beginning of the line
   - **`w/W`** => spacing forwards to the beginning of a word
   - **`e/E`** => spacing forwards to the end of a word
   - **`b/B`** => spacing backwards to the end of a word
