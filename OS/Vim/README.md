@@ -56,7 +56,7 @@
   - **`f/t+<char>`** => going to the next charachter/one character before
   - **`Shift+=`** => **↓** in the beginning of the line
   - **`_`** => **↑** in the beginning of the line
-  - **`Shift+%`** => going to the beginning/end
+  - **`Shift+%`** => going to the beginning/end of the given block
   - **`Shift+g`** => going to the end of the file
   - **`gg`** => going to the beginning of the file
 
