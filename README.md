@@ -10,3 +10,4 @@ The following subjects are incldued
 -  DSA -> ***Data structures and algorithms***
 -  PyLearn -> ***Introduction and some custom tasks in Python***
 -  OS -> "***Operating systems***"
+-  CN -> "***Computer networking***"
