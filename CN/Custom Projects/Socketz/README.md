@@ -1,8 +1,5 @@
 # Socketz
 
-![Socket-io svg](https://github.com/user-attachments/assets/6c206b38-bc63-4c9c-b0e5-5106b1f8706b)
-
-
 Description
 -
 
@@ -18,7 +15,7 @@ Steps
 3. Make *NetServer* and *NetClient* depend on the static library *NetCommon*
 4. Compile them so that you get *NetServer.exe* and *NetClient.exe*
 5. First, run the server and then run as many clients as you want
-6. Press the keys(specified down below in the table) and see how networking works in C++ 🤙
+6. Press the keys(specified down below in the table) and see how networking works in C++
 
 Keys
 -
