@@ -1,4 +1,4 @@
-USE WEEK_01
+USE Movies
 
 CREATE TABLE MovieExec (
 	cert# INT PRIMARY KEY,
