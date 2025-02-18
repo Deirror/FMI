@@ -1,4 +1,4 @@
-USE WEEK_01
+USE Movies
 
 CREATE TABLE MovieStar (
 	name VARCHAR(50) PRIMARY KEY,
