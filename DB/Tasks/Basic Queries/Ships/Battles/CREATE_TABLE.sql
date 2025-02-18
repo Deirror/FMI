@@ -1,0 +1,6 @@
+USE Ships
+
+CREATE TABLE Battles (
+	name VARCHAR(50) PRIMARY KEY,
+	date DATE NOT NULL
+)
