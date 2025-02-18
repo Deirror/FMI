@@ -1,4 +1,4 @@
-USE WEEK_01
+USE Movies
 
 CREATE TABLE Studio (
 	name VARCHAR(50) PRIMARY KEY,
