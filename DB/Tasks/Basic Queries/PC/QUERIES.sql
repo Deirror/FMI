@@ -4,7 +4,7 @@ USE PC
 SELECT model, speed AS MHz, hd AS GB FROM Computer WHERE price < 1200.00
 
 --Напишете заявка, която извежда производителите на принтери без повторения
-SELECT DISTINCT type FROM Printer
+SELECT DISTINCT maker FROM Product WHERE type='Printer'
 
 --Напишете заявка, която извежда модел, размер на паметта, размер на екран за лаптопите, чиято цена е над 1000 долара
 SELECT model, ram, screen FROM Laptop WHERE price > 1000
