@@ -10,7 +10,7 @@ SELECT birthdate FROM MovieStar WHERE name='Jack Nicholson'
 SELECT starname FROM StarsIn WHERE movieyear=1980 OR movietitle LIKE '%Knights%'
 
 --Напишете заявка, която извежда имената на продуцентите с нетни активи над 10 000 000 долара
-SELECT name FROM MovieExec WHERE networth > 10000
+SELECT name FROM MovieExec WHERE networth > 1000
 
 --Напишете заявка, която извежда имената на актьорите, които са мъже или живеят на Prefect Rd
 SELECT name FROM MovieStar WHERE gender='M' OR address='Prefect Rd'
