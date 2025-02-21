@@ -83,5 +83,5 @@ File Manip
 - **`cp <path> <place_path>`** => copies a file and places it in the given dir
 - **`mv <path> <move_path>`** => moves a file and places it in the given dir
 - **`rmdir <place_path>`** => deletes an epmty dir
-- **`rmd -<flag> <place_path>`** => deletes a files
+- **`rm -<flag> <place_path>`** => deletes a files
   - **`-<flag>`** can be **`-r`**, stands for *recursively*
