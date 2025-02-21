@@ -20,10 +20,9 @@ Help Commands
 -
 
 - **`man <theme> <cmd>`** => based on **`<theme>`**,which is just a number, opens a new window with useful info like **`help`** in *Windows*, where you can use *Vim* motions for navigation
-- **`<command> -h/--help`** => prints *help* for the given command
+- **`<cmd> -h/--help`** => prints *help* for the given command
 - **`apropos <cmd>`** => prints a lot information where this command can be used and for what purpose
 - **`whatis <cmd>`** => prints general/short info for the command
 - **`whereis <cmd>`** => prints the absolute path of the location of the command
-
 
 
