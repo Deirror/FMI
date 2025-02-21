@@ -2,6 +2,9 @@
 
 ![bash](https://github.com/user-attachments/assets/35331d53-3afd-4dbe-b21f-b1a400b238d8)
 
+> [!NOTE]
+> **File**, **dir**, **symbol links** and etc. are considered just as a **File**
+
 Navigation in Bash CLI
 -
 
@@ -14,7 +17,7 @@ Clean Terminal Screen
 -
 
 - **`clear`** => clears the ternimal's screen
-- **`reset`** => **`clear`** and resets command history
+- **`reset`** => **`clear`** + resets command history
 
 Help Commands
 -
@@ -28,11 +31,13 @@ Help Commands
 Users
 -
 
-- Todo
+- **`whoami`** => prints your user name
+- **`who`** => prints the users in your group
 
 Paths Related
 -
 
+- **`pwd`** => prints your current dir **absolute** path
 - **`ls -<char> <dir>`** => prints the content of the given dir
   - | **`-<char>`** | Description |
     |---|---|
@@ -41,6 +46,9 @@ Paths Related
     | **-i** | prints the index number of each file |
     | **-t** | sorts by time |
     | **-1** | prints on new lines |
--  **`realpath <file>`** => prints the **absolute** path of the file
--  **`basename <file>`** => prints only the name of the file, excluding the path to it(**relative** path)
--  **`dirname <file>`** => prints the **absolute** path to the file, excluding the name of the file
+- **`tree`** => shows dir structure   
+- **`realpath <file>`** => prints the **absolute** path of the file
+- **`basename <file>`** => prints only the name of the file, excluding the path to it
+- **`dirname <file>`** => prints the name of the dir, in which the file is located
+- **`cd <path>`** => navigates you to the given **absolute/relative** path
+- **`find <path> <expr>`** => by default, prints **absolute** paths for the given dir and all files 
