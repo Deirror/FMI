@@ -5,9 +5,25 @@
 Navigation in Bash CLI
 -
 
-- **`↓ | ↑`** => iterating through command history
--  **`CTRL+R`** => searching in command history by typing charachter by charachter
--  **`TAB`** => autocompleting a command
--  **`CTRL+C`** => killing the current running process
+- **`↓ | ↑`** => iterates through command history
+-  **`CTRL+R`** => searches in command history by typing charachter by charachter
+-  **`TAB`** => autocompletes a command
+-  **`CTRL+C`** => kills the current running process
 
-  
+Clean Terminal
+-
+
+- **`clear`** => clears the ternimal
+- **`reset`** => **`clear`** and resets command history
+
+Help Commands
+-
+
+- **`man <theme> <cmd>`** => based on **`<theme>`**,which is just a number, opens a new window with useful info like **`help`** in *Windows*, where you can use *Vim* motions for navigation
+- **`<command> -h/--help`** => prints *help* for the given command
+- **`apropos <cmd>`** => prints a lot information where this command can be used and for what purpose
+- **`whatis <cmd>`** => prints general/short info for the command
+- **`whereis <cmd>`** => prints the absolute path of the location of the command
+
+
+
