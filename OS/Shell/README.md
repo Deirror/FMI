@@ -48,15 +48,16 @@ Paths Related Commands
     | **-l** | shows info as permissions, time of creation |
     | **-1** | prints on new lines |
 - **`tree`** => shows dir structure   
-- **`realpath <file>`** => prints the **absolute** path of the file
-- **`basename <file>`** => prints only the name of the file, excluding the path to it
-- **`dirname <file>`** => prints the name of the dir, in which the file is located
+- **`realpath <path>`** => prints the **absolute** path of the file
+- **`basename <path>`** => prints only the name of the file, excluding the path to it
+- **`dirname <path>`** => prints the name of the dir, in which the file is located
+- **`readlink <path>`** => dereferences a path
 - **`cd <path>`** => navigates you to the given **absolute/relative** path
 - **`find <path> <expr>`** => by default, prints **absolute** paths for the given dir and all files in it
   - **`<expr>`** can be *options*, *operators*, *actions* and *tests*
   - *options* are the commands **`-depth`**, **`-(min/max)depth`**
   - *operators* are from discrete math(!, not, or, and)
-  - *actions* are the commands **`-delete`**, **`-print`**, **`-depth`**, **`-exec <cmd> {} \;`**
+  - *actions* are the commands **`-delete`**, **`-print`**, **`-depth`**, **`-exec <cmd> {} \;`**, **`-type f/d/l`**, **`-name <filename>`**
   - *tests* can be **`-mmin`**, **`-perm`**, **`-size`**, **`-path`** and a lot more
 
 Path Extentions
