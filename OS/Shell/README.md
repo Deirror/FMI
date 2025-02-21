@@ -40,7 +40,7 @@ Paths Related
 - **`pwd`** => prints your current dir **absolute** path
 - **`ls -<char> <dir>`** => prints the content of the given dir
   - | **`-<char>`** | Description |
-    |---|---|
+    | --- | --- |
     | **-d**| lists subdirectories names |
     | **-a** | lists all files, regardless of their type |  
     | **-i** | prints the index number of each file |
@@ -56,4 +56,10 @@ Paths Related
   - *options* are the commands **`-depth`**, **`-(min/max)depth`**
   - *operators* are from discrete math(!, not, or, and)
   - *actions* are the commands **`-delete`**, **`-print`**, **`-depth`**, **`-exec <cmd> {} \;`**
-  - *tests* can be **`-mmin`**, **`-perm`**, **`-size`**, **`-path`** and a lot more 
+  - *tests* can be **`-mmin`**, **`-perm`**, **`-size`**, **`-path`** and a lot more
+
+Path Extentions
+-
+
+| Pattern | Desription |
+| --- | 
