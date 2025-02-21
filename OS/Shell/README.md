@@ -62,4 +62,9 @@ Path Extentions
 -
 
 | Pattern | Desription |
-| --- | 
+| --- | --- |
+| **`/dir`** | **Absolute** path |
+| **`.`** | **Relative** path |
+| **`..`** | One dir back |
+| **`-`** | Previous visited dir |
+| **`~`** | Home dir |
