@@ -51,4 +51,9 @@ Paths Related
 - **`basename <file>`** => prints only the name of the file, excluding the path to it
 - **`dirname <file>`** => prints the name of the dir, in which the file is located
 - **`cd <path>`** => navigates you to the given **absolute/relative** path
-- **`find <path> <expr>`** => by default, prints **absolute** paths for the given dir and all files 
+- **`find <path> <expr>`** => by default, prints **absolute** paths for the given dir and all files in it
+  - **`<expr>`** can be *options*, *operators*, *actions* and *tests*
+  - *options* are the commands **`-depth`**, **`-(min/max)depth`**
+  - *operators* are from discrete math(!, not, or, and)
+  - *actions* are the commands **`-delete`**, **`-print`**, **`-depth`**, **`-exec <cmd> {} \;`**
+  - *tests* can be **`-mmin`**, **`-perm`**, **`-size`**, **`-path`** and a lot more 
