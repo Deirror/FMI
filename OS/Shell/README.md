@@ -86,3 +86,19 @@ File Manip
 - **`rmdir <place_path>`** => deletes an epmty dir
 - **`rm -<flag> <place_path>`** => deletes a files
   - **`-<flag>`** can be **`-r`**, stands for *recursively*
+
+Globbing
+-
+
+- Todo
+
+Read File
+-
+
+- Todo
+
+Write File
+-
+
+- Todo
+
