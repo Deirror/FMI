@@ -10,7 +10,7 @@ Navigation in Bash CLI
 -  **`TAB`** => autocompletes a command
 -  **`CTRL+C`** => kills the current running process
 
-Clean Terminal
+Clean Terminal Screen
 -
 
 - **`clear`** => clears the ternimal's screen
@@ -25,4 +25,15 @@ Help Commands
 - **`whatis <cmd>`** => prints general/short info for the command
 - **`whereis <cmd>`** => prints the absolute path of the location of the command
 
+Users
+-
 
+- Todo
+
+Paths Related
+-
+
+- **`ls -<char> <dir>`** => prints the content of the given dir
+  - | **`<char>`** | Description |
+    |---|---|
+    | | |  
