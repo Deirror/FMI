@@ -87,6 +87,9 @@ File Manip
 - **`rm -<flag> <place_path>`** => deletes a files
   - **`-<flag>`** can be **`-r`**, stands for *recursively*
 
+> [!Warning]
+> Use **`rm`**, **`mv`**, **`cp`** with the flag **`-i`** if you want to see what is next to be deleted
+
 Globbing
 -
 
