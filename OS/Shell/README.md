@@ -24,7 +24,7 @@ Help Commands
 
 - **`man <theme> <cmd>`** => based on **`<theme>`**,which is just a number, opens a new window with useful info like **`help`** in *Windows*, where you can use *Vim* motions for navigation
 - **`<cmd> -h/--help`** => prints *help* for the given command
-- **`apropos <cmd>`** => prints a lot information where this command can be used and for what purpose
+- **`apropos <cmd>`** => prints a lot of information where this command can be used and for what purpose
 - **`whatis <cmd>`** => prints general/short info for the command
 - **`whereis <cmd>`** => prints the absolute path of the location of the command
 
@@ -95,9 +95,12 @@ Globbing
   | **`?`** | corresponds to one random chararchter |
   | **`*`** | corresponds to many random chararchter|
   | **`[...]`**| corresponds to to a set of charachters |
+  | **`{<args>}`**| does the command for each *args* |
 
 > [!IMPORTANT]
-> When these globbing symbols are in **``\"`**   
+> When these globbing symbols are in **`''\""`** they are just stringified, also called **escaping**
+
+- **`\`** => can be used for making commands on new lines 
 
 Read File
 -
