@@ -13,7 +13,7 @@ Navigation in Bash CLI
 Clean Terminal
 -
 
-- **`clear`** => clears the ternimal
+- **`clear`** => clears the ternimal's screen
 - **`reset`** => **`clear`** and resets command history
 
 Help Commands
