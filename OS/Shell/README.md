@@ -3,7 +3,7 @@
 ![bash](https://github.com/user-attachments/assets/35331d53-3afd-4dbe-b21f-b1a400b238d8)
 
 > [!NOTE]
-> **File**, **dir**, **symbol links** and etc. are considered just as a **File**, so when somewhere is written **file** it can be any of the listed
+> **File**, **Dir**, **Symbol Links** and etc. are considered just as a **File**, so when somewhere is written **File** it can be any of the listed
 
 Navigation in Bash CLI
 -
