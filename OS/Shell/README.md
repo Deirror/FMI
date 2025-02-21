@@ -34,6 +34,13 @@ Paths Related
 -
 
 - **`ls -<char> <dir>`** => prints the content of the given dir
-  - | **`<char>`** | Description |
+  - | **`-<char>`** | Description |
     |---|---|
-    | | |  
+    | **-d**| lists subdirectories names |
+    | **-a** | lists all files, regardless of their type |  
+    | **-i** | prints the index number of each file |
+    | **-t** | sorts by time |
+    | **-1** | prints on new lines |
+-  **`realpath <file>`** => prints the **absolute** path of the file
+-  **``** =>
+-  **``** =>
