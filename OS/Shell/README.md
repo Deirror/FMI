@@ -90,7 +90,14 @@ File Manip
 Globbing
 -
 
-- Todo
+- | Spec Shell Symbols | Description |
+  | --- | --- |
+  | **`?`** | corresponds to one random chararchter |
+  | **`*`** | corresponds to many random chararchter|
+  | **`[...]`**| corresponds to to a set of charachters |
+
+> [!IMPORTANT]
+> When these globbing symbols are in **``\"`**   
 
 Read File
 -
