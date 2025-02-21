@@ -34,7 +34,7 @@ Users
 - **`whoami`** => prints your user name
 - **`who`** => prints the users in your group
 
-Paths Related
+Paths Related Commands
 -
 
 - **`pwd`** => prints your current dir **absolute** path
@@ -45,6 +45,7 @@ Paths Related
     | **-a** | lists all files, regardless of their type |  
     | **-i** | prints the index number of each file |
     | **-t** | sorts by time |
+    | **-l** | shows info as permissions, time of creation |
     | **-1** | prints on new lines |
 - **`tree`** => shows dir structure   
 - **`realpath <file>`** => prints the **absolute** path of the file
@@ -68,3 +69,4 @@ Path Extentions
 | **`..`** | One dir back |
 | **`-`** | Previous visited dir |
 | **`~`** | Home dir |
+
