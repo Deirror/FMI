@@ -3,7 +3,7 @@
 ![bash](https://github.com/user-attachments/assets/35331d53-3afd-4dbe-b21f-b1a400b238d8)
 
 > [!NOTE]
-> **File**, **Dir**, **Symbol Links** and etc. are considered just as a **File**, so when somewhere is written **File** it can be any of the listed
+> **File**, **Dir**, **Symbol Link**, **Path** and etc. are considered just as a **File**, so when somewhere is written **File** it can be any of the listed
 
 Navigation in Bash CLI
 -
@@ -70,3 +70,18 @@ Path Extentions
 | **`-`** | Previous visited dir |
 | **`~`** | Home dir |
 
+File Manip
+-
+
+- **`touch <path>`** => creates an empty file
+- **`mkdir -<flag> <path>`** => creates an empty dir
+  - | **`-<flag>`** | Desription |
+    | --- | --- |
+    | **`-m`** | sets permissions |
+    | **`-p`** | creates all parent dirs if not existing |
+    | **`-v`** | prints a message for each created dir |
+- **`cp <path> <place_path>`** => copies a file and places it in the given dir
+- **`mv <path> <move_path>`** => moves a file and places it in the given dir
+- **`rmdir <place_path>`** => deletes an epmty dir
+- **`rmd -<flag> <place_path>`** => deletes a files
+  - **`-<flag>`** can be **`-r`**, stands for *recursively*
