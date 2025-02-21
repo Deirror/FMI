@@ -42,5 +42,5 @@ Paths Related
     | **-t** | sorts by time |
     | **-1** | prints on new lines |
 -  **`realpath <file>`** => prints the **absolute** path of the file
--  **``** =>
--  **``** =>
+-  **`basename <file>`** => prints only the name of the file, excluding the path to it(**relative** path)
+-  **`dirname <file>`** => prints the **absolute** path to the file, excluding the name of the file
