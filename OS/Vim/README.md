@@ -82,15 +82,15 @@
     - **`Shift+p`** => pasting the copied line without moving the cursor
     - **`u`** => undoing changes
   - **Additional**
-    - **`Ctrl+|`** => Opening new window
-    - **`Ctrl+/`** => Commenting a line
-    - **`Shift+<<`** => Indenting a line to left
-    - **`Shift+>>`** => Indenting a line to right
-    - **`Shift+zz`** => Closing a window
-    - **`:w`** => Saving a file
-    - **`:wq`** => Saving and closing a file
-    - **`:qa`** => Closing all windows
-    - **`:q`** => Closing a window
+    - **`Ctrl+|`** => opening new window
+    - **`Ctrl+/`** => commenting a line
+    - **`Shift+<<`** => indenting a line to left
+    - **`Shift+>>`** => indenting a line to right
+    - **`Shift+zz`** => closing a window
+    - **`:w`** => saving a file
+    - **`:wq`** => saving and closing a file
+    - **`:qa`** => closing all windows
+    - **`:q`** => closing a window
 
 --VISUAL--
 -
