@@ -103,7 +103,7 @@ Globbing
 | --- | --- |
 | **`?`** | corresponds to one random chararchter |
 | **`*`** | corresponds to many random chararchter|
-| **`[...]`**| corresponds to to a set of charachters |
+| **`[...]`**| corresponds to a set of charachters |
 | **`{<args>}`**| does the command for each *args* |
 
 > [!IMPORTANT]
