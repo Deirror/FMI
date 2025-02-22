@@ -8,10 +8,10 @@ Here are stored some custom tasks designed and made by me, ***Deirror***
 Tasks
 -
 
+- Намерете всички файлове в /etc, които съдържат "00" в името си и изключете директориите /etc/ssl и /etc/grub като опции
 <details>
-  <p> Намерете всички файлове в /etc, които съдържат "00" в името си и изключете директориите /etc/ssl и /etc/grub като опции</p>
   <summary>Click to reveal</summary>
-
+  
   ```bash
   find /etc -type f -name "*00*" ! \( -path "/etc/ssl/*" -o -path "/etc/grub.d/*" \)
 
@@ -19,5 +19,4 @@ Tasks
 
   find /etc -type f -name "*00*" ! -path "/etc/ssl/*" ! -path "/etc/grub.d/*"
   ```
-
 </details>
