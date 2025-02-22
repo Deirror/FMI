@@ -14,7 +14,7 @@ Navigation in Bash CLI
 -  **`CTRL+C`** => kills the current running process
 
 > [!IMPORTANT]
-> There are also other combo keys which are used when you enter modes like **`man`**, **`vim`**, **`less`** and other, also called *Vim* motions - [checkout](https://github.com/Deirror/FMI/tree/main/OS/Vim) this for more
+> There are also other combo keys when you enter modes like **`man`**, **`vim`**, **`less`** and other, *Vim* motions - [checkout](https://github.com/Deirror/FMI/tree/main/OS/Vim) this for more
 
 Clean Terminal Screen
 -
