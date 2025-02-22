@@ -39,8 +39,15 @@ Users
 
 - **`whoami`** => prints your user name
 - **`who`** => prints the users in your group
+- **`id -(u/g) <username>`** => prints the id of the user/group
 
--  Todo
+> [!NOTE]
+> All info the the users is stored in **`/etc/passwd`**
+
+> [!WARNING]
+> **`sudo <cmd>`** executes **`cmd`** from the root, but must have permissions first to do so
+
+
 
 Paths Related Commands
 -
