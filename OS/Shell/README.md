@@ -31,6 +31,9 @@ Help Commands
 - **`whatis <cmd>`** => prints general/short info for the command
 - **`whereis <cmd>`** => prints the **absolute** path of the location of the command
 
+> [!TIP]
+> If you just want to briefly understand what the command does, use **`whatis`**. For more info like **`-flags`** or best practices, use **`man`** as it uses *Vim* motions and it's convenient to search text or navigate
+
 Users
 -
 
