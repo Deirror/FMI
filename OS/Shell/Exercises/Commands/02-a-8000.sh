@@ -7,3 +7,4 @@ mkdir ~/myetc && cp $(find /etc -type f -perm /444 2>/dev/null) ~/myetc
 
 # по-доброто от двете, безопасно използване на cp
 mkdir ~/myetc && find /etc -type f -perm /444 2>/dev/null -exec cp -- {} ~/myetc \;
+# {} - самите аргументи(в нашия случай, пътеки), -- - използва се за файлове като "-config", Shell може да го обърка с flag
