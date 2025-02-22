@@ -4,12 +4,13 @@ Description
 -
 
 Here are stored some custom tasks designed and made by me, ***Deirror***
+Description of the tasks will be written in Bulgarian, as they are intended for ***FMI*** students
 
 Tasks
 -
 
 - Намерете всички файлове в /etc, които съдържат "00" в името си и изключете директориите /etc/ssl и /etc/grub като опции
-<details>
+- <details>
   <summary>Click to reveal</summary>
   
   ```bash
