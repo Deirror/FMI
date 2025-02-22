@@ -5,11 +5,11 @@ Description
 
 Here are stored some custom tasks designed and made by me, ***Deirror***
 
-Task
+Tasks
 -
 
 <details>
-  <p></p>
+  <p> Намерете всички файлове в /etc, които съдържат "00" в името си и изключете директориите /etc/ssl и /etc/grub като опции</p>
   <summary>Click to reveal</summary>
 
   ```bash
