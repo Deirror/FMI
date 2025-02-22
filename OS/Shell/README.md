@@ -13,8 +13,8 @@ Navigation in Bash CLI
 -  **`TAB`** => autocompletes a command
 -  **`CTRL+C`** => kills the current running process
 
-> [!NOTE]
-> There are also other combo keys which are used when you enter mode like **`man`**, **`vim`**, **`less`** and more, also called *Vim* motions
+> [!IMPORTANT]
+> There are also other combo keys which are used when you enter modes like **`man`**, **`vim`**, **`less`** and other, also called *Vim* motions
 
 Clean Terminal Screen
 -
