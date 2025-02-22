@@ -10,7 +10,7 @@ Description of the tasks will be written in Bulgarian, as they are intended for 
 Tasks
 -
 
-### ❓ Намерете всички файлове в /etc, които съдържат "00" в името си и изключете директориите /etc/ssl и /etc/grub като опции
+### Намерете всички файлове в /etc, които съдържат "00" в името си и изключете директориите /etc/ssl и /etc/grub като опции❓
 
 <details>
   <summary>Click to reveal</summary>
