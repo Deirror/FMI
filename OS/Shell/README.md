@@ -146,7 +146,11 @@ Stats
 Read File
 -
 
-- **`cat <opt> <file>`** => renders the content of the file
+- **`cat -<opt> <file>`** => renders the content of the file
+  - | **`-<opt>`** | Description |
+    | --- | --- |
+    | **`-n`** | adds numbers at the start of each line |
+    | **`-e`** | adds **`$`** at teh end of each line |
 - **`head -n <N> <file>`** => if number is negative, then it doesn't render only the last abs(N) lines, else, renders the first N lines
 - **`tail -n <N> <file>`** => same as **`head`**, but reverse, starts from the end
 - **`less <file>`** => opens **`man`**, but renders the content itself
