@@ -16,10 +16,12 @@ Tasks
   <summary>Click to reveal</summary>
 
   ```bash
-  find /etc -type f -name "*00*" ! \( -path "/etc/ssl/*" -o -path "/etc/grub.d/*" \)
+  #тук използваме escaping, за да използваме математическа логика
+  find /etc -type f -name "*00*" ! \( -path "/etc/ssl/*" -o -path "/etc/grub.d/*" \) 
 
-  # or
-  
+  # или
+
+  # тук просто изреждаме и по default се добавя неявно -a(AND) между всички изредени израз
   find /etc -type f -name "*00*" ! -path "/etc/ssl/*" ! -path "/etc/grub.d/*"
   ```
 </details>
