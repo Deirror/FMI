@@ -171,3 +171,22 @@ Write File
 - **`ls <path> (>/>>) <file>`** => overwrites **`<path>`** to the file
 - **`exec > <file>`** => disconnects and connects *stdout* to the file for all running scripts, instead of the terminal screen itself
 
+Compress/Archive File
+-
+
+- **`tar -<opt> -f <tarname>.tar <files>`** => (un)archives all files under the archive name **`<tarname>`**
+  - | **`-<opt>`** | Description |
+    | --- | --- |
+    | **`-c`** | archives the files |
+    | **`-x`** | unarchives the .tar |
+- **`tar -cf <tarname>.tar <dir>`** => archives the whole dir and subcontent of the dir
+- **`tar -tvf <tarname>.tar`** => lists the content of the archive
+- **`(gzip/xz) -<opt> <file>`** => compresses the file
+  - | **`-<opt>`** | Description |
+    | --- | --- |
+    | **`-k`** | keeps the original file |
+    | **`-d`** | decompresses the .tar |
+    | **`-l`** | shows compressed file info |
+- **`tar -<compr> -<opt> <tarname>.tar.<compr> <dir>`** => compresses and archives the dir
+- **`tar -caf <tarname>.tar.<compr> <dir>`** => compresses and archives the whole dir and subcontent of the dir
+- **`tar -xf <tarname>.tar.<compr>`** => unarchives and decompresses the archive
