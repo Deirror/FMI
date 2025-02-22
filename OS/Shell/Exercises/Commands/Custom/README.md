@@ -1,10 +1,22 @@
 # Custom Task
 
-Here are stored some custom tasks made by me
+Description
+-
+
+Here are stored some custom tasks designed and made by me, ***Deirror***
+
+Task
+-
 
 <details>
-  <summary>Click to expand</summary>
+  <summary>Click to reveal</summary>
 
-  Here is some hidden text that will be shown when you click on "Click to expand".
+  ```bash
+  find /etc -type f -name "*00*" ! \( -path "/etc/ssl/*" -o -path "/etc/grub.d/*" \)
+
+  # or
+
+  find /etc -type f -name "*00*" ! -path "/etc/ssl/*" ! -path "/etc/grub.d/*"
+  ```
 
 </details>
