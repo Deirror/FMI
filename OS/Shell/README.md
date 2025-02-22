@@ -50,7 +50,11 @@ Users
 Permissions
 -
 
+- **`chown <user>:<group> <file>`** => changes the user and the group
+- **`chmod (<octal>/<perm> <file>)`** => changes permissions
+- **`unmask <mask> <file>`** => removes permissions
 
+![chmod_img](https://github.com/user-attachments/assets/9b309f4f-ea04-48fd-b42c-0e29e7cb6b97)
 
 Paths Related Commands
 -
