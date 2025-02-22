@@ -111,6 +111,15 @@ Globbing
 
 **`\`** => can be used for making commands on new lines 
 
+Date
+-
+
+- **`date <flag><format>`** => prints current time in the given format and based on the flag, simply said, the date's padding is different
+- **`date +'%s'`** => prints UNIX timestamp
+
+> [!NOTE]
+> Not quite sure if useful, but *UNIX timestamp* is just how many seconds have passed since 1970-01-01 00:00 UTC 
+
 Read File
 -
 
