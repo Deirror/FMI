@@ -42,10 +42,13 @@ Users
 - **`id -(u/g) <username>`** => prints the id of the user/group
 
 > [!NOTE]
-> All info the the users is stored in **`/etc/passwd`**
+> All info for the users is stored in **`/etc/passwd`**
 
 > [!WARNING]
 > **`sudo <cmd>`** executes **`cmd`** from the root, but must have permissions first to do so
+
+Permissions
+-
 
 
 
