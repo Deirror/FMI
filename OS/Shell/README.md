@@ -99,17 +99,17 @@ File Manip
 Globbing
 -
 
-- | Spec Shell Symbols | Description |
-  | --- | --- |
-  | **`?`** | corresponds to one random chararchter |
-  | **`*`** | corresponds to many random chararchter|
-  | **`[...]`**| corresponds to to a set of charachters |
-  | **`{<args>}`**| does the command for each *args* |
+| Spec Shell Symbols | Description |
+| --- | --- |
+| **`?`** | corresponds to one random chararchter |
+| **`*`** | corresponds to many random chararchter|
+| **`[...]`**| corresponds to to a set of charachters |
+| **`{<args>}`**| does the command for each *args* |
 
 > [!IMPORTANT]
 > When these globbing symbols are in **`''\""`** they are just stringified, also called **escaping**
 
-- **`\`** => can be used for making commands on new lines 
+**`\`** => can be used for making commands on new lines 
 
 Read File
 -
