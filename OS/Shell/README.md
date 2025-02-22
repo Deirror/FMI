@@ -54,7 +54,8 @@ Permissions
 - **`chmod (<octal>/<perm> <file>)`** => changes permissions
 - **`unmask <mask> <file>`** => removes permissions
 
-![chmod_img](https://github.com/user-attachments/assets/9b309f4f-ea04-48fd-b42c-0e29e7cb6b97)
+<img src="https://github.com/user-attachments/assets/9b309f4f-ea04-48fd-b42c-0e29e7cb6b97" width=120 height=100/>
+
 
 Paths Related Commands
 -
