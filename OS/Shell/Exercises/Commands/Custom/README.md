@@ -2,4 +2,9 @@
 
 Here are stored some custom tasks made by me
 
-<div class="meta_for_parser tablespecs" style="visibility:hidden">{"dataname":"environment","colvar":"varname","colval":"value"}</div>
+<details>
+  <summary>Click to expand</summary>
+
+  Here is some hidden text that will be shown when you click on "Click to expand".
+
+</details>
