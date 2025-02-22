@@ -88,7 +88,7 @@ File Manip
   - **`-<flag>`** can be **`-r`**, stands for *recursively*
 
 > [!Warning]
-> Use **`rm`**, **`mv`**, **`cp`** with the flag **`-i`** if you want to see what is next to be deleted
+> Use **`rm`**, **`mv`**, **`cp`** with the flag **`-i`** if you want to be asked before deleting each file one by one
 
 Globbing
 -
