@@ -190,3 +190,15 @@ Compress/Archive File
 - **`tar -<compr> -<opt> <tarname>.tar.<compr> <dir>`** => compresses and archives the dir
 - **`tar -caf <tarname>.tar.<compr> <dir>`** => compresses and archives the whole dir and subcontent of the dir
 - **`tar -xf <tarname>.tar.<compr>`** => unarchives and decompresses the archive
+
+File Descriptor
+-
+
+| File Descriptor | Description |
+| --- | --- |
+| 0> | refers to *stdin* |
+| 1> | refers to *stdout* |
+| 2> | refers to *stderr* |
+
+> [!IMPORTANT]
+> **`2>/dev/null`** is used to suppress errors like "*permission denied*"
