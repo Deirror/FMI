@@ -40,6 +40,8 @@ Users
 - **`whoami`** => prints your user name
 - **`who`** => prints the users in your group
 
+-  Todo
+
 Paths Related Commands
 -
 
@@ -120,18 +122,34 @@ Date
 > [!NOTE]
 > Not quite sure if useful, but *UNIX timestamp* is just how many seconds have passed since 1970-01-01 00:00 UTC 
 
+Stats
+-
+
+- **`stat -<format> <file>`** => prints all info for the file like size, blocks, type, inode, access, last time modified/accessed/change, birthdate
+  -  | **`-<format>`**| Description |
+     | --- | --- |
+     | **`-c '%s'`**| prints the size(bytes) of the file |
+     | **`-c '%U'`**| prints the owner of the file |
+     | **`-c '%Y'`**| prints the last time modification of the file |
+- **`ls -l <file>`** => prints only the access info, owner name, birthdate
+
 Read File
 -
 
-- Todo
+- **`cat <opt> <file>`** => renders the content of the file
+- **`head -n <N> <file>`** => if number is negative, then it doesn't render only the last abs(N) lines, else, renders the first N lines
+- **`tail -n <N> <file>`** => same as **`head`**, but reverse, starts from the end
+- **`less <file>`** => opens **`man`**, but renders the content itself
+- **`xxd <file>`** => renders the content in hex code
+- **`od -c <file>`** => renders ASCII content of the file 
 
 Write File
 -
 
-- Todo
-
-Serach Text
--
-
-- grep ... Todo
+- **`echo <text> (>/>>) <file>`** => disconnects and connects *stdout* to the file to append to/overwrite file
+- **`echo <text> >> <file>`** => disconnects and connects *stdout* to the file to append to file
+- **`printf <text> > <file>`** => same as **`echo >`**, but with formatted text
+- **`cat (>/>>) <file>`** => you start writing text to the file and use **`CTRL+D`** to exit and save
+- **`ls <path> (>/>>) <file>`** => overwrites **`<path>`** to the file
+- **`exec > <file>`** => disconnects and connects *stdout* to the file for all running scripts, instead of the terminal screen itself
 
