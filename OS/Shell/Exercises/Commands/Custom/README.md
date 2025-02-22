@@ -12,7 +12,7 @@ Tasks
 
 - Task 1
   - Намерете всички файлове в /etc, които съдържат "00" в името си и изключете директориите /etc/ssl и /etc/grub като опции
-<details>
+  - <details>
   <summary>Click to reveal</summary>
   
   ```bash
