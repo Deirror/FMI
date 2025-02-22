@@ -9,6 +9,7 @@ Task
 -
 
 <details>
+  <p></p>
   <summary>Click to reveal</summary>
 
   ```bash
