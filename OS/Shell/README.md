@@ -26,7 +26,7 @@ Help Commands
 - **`<cmd> -h/--help`** => prints *help* for the given command
 - **`apropos <cmd>`** => prints a lot of information where this command can be used and for what purpose
 - **`whatis <cmd>`** => prints general/short info for the command
-- **`whereis <cmd>`** => prints the absolute path of the location of the command
+- **`whereis <cmd>`** => prints the **absolute** path of the location of the command
 
 Users
 -
