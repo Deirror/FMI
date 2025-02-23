@@ -211,3 +211,6 @@ File Descriptor
 
 > [!IMPORTANT]
 > **`2>/dev/null`** is used to suppress errors like "*permission denied*"
+
+> [!TIP]
+> To see the exit code of your last executed command, type **`echo $?`**, **`?`** is a special variable
