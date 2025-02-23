@@ -199,6 +199,7 @@ File Descriptor
 | 0> | refers to *stdin* |
 | 1> | refers to *stdout* |
 | 2> | refers to *stderr* |
+| &> | refers to *stdout* and *stderr* |
 
 > [!IMPORTANT]
 > **`2>/dev/null`** is used to suppress errors like "*permission denied*"
