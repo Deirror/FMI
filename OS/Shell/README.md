@@ -242,3 +242,13 @@ File Descriptor
 
 > [!TIP]
 > To see the exit code of your last executed command, type **`echo $?`**, **`?`** is a special variable
+
+Regex
+-
+
+### Anchors
+- **`$`** => means *end of line*
+- **`^`** => means *beginning of line*
+- **`\>`** => means *end of word*
+- **`\<`** => means *beginning of word*
+ 
