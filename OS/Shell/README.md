@@ -286,4 +286,4 @@ Awk Scripting
     | **`-v <var>=<some_export_name>`** | allows us to include global variables |
 
 > [!IMPORTANT]
-> *Awk* allow regex by typing **`~`** before the regex itself
+> *Awk* allows regex by typing **`~`** before the regex itself
