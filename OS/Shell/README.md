@@ -146,6 +146,14 @@ Stats
      | **`-c '%U'`**| prints the owner of the file |
      | **`-c '%Y'`**| prints the last time modification of the file |
 - **`ls -l <file>`** => prints only the access info, owner name, birthdate
+- **`wc -<opt> <file>`** => prints newline, word, and byte counts for the given file
+  - | **`-<opt>`**| Description |
+    | --- | --- |
+    | **`-l`** | prints the count of the rows in the file |
+    | **`-c`** | prints the number of bytes of the file |
+    | **`-m`** | prints the characters of the file |
+    | **`-w`** | prints the count of the words in the file | 
+
 
 Read File
 -
