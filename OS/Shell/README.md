@@ -155,9 +155,10 @@ Read File
     | --- | --- |
     | **`-n`** | adds numbers at the start of each line |
     | **`-e`** | adds **`$`** at teh end of each line |
+- **`paste -<space> <files>`** => renders the files' contents in parallel
 - **`head -n <N> <file>`** => if number is negative, then it doesn't render only the last abs(N) lines, else, renders the first N lines
 - **`tail -n <N> <file>`** => same as **`head`**, but reverse, starts from the end
-- **`less <file>`** => opens **`man`**, but renders the content itself
+- **`less <file>`** => opens **`man`**-like, but renders the content itself
 - **`xxd <file>`** => renders the content in hex code
 - **`od -c <file>`** => renders ASCII content of the file 
 
