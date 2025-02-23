@@ -210,6 +210,7 @@ Search File
 Compress/Archive File
 -
 
+### Archiving
 - **`tar -<opt> -f <tarname>.tar <files>`** => (un)archives all files under the archive name **`<tarname>`**
   - | **`-<opt>`** | Description |
     | --- | --- |
@@ -217,6 +218,8 @@ Compress/Archive File
     | **`-x`** | unarchives the .tar |
 - **`tar -cf <tarname>.tar <dir>`** => archives the whole dir and subcontent of the dir
 - **`tar -tvf <tarname>.tar`** => lists the content of the archive
+
+### Compressing
 - **`(gzip/xz) -<opt> <file>`** => compresses the file
   - | **`-<opt>`** | Description |
     | --- | --- |
