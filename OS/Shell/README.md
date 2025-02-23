@@ -134,7 +134,7 @@ Date
 - **`date +'%s'`** => prints UNIX timestamp
 
 > [!NOTE]
-> Not quite sure if useful, but *UNIX timestamp* is just how many seconds have passed since 1970-01-01 00:00 UTC 
+> *UNIX timestamp* is just how many seconds have passed since 1970-01-01 00:00 UTC 
 
 Stats
 -
@@ -154,7 +154,6 @@ Stats
     | **`-m`** | prints the characters of the file |
     | **`-w`** | prints the count of the words in the file | 
 
-
 Read File
 -
 
@@ -162,7 +161,7 @@ Read File
   - | **`-<opt>`** | Description |
     | --- | --- |
     | **`-n`** | adds numbers at the start of each line |
-    | **`-e`** | adds **`$`** at teh end of each line |
+    | **`-e`** | adds **`$`** at thе end of each line |
 - **`paste -<space> <files>`** => renders the files' contents in parallel
 - **`tr -<flag> <to_replace> <with>`** => reads form *stdin* and replaces in text with the given format
 - **`head -n <N> <file>`** => if number is negative, then it doesn't render only the last abs(N) lines, else, renders the first N lines
