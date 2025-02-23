@@ -177,7 +177,8 @@ Read File
     | --- | --- |
     |**`-c`** | prints the occurence of each row and the row itself |
     |**`-d`** | prints only the duplicate rows |
-- **`comm -<opt> <file1> <file2>`** => compares two sorted files line by line. **`-<opt>`** can be **`-1`**, **`-2`** or **`-3`**, meaning that you can exlucde the columns  
+- **`comm -<opt> <file1> <file2>`** => compares two sorted files line by line. **`-<opt>`** can be **`-1`**, **`-2`** or **`-3`**, meaning that you can exlucde the columns
+- **`join`** => joins lines of two files on a common field
 - **`head -n <N> <file>`** => if number is negative, then it doesn't render only the last abs(N) lines, else, renders the first N lines
 - **`tail -n <N> <file>`** => same as **`head`**, but reverse, starts from the end
 - **`less <file>`** => opens **`man`**-like, but renders the content itself
