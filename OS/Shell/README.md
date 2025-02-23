@@ -266,3 +266,13 @@ Regex
 
 - **`<atom>(*/+/?)`** => you can recall these easily from discrete math
 - **`<atom>.{<start>,<end>}`** => how many occurrences are allowed for search
+
+Awk Scripting
+-
+
+- **`awk -<flag> <scirpt>`** => runs the script in the programming language *awk*
+  - | **`-<flag>`** | Description |
+    | **`-`** | |
+    | **`-`** | |
+    | **`-`** | |
+    | **`-`** | | 
