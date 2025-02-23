@@ -197,7 +197,7 @@ Write File
 Search File
 -
 
-- **`grep -<flag> <regex> <file>`** => searches for **`<regex>`** in the file
+- **`grep -<flag> <regex> <file>`** => searches for **`<regex>`** in the file and prints the lines
   - | **`-<flag>`** | Description |
     | --- | --- |
     | **`-n`** | prints the numbers of the lines which contains the string |
@@ -205,6 +205,7 @@ Search File
     | **`-i`** | ignores case(doesn't matter if upper or lower case) |
     | **`-v`** | prints all lines which don't contain the string |
     | **`-r`** | searches files, which contain the string, *recursively* |
+    | **`-F`** | search for the **`<regex>`**, but it is treated as a plain string here |
 
 Compress/Archive File
 -
