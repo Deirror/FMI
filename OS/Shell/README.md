@@ -270,9 +270,20 @@ Regex
 Awk Scripting
 -
 
+### Structure of awk script
+
+- **`'BEGIN{init_code} {main_code} END{final_code}'`**
+
+### Special varibles
+
+- **`$<N>`** => specifies concrete column to be used
+
 - **`awk -<flag> <scirpt>`** => runs the script in the programming language *awk*
   - | **`-<flag>`** | Description |
     | --- | --- |
     | **`-f`** | reads from file and scripts |
     | **`-F '<sep>'`** | allows to specify a separator |
     | **`-v <var>=<some_export_name>`** | allows us to include global variables |
+
+> [!IMPORTANT]
+> *Awk* allow regex by typing **`~`** before the regex itself
