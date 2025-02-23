@@ -272,6 +272,7 @@ Awk Scripting
 
 - **`awk -<flag> <scirpt>`** => runs the script in the programming language *awk*
   - | **`-<flag>`** | Description |
+    | --- | --- |
     | **`-`** | |
     | **`-`** | |
     | **`-`** | |
