@@ -164,7 +164,14 @@ Read File
     | **`-e`** | adds **`$`** at thе end of each line |
 - **`paste -<space> <files>`** => renders the files' contents in parallel
 - **`tr -<flag> <to_replace> <with>`** => reads form *stdin* and replaces in text with the given format
-- **`cut -<opt>`** => as the name suggests, cuts part of file and renders to the terminal screen
+- **`cut -<flag>`** => as the name suggests, cuts part of file and renders to the terminal screen
+- **`sort -<flag>`** => sorts the content by a given **`-<flag>`**
+  - | **`-<flag>`** | Description |
+    | --- | --- |
+    | **`-r`** | sorts the lines alphabetically and reverses |
+    | **`-n`** | sorts the lines by the numbers at the start of each line |
+    | **`-k <args>`** | sorts by columns, **`<args>`** are numbers of the columns |
+    | **`-t <args>`** | sets separator(useful for csv files) |   
 - **`head -n <N> <file>`** => if number is negative, then it doesn't render only the last abs(N) lines, else, renders the first N lines
 - **`tail -n <N> <file>`** => same as **`head`**, but reverse, starts from the end
 - **`less <file>`** => opens **`man`**-like, but renders the content itself
