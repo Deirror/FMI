@@ -171,7 +171,13 @@ Read File
     | **`-r`** | sorts the lines alphabetically and reverses |
     | **`-n`** | sorts the lines by the numbers at the start of each line |
     | **`-k <args>`** | sorts by columns, **`<args>`** are numbers of the columns |
-    | **`-t <args>`** | sets separator(useful for csv files) |   
+    | **`-t <args>`** | sets separator(useful for csv files) |
+- **`uniq -<flag>`** => renders only unique rows
+  - | **`-<flag>`** | Description |
+    | --- | --- |
+    |**`-c`** | prints the occurence of each row and the row itself |
+    |**`-d`** | prints only the duplicate rows |
+- **`comm -<opt> <file1> <file2>`** => compares two sorted files line by line. **`-<opt>`** can be **`-1`**, **`-2`** or **`-3`**, meaning that you can exlucde the columns  
 - **`head -n <N> <file>`** => if number is negative, then it doesn't render only the last abs(N) lines, else, renders the first N lines
 - **`tail -n <N> <file>`** => same as **`head`**, but reverse, starts from the end
 - **`less <file>`** => opens **`man`**-like, but renders the content itself
