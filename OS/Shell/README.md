@@ -194,6 +194,18 @@ Write File
 - **`ls <path> (>/>>) <file>`** => overwrites **`<path>`** to the file
 - **`exec > <file>`** => disconnects and connects *stdout* to the file for all running scripts, instead of the terminal screen itself
 
+Search File
+-
+
+- **`grep -<flag> <regex> <file>`** => searches for **`<regex>`** in the file
+  - | **`-<flag>`** | Description |
+    | --- | --- |
+    | **`-n`** | prints the numbers of the lines which contains the string |
+    | **`-(A/B/C) <number>`** | prints the line itself and the previous/next/previous and next **`<number>`** line |
+    | **`-i`** | ignores case(doesn't matter if upper or lower case) |
+    | **`-v`** | prints all lines which don't contain the string |
+    | **`-r`** | searches files, which contain the string, *recursively* |
+
 Compress/Archive File
 -
 
