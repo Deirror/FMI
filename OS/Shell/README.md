@@ -273,7 +273,6 @@ Awk Scripting
 - **`awk -<flag> <scirpt>`** => runs the script in the programming language *awk*
   - | **`-<flag>`** | Description |
     | --- | --- |
-    | **`-`** | |
-    | **`-`** | |
-    | **`-`** | |
-    | **`-`** | | 
+    | **`-f`** | reads from file and scripts |
+    | **`-F '<sep>'`** | allows to specify a separator |
+    | **`-v <var>=<some_export_name>`** | allows us to include global variables |
