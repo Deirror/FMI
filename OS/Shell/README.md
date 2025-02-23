@@ -9,7 +9,7 @@ Navigation in Bash CLI
 -
 
 - **`↓ | ↑`** => iterates through command history
--  **`CTRL+R`** => searches in command history by typing charachter by charachter
+-  **`CTRL+R`** => searches in command history by typing character by character
 -  **`TAB`** => autocompletes a command
 -  **`CTRL+C`** => kills the current running process
 
@@ -117,9 +117,9 @@ Globbing
 
 | Spec Shell Symbols | Description |
 | --- | --- |
-| **`?`** | corresponds to one random chararchter |
-| **`*`** | corresponds to many random chararchter|
-| **`[...]`**| corresponds to a set of charachters |
+| **`?`** | corresponds to one random character |
+| **`*`** | corresponds to many random characters |
+| **`[...]`**| corresponds to a set of characters |
 | **`{<args>}`**| does the command for each *args* |
 
 > [!IMPORTANT]
