@@ -165,7 +165,6 @@ Write File
 -
 
 - **`echo <text> (>/>>) <file>`** => disconnects and connects *stdout* to the file to append to/overwrite file
-- **`echo <text> >> <file>`** => disconnects and connects *stdout* to the file to append to file
 - **`printf <text> > <file>`** => same as **`echo >`**, but with formatted text
 - **`cat (>/>>) <file>`** => you start writing text to the file and use **`CTRL+D`** to exit and save
 - **`ls <path> (>/>>) <file>`** => overwrites **`<path>`** to the file
