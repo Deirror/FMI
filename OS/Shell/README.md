@@ -254,4 +254,14 @@ Regex
 - **`^`** => means *beginning of line*
 - **`\>`** => means *end of word*
 - **`\<`** => means *beginning of word*
- 
+
+### Classes
+- **`[<chars>]`** => matches one of the characters 
+- **`[(^)<char1>-<char2>]`** => matches one of between the interval characters. When **`^`** is used, then it opposites the regex
+- **`[:<opt>:]`** => matches special predefined intervals of characters
+- **`(<atom1>|<atom2>|...)`** => matches one of the following atoms
+
+### Quantifiers
+
+- **`<atom>(*/+/?)`** => you can recall these easily from discrete math
+- **`<atom>.{<start>,<end>}`** => how many occurrences are allowed for search
