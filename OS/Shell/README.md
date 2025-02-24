@@ -277,7 +277,8 @@ Awk Scripting
 ### Special varibles
 
 - **`$<N>`** => specifies concrete column to be used
-
+- **`NF`** => how many colums the row has
+- **`NR`** => how many rows have been read so far
 - **`awk -<flag> <scirpt>`** => runs the script in the programming language *awk*
   - | **`-<flag>`** | Description |
     | --- | --- |
