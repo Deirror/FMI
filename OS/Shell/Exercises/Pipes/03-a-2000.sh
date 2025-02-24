@@ -12,7 +12,7 @@ head -n -4 /etc/passwd
 tail -n 17 /etc/passwd
 
 # - 151-я ред (или друг произволен, ако нямате достатъчно редове)
-
+head -n 151 /etc/passwd | tail -n 1
 
 # - последните 4 символа от 13-ти ред (символът за нов ред не е част от реда)
-
+head -n 13 /etc/passwd | tail -n 1 | tail -c 5
