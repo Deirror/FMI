@@ -1,3 +1,3 @@
 # Изведете съдържанието на файла /etc/passwd от 2-ри до 6-ти символ.
 
-cut -d ':' -c 2,6 /etc/passwd
+cut -c 2-6 /etc/passwd
