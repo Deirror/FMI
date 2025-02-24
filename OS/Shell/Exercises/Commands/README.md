@@ -16,7 +16,7 @@ Tasks
   <summary>Виж решение</summary>
 
   ```bash
-  # тук използваме escaping, за да приложим математическа логика
+  # тук използваме escaping, за да приложим булева логика
   find /etc -type f -name "*00*" ! \( -path "/etc/ssl/*" -o -path "/etc/grub.d/*" \) 
 
   # или
