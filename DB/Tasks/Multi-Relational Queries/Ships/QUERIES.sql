@@ -23,6 +23,8 @@ SELECT country FROM Classes GROUP BY country HAVING COUNT(DISTINCT type) = 2
 SELECT DISTINCT S.name
 FROM Ships S
 JOIN Outcomes O1 ON S.name = O1.ship
+JOIN Battles B1 ON O1.battle = B1.name
 JOIN Outcomes O2 ON S.name = O2.ship
+JOIN Battles B2 ON O2.battle = B2.name
 WHERE O1.result = 'damaged'
-AND O1.battle <> O2.battle;
+AND B1.date < B2.date;
