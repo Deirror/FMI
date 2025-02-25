@@ -4,4 +4,4 @@ sed -n '28,46p' /etc/passwd | cut -d ':' -f 3 | awk '{print substr($0, length($0
 
 # или
 
- cut -d ':' -f 3 /etc/passwd | head -n 46 | tail -n 28 | sed 's/.*\(.\)$/\1/'
+cut -d ':' -f 3 /etc/passwd | head -n 46 | tail -n 28 | sed 's/.*\(.\)$/\1/'
