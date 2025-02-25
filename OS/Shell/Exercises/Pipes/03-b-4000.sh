@@ -3,6 +3,8 @@
 # dir5/file2
 # dir5/file3
 
+mkdir ~/dir5 && touch ~/dir5/file{1,2,3}
+
 # Посредством vi въведете следното съдържание:
 # file1:
 # 1
