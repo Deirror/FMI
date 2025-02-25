@@ -193,7 +193,7 @@ Write File
 - **`cat (>/>>) <file>`** => you start writing text to the file and use **`CTRL+D`** to exit and save
 - **`ls <path> (>/>>) <file>`** => overwrites **`<path>`** to the file
 - **`exec > <file>`** => disconnects and connects *stdout* to the file for all running scripts, instead of the terminal screen itself
-- **`sed 's/<to_replace>/<with>(/g) <file>'`** => modifies file's content. When using **`/g`**, then it replaces for all occurrences 
+- **`sed (-i) 's/<to_replace>/<with>(/g) <file>'`** => With **`-i`**, modifies file's content. When using **`/g`**, then it replaces for all occurrences 
 
 Search File
 -
