@@ -4,3 +4,4 @@
 find ./ -size 0c -exec rm -r -i {} \;
 
 # б) 5-е най-големи файла в home директорията на текущия потребител и нейните поддиректории.
+find ~/ -type f | grep -v "/\.[.]*" | xargs -I{} wc -c {} | sort -nr | head -n 5 | awk -F '/' '{print $NF}'
