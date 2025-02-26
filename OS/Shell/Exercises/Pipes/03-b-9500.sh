@@ -1,5 +1,6 @@
-Копирайте <РЕПО>/exercises/data/ssa-input.txt във вашата home директория.
-Общият вид на файла е:
+# Копирайте <РЕПО>/exercises/data/ssa-input.txt във вашата home директория.
+# Общият вид на файла е:
+
 
 - заглавна част:
 	Smart Array P440ar in Slot 0 (Embedded)
