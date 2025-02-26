@@ -208,6 +208,9 @@ Search File
     | **`-r`** | searches files, which contain the string, *recursively* |
     | **`-F`** | search for the **`<regex>`**, but it is treated as a plain string here |
 
+> [!TIP]
+> If you want to remove this damn .(files/dir), when searching in you ~ -> Just type this **`find ~/ | grep -v "/\.[.]*"`**
+
 Compress/Archive File
 -
 
