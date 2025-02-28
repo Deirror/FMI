@@ -45,7 +45,7 @@ Users
 > All info for the users is stored in **`/etc/passwd`**
 
 > [!WARNING]
-> **`sudo <cmd>`** executes **`cmd`** from the root, but must have permissions first to do so
+> **`sudo <cmd>`**(superuser do) executes **`cmd`** from the root, but must have permissions first to do so
 
 Permissions
 -
@@ -132,6 +132,9 @@ Date
 
 - **`date <flag><format>`** => prints current time in the given format and based on the flag, simply said, the date's padding is different
 - **`date +'%s'`** => prints UNIX timestamp
+
+> [!TIP]
+> From unix timestamp to human readable conversion - **`date --date="@<seconds>"`**
 
 > [!NOTE]
 > *UNIX timestamp* is just how many seconds have passed since 1970-01-01 00:00 UTC 
