@@ -134,7 +134,7 @@ Date
 - **`date +'%s'`** => prints UNIX timestamp
 
 > [!TIP]
-> From unix timestamp to human readable conversion - **`date --date="@<seconds>"`**
+> From *UNIX timestamp* to human readable conversion - **`date --date="@<seconds>"`**
 
 > [!NOTE]
 > *UNIX timestamp* is just how many seconds have passed since 1970-01-01 00:00 UTC 
