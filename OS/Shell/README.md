@@ -333,3 +333,7 @@ Scripts
 
 > [!IMPORTANT]
 > I will use mostly the following ***Shebang*** - **`#!/bin/bash`** 
+
+- **`<path>`** => to run a script with ***Shebang***, type the path to the script as a separate process
+- **`<interpreter> <path>`** => runs a script based on the **`interpreter`**
+- **`(.|source) <path>`** => as **`<path>`**, but runs the script in the current session
