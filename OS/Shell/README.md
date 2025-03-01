@@ -334,6 +334,9 @@ Scripts
 > [!IMPORTANT]
 > I will use mostly the following ***Shebang*** - **`#!/bin/bash`** 
 
+> [!NOTE]
+> Use **`#`** for commenting a line, this implies also for ***Shebangs***
+
 ### Running Scripts
 
 - **`<path> <args>...`** => to run a script with ***Shebang***, type the path to the script as a separate process
@@ -342,11 +345,21 @@ Scripts
 
 ### Variables
 
-- **`(un)alias <name>=<cmd>`** => works like **typedef** in C. Use *un* to unset the **`alias`**
+#### Defining
+
+- **`(un)alias <name>=<cmd>`** => works like **#define** in C. Use *un* to unset the **`alias`**
+
+#### Viewing
 
 - **`set`** => shows all **variables**
 - **`env`** => shows all **environment variables**
 
-- **`export <name>=<string>...`** => creates an **env var**
+#### Creating
+
+- **`export <name>=<string>...`** => creates **env vars**
+- **`local <name>=<string>...`** => creates **vars** in the scope of a shell function
+- **`<name>=<string>`** => creates a global **var** in the scope of a scirpt itself
+
+#### Accessing
 
 
