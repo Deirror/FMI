@@ -346,7 +346,7 @@ Scripts
 ### Variables
 
 > [!NOTE]
-> There are 3 types of **vars** - **local**(shell func), **global**(shell script) and **env**(shell session, like $PATH,$HOME and etc.)
+> There are 3 types of **vars** - **local**(shell func), **global**(shell script) and **env**(based on shell user, like $PATH, $HOME and etc.)
 
 #### Defining
 
@@ -365,4 +365,22 @@ Scripts
 
 #### Accessing
 
+- **`${<varname>}`** => refers to the content of the **var**
+  - | **`${<shrtcut>}`** | Description |
+    | --- | --- |
+    | **`${0}`** | returns the path to the script |
+    | **`${#}`** | returns the count of the parameters |
+    | **`${N}`** | returns the N-th argument, where N is natural |
+    | **`${@/*}`** | returns all func arguments in the format - **`"${1}" "${2}" ... / "${1} ${2} ..."`** |
 
+#### Reading
+
+> [!NOTE]
+> **`IFS`** is the separator between the arguments in the **`read`** command
+
+- **`read -<flag> <varnames>`** => reads from stdin user's input
+  - | **`-<flag>`** | Description |
+    | --- | --- |
+    | **`-p`**| prints the *promt* and then asks for input |
+    | **`-d`**| changes the stop char for reading(default one is **'\n'**) |
+- **`IFS=<str>`** => sets **`IFS`** to new separator
