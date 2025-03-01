@@ -294,3 +294,31 @@ Awk Scripting
 
 > [!IMPORTANT]
 > *Awk* allows regex by typing **`~`** before the regex itself
+
+Disk Usage
+-
+
+- **`df -<opt> <file>`** => shows usage of disk of the file
+- **`du -<opt> <file>`** => same as **`df`**, but redners *recursevily*
+
+> [!NOTE]
+> For more info about **`-<opt>`**, type **`man (df|du)`** as the documentation is pretty well structured for these commands
+
+Processes
+-
+
+- **`ps -<opt>`** => shows information for a given process
+  - | **`-<opt>`** | Description |
+    | --- | --- |
+    | **`-e(f)`** | shows information for all processes. With *f*, much more information is rendered |
+    | **`-u <user>`** | shows information for all processes based on the user |
+    | **`-o <args>`** | shows specific information, based on **`<args>`**, for a given process |
+- **`pstree`** => tree version of **`ps`**   
+- **`top`** => same as **`ps`**, but more interactive
+
+Signals
+-
+
+- **`kill -<signal> <PID>`** => changes behaviour/state of a process, based on the signal
+- **`killall -<signal> <name>`** => changes behaviour/state of all processes with the same name, based on the signal
+
