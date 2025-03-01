@@ -345,11 +345,11 @@ Scripts
 
 ### Variables
 
-#### Defining
+##### Defining
 
 - **`(un)alias <name>=<cmd>`** => works like **#define** in C. Use *un* to unset the **`alias`**
 
-#### Viewing
+##### Viewing
 
 - **`set`** => shows all **variables**
 - **`env`** => shows all **environment variables**
