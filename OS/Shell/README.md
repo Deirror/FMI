@@ -322,3 +322,8 @@ Signals
 - **`kill -<signal> <PID>`** => changes behaviour/state of a process, based on the signal
 - **`killall -<signal> <name>`** => changes behaviour/state of all processes with the same name, based on the signal
 
+Jobs
+-
+
+- **`jobs`** => shows all processes of the current session
+- **`(fg|bg) <jid>`** => starts the *foreground*|*background* process
