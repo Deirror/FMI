@@ -327,3 +327,9 @@ Jobs
 
 - **`jobs`** => shows all processes of the current session
 - **`(fg|bg) <jid>`** => starts the *foreground*|*background* process
+
+Scripts
+-
+
+> [!IMPORTANT]
+> I will use mostly the following ***Shebang*** - **`#!/bin/bash`** 
