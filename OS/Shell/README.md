@@ -210,6 +210,7 @@ Search File
     | **`-v`** | prints all lines which don't contain the string |
     | **`-r`** | searches files, which contain the string, *recursively* |
     | **`-F`** | search for the **`<regex>`**, but it is treated as a plain string here |
+    | **`-q`** | prevents result text from rendering onto the shell screen |
 
 > [!TIP]
 > If you want to remove these damn .(files/dirs) when searching in your ~ -> Just type this **`find ~/ | grep -v "/\.[.]*"`**
@@ -272,6 +273,13 @@ Regex
 
 - **`<atom>(*/+/?)`** => you can recall these easily from discrete math
 - **`<atom>.{<start>,<end>}`** => how many occurrences are allowed for search
+
+Arithmetic
+-
+
+- **`expr <expression>`** => calculates expression with integers
+- **`bc`** => works well with **`echo "<expr>"`**. Accepts floats!
+- **`((<varname>=<expr>))`** => calculates the fastest and saves result to **var**, but works only with integers 
 
 Awk Scripting
 -
@@ -359,7 +367,8 @@ Scripts
 
 #### Creating
 
-- **`export <name>=<string>...`** => creates **env vars**
+- **`export <name>=<string>...`** => creates **env vars** only for the current shell session
+- **`env <name>=<string>...`** => creates **env vars** only for the current running command
 - **`local <name>=<string>...`** => creates **vars** in the scope of a shell function
 - **`<name>=<string>`** => creates a global **var** in the scope of a scirpt itself
 
@@ -372,6 +381,7 @@ Scripts
     | **`${#}`** | returns the count of the parameters |
     | **`${N}`** | returns the N-th argument, where N is natural |
     | **`${@/*}`** | returns all func arguments in the format - **`"${1}" "${2}" ... / "${1} ${2} ..."`** |
+    | **`${?}`** | returns the exit status of the last run command |
 
 #### Reading
 
@@ -384,3 +394,17 @@ Scripts
     | **`-p`**| prints the *promt* and then asks for input |
     | **`-d`**| changes the stop char for reading(default one is **'\n'**) |
 - **`IFS=<str>`** => sets **`IFS`** to new separator
+
+### Exit Behaviour
+
+- **`set -<flag>`** => changes the treatment of the conditions of the executed series of command whether they failed or succeeded
+  - | **`-<flag>`** | Description |
+    | --- | --- |
+    | **`-o pipefail`**| exits with fail status even if just one command fails |
+    | **`-e`**| exits immediately after a command fails |
+    | **`-u`**| exits if a command doesn't exist |
+
+> [!TIP]
+> Good practice to add **`set-euo pipefail`** in the beginning of each shell script
+
+
