@@ -345,11 +345,14 @@ Scripts
 
 ### Variables
 
-##### Defining
+> [!NOTE]
+> There are 3 types of **vars** - **local**(shell func), **global**(shell script) and **env**(shell session, like $PATH,$HOME and etc.)
+
+#### Defining
 
 - **`(un)alias <name>=<cmd>`** => works like **#define** in C. Use *un* to unset the **`alias`**
 
-##### Viewing
+#### Viewing
 
 - **`set`** => shows all **variables**
 - **`env`** => shows all **environment variables**
