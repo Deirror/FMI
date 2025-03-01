@@ -334,6 +334,14 @@ Scripts
 > [!IMPORTANT]
 > I will use mostly the following ***Shebang*** - **`#!/bin/bash`** 
 
-- **`<path>`** => to run a script with ***Shebang***, type the path to the script as a separate process
+- **`<path> <args>...`** => to run a script with ***Shebang***, type the path to the script as a separate process
 - **`<interpreter> <path>`** => runs a script based on the **`interpreter`**
 - **`(.|source) <path>`** => as **`<path>`**, but runs the script in the current session
+
+- **`(un)alias <name>=<cmd>`** => works like **typedef** in C. Use *un* to unsert the shortcut
+
+- **`set`** => shows all **variables**
+- **`env`** => shows all **environment variables**
+
+- **`export <name>=<string>...`** => creates an **env var**
+  - | **``** | |
