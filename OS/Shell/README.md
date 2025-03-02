@@ -302,6 +302,7 @@ Awk Scripting
 
 > [!IMPORTANT]
 > *Awk* allows regex by typing **`~`** before the regex itself
+> 
 > Commands can be run inside *awk* script - **`{... cmd="<cmd>"; cmd | getline <result> | close(cmd) ...}`**
 
 Disk Usage
