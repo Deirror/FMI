@@ -420,7 +420,7 @@ Scripts
 
 ### Process Substitution
 
-- **`<|>( cmd1; cmd2; ...)`** => creates a *virtual* file, executes the comamnds and return the name of the file to *stdin*|*stdout*
+- **`<|>( cmd1; cmd2; ...)`** => creates a *virtual* file, executes the commands and returns the name of the file to *stdin*|*stdout*
 
 > [!IMPORTANT]
 > **`|`**(or just a pipe) runs the commands in a subshell. On the other hand, **`< <(<cmds>)`** simulates a pipe but runs the commands in the current shell 
