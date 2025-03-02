@@ -382,7 +382,7 @@ Scripts
     | **`${N}`** | returns the N-th argument, where N is natural |
     | **`${@/*}`** | returns all func arguments in the format - **`"${1}" "${2}" ... / "${1} ${2} ..."`** |
     | **`${?}`** | returns the exit status of the last run command |
-    | **`${!}`** | returns teh **PID** of the last run process |
+    | **`${!}`** | returns the **PID** of the last run process |
 
 #### Reading
 
