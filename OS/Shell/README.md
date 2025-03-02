@@ -279,7 +279,8 @@ Arithmetic
 
 - **`expr <expression>`** => calculates expression with integers
 - **`bc`** => works well with **`echo "<expr>"`**. Accepts floats!
-- **`((<varname>=<expr>))`** => calculates the fastest and saves result to **var**, but works only with integers 
+- **`((<varname>=<expr>))`** => calculates the fastest and saves result to **var**, but works only with integers
+- **`seq <start> <end>`** => prints the numbers in the interval
 
 Awk Scripting
 -
