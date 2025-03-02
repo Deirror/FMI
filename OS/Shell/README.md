@@ -286,6 +286,7 @@ Awk Scripting
 
 > [!NOTE]
 > Structure of awk script - **`'BEGIN{init_code} {main_code} END{final_code}'`**
+> 
 > If and For statements work like in a normal programming language
 
 ### Special varibles
