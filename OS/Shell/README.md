@@ -408,4 +408,19 @@ Scripts
 > [!TIP]
 > Good practice to add **`set-euo pipefail`** in the beginning of each shell script
 
+### Waiting  
 
+- **`wait <PID>`** => waits for the process to end
+
+### Subshells
+
+- **`{ cmd1; cmd2;... }`** => runs the commands in the **current** shell session
+- **`( cmd1; cmd2; ... )`** => runs the commands in a **new** shell session
+- **`bash -c <cmds>`** => same as **`(...)`**
+
+### Process Substitution
+
+- **`<|>( cmd1; cmd2; ...)`** => creates a *virtual* file, executes the comamnds and return the name of the file to *stdin*|*stdout*
+
+> [!IMPORTANT]
+> **`|`**(or just a pipe) runs the commands in a subshell. On the other hand, **`< <(<cmds>)`** simulates a pipe but runs the commands in the current shell 
