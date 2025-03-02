@@ -286,6 +286,7 @@ Awk Scripting
 
 > [!NOTE]
 > Structure of awk script - **`'BEGIN{init_code} {main_code} END{final_code}'`**
+> If and For statements work like in a normal programming language
 
 ### Special varibles
 
@@ -301,6 +302,7 @@ Awk Scripting
 
 > [!IMPORTANT]
 > *Awk* allows regex by typing **`~`** before the regex itself
+> Commands can be run inside *awk* script - **`{... cmd="<cmd>"; cmd | getline <result> | close(cmd) ...}`**
 
 Disk Usage
 -
