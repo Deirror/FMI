@@ -284,9 +284,8 @@ Arithmetic
 Awk Scripting
 -
 
-### Structure of awk script
-
-- **`'BEGIN{init_code} {main_code} END{final_code}'`**
+> [!NOTE]
+> Structure of awk script - **`'BEGIN{init_code} {main_code} END{final_code}'`**
 
 ### Special varibles
 
