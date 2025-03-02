@@ -428,3 +428,35 @@ Scripts
 
 > [!IMPORTANT]
 > **`|`**(or just a pipe) runs the commands in a subshell. On the other hand, **`< <(<cmds>)`** simulates a pipe but runs the commands in the current shell 
+
+### Expressions
+
+| **`<expr>`** | Description |
+| --- | --- |
+| **`!<cmd>`** | **NOT** |
+| **`<cmd1> \|\| <cmd2>`** | **OR** |
+| **`<cmd1> && <cmd2>`** | **AND** |
+
+### Tests
+
+- **`[[ -<flag> <expr> ]]`** => evaluates the expression
+  - | **`-<flag> <expr>`**| Description |
+    | --- | --- |
+    | "numbers" | (-eq, -gt, -lt, -le, -ge) |
+    | "strings/cmd output" | (==, <(=), >(=), !=) |
+    | **`-(n\|z) <str>`**| checks if string is non-empty/empty |
+    | **`-(f\|d) <str>`**| checks if a file/dir exists |
+    | **`-(r\|w) <file>`**| checks if we can read/write |
+
+### Constructions and Syntax
+
+> [!IMPORTANT]
+> To separate commands, by default, we can use **\n**, but in shell scripts we can also use **;**
+
+| Construction | Syntax | 
+| --- | --- |
+| *if* | **`if <cmd>; then <block> else <block> fi`** |
+| *case* | **`case <str> in <glob1>) <block>;; <glob2>) <block>;; ... esac`**, **`*)`** => defualt |
+| *for* | **`for <var> in <args>; do <block>; done`** |
+| *while* | **`while <cmd>; do <block>; done`** |
+| *func* | **`function <name> { <cmds> }`** |
