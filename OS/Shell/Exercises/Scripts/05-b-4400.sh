@@ -12,9 +12,10 @@ if [[ $# -eq 1 ]]; then
         echo "Dir doesn't exist: $1"
         exit 1 
     fi
-    cp_dir_name='./$(date +"%d-%m-%y")'
-    if [[! -d $cp_dir_name]]; then
+    cp_dir_name="./$(date +"%d-%m-%y")"
+    if [[ ! -d $cp_dir_name ]]; then
         mkdir -p ./$cp_dir_name
+        echo "$cp_dir_name was created in your current directory"
     fi
 elif [[ $# -eq 2 ]]; then
     flag=false
@@ -27,10 +28,12 @@ elif [[ $# -eq 2 ]]; then
     if [[ $flag == true ]]; then
         exit 1
     fi
-    cp_dir_name='$2'
+    cp_dir_name="$2"
 else
     echo "Invalid count of arguments"
     exit 1
 fi
 
-find $1 -mindepth 1 -maxdepth 1  -type f -mmin 45 -print0 | xargs -0 -r -I{} mv {} $cp_dir_name
+for file in $(find $1 -mindepth 1 -maxdepth 1 -type f -mmin -45); do
+    cp $file $cp_dir_name
+done
