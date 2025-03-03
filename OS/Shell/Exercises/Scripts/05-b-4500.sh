@@ -9,7 +9,7 @@ if [[ $# -ne 1 ]]; then
     exit 1
 fi
 
-if ! cut -d ':' -f 3 /etc/passwd | grep -q "$1"; then
+if ! cut -d ':' -f 3 /etc/passwd | grep -qw "$1"; then
     echo "Invalid uid"
     exit 1
 fi
