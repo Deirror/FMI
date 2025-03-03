@@ -3,3 +3,17 @@
 #	- дали е файл, който може да прочетем
 #	- ако е директория - имената на файловете в нея, които имат размер, по-малък от броя на файловете в директорията
 
+#!/bin/bash
+
+if [[ $# -ls 1 ]]; then
+    echo "At least one argument required"
+    exit 1
+fi
+
+for o in $@; do
+    if [[ -f $o ]]; then
+        echo "$o - "
+    elif [[ -d $o ]]; then
+    
+    if
+done
