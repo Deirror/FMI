@@ -5,15 +5,20 @@
 
 #!/bin/bash
 
-if [[ $# -ls 1 ]]; then
+if [[ $# -lt 1 ]]; then
     echo "At least one argument required"
     exit 1
 fi
 
-for o in $@; do
-    if [[ -f $o ]]; then
-        echo "$o - "
-    elif [[ -d $o ]]; then
-    
-    if
+for o in "$@"; do
+    if [[ ! -f "$o" && ! -d "$o" ]]; then
+        continue
+    fi
+    if [[ -f "$o" && -r "$o" ]]; then
+        echo "$o is readble"
+    elif [[ -d "$o" ]]; then
+        dir_count=$(find "$o" -mindepth 1 -maxdepth 1 -type d | wc -l)
+        echo "$o :"
+        find "$o" -mindepth 1 -maxdepth 1 -type f -size -"${dir_count}c"
+    fi
 done
