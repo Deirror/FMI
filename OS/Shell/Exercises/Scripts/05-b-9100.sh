@@ -6,7 +6,7 @@
 #!/bin/bash
 
 function find_file {
-    find $1 -type f 2>/dev/null | grep -E -q "/[^\.]+\.[^\.]+$" | grep -v -E -q "/\.[^\.]*"
+    find $1 -type f 2>/dev/null | grep -E "/[^\.]+\.[^\.]+$" | grep -v -E "/\.[^\.]*"
 }
 
 if [[ $# -ne 2 ]]; then
