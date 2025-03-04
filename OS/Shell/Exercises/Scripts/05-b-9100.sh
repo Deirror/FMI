@@ -5,6 +5,10 @@
 
 #!/bin/bash
 
+function find_file {
+    find $1 -type f 2>/dev/null | grep -E -q "/[^\.]+\.[^\.]+$" | grep -v -E -q "/\.[^\.]*"
+}
+
 if [[ $# -ne 2 ]]; then
     echo "Two arguments are required"
     exit 1
@@ -16,5 +20,10 @@ if [[ ! -d "$1" ]] || [[ ! -d "$2" ]]; then
 fi
 
 while read format; do
-    
-done < <(find "$1" -type f | grep -E -o "/\.[^\.]+$" | ...(for tommorow))
+    mkdir -p "${2}/${format}"
+done < <(find_file "$1" | awk -F '.' '{ print $NF }' | sort | uniq)
+
+while read file; do
+    format=$(echo "$file" | awk -F '.' '{ print $NF }')
+    cp "$file" "${2}/${format}/"
+done < <(find_file "$1")
