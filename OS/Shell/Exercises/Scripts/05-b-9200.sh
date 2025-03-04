@@ -2,6 +2,11 @@
 # Ако бъде подадена празна директория, тя бива изтрита. Ако подадения файл е директория с поне 1 файл, тя не се изтрива.
 # За всеки изтрит файл (директория) скриптът добавя ред във log файл с подходящо съобщение
 
+# а) Името на log файла да се чете от shell environment променлива, която сте конфигурирали във вашия .bashrc
+cat >> ~/.bashrc
+export RMLOG_FILE=~/logs/remove.log
+source ~/.bashrc
+
 #!/bin/bash
 
 LOG_DIR="${HOME}/tmp/logs"
@@ -19,10 +24,17 @@ if [[ $# -lt 1 ]]; then
     exit 1
 fi
 
-# а) Името на log файла да се чете от shell environment променлива, която сте конфигурирали във вашия .bashrc
-cat >> ~/.bashrc
-export RMLOG_FILE=~/logs/remove.log
-source ~/.bashrc
+for file in $@; do
+    if [[ -f "$file" ]]; then
+        rm "$file"
+        echo "[$(date +"%Y-%m-%d %H:%M:%S")] Removed file $file" >> $LOG_FILE 
+    elif [[ -d "$file" ]]; then
+        if [[ $(find "$file" | wc -l) -eq 1 ]]; then
+            rmdir "$file"
+            echo "[$(date +"%Y-%m-%d %H:%M:%S")] Removed directory $file" >> $LOG_FILE
+        fi
+    fi
+done
 
 # б) Добавете параметър -r на скрипта, който позволява да се изтриват непразни директории рекурсивно
 # в) Добавете timestamp на log съобщенията във формата: 2018-05-01 22:51:36
