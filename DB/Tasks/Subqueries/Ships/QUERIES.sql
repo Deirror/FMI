@@ -24,3 +24,12 @@ ON Classes.class=Ships.class
 WHERE Classes.bore=16
 
 -- Напишете заявка, която извежда имената на битките, в които са участвали кораби от клас ‘Kongo’
+SELECT DISTINCT Outcomes.battle FROM Classes
+JOIN Ships
+ON Ships.class=Classes.class
+JOIN Outcomes
+ON Outcomes.ship=Ships.name
+WHERE Classes.class='Kongo'
+
+-- Напишете заявка, която извежда класа и името на корабите, чиито брой
+-- оръдия е по-голям или равен на този на корабите със същия калибър оръдия
