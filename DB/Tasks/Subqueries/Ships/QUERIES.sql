@@ -33,3 +33,11 @@ WHERE Classes.class='Kongo'
 
 -- Напишете заявка, която извежда класа и името на корабите, чиито брой
 -- оръдия е по-голям или равен на този на корабите със същия калибър оръдия
+SELECT S.class, S.name
+FROM Ships S
+JOIN Classes C1 ON S.class = C1.class
+WHERE C1.numguns >= (
+    SELECT MAX(C2.numguns)
+    FROM Classes C2
+    WHERE C1.bore = C2.bore
+)
