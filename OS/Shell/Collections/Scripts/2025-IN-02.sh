@@ -20,4 +20,4 @@ fi
 while read TEAM; do
     echo "; team $TEAM"
     grep "$TEAM" "$MAP" | awk -F ' ' -v domain=$DOMAIN '{ printf $2"\tIN NS\t"$1"."domain".\n" }'
-done < <(cat "$MAP" | cut -d ' ' -f 3 | sort | uniq)
+done < <(cat "$MAP" | awk -F ' ' 'print $NF' | sort | uniq)
