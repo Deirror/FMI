@@ -6,13 +6,27 @@
 
 #!/bin/bash
 
-if [[ $# -ne 3 ]]; then
-    echo "Exatcly 3 numbers are required"
+if [[ $# -ne 2 ]]; then
+    echo "Exatcly 2 numbers are required"
     exit 1
 fi
+
+for num in $@; do
+    if [[ ! "$num" =~ [0-9]+ ]]; then
+        echo "Only whole numbers allowed"
+        exit 2
+    fi
+done
 
 mkdir -p ./a ./b ./c
 
 while read file; do
-
-done < <()
+    lines=$(cat "$file" | wc -l)
+    if [[ lines -lt $1 ]]; then
+        mv "$file" ./a
+    elif [[ lines -ge $1 && lines -le $2 ]]; then
+        mv "$file" ./b
+    else
+        mv "$file" ./c
+    fi
+done < <(find ./ -type f)
