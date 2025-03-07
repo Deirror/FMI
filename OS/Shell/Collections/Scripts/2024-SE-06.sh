@@ -37,27 +37,15 @@ while read LINE; do
     else
         if [[ $# -eq 3 ]]; then
             PERM=$(cut -d ' ' -f 3)
+            # ...
             if [[ ! -e "$FILE_PATH" ]]; then
                 echo "> Creating file $FILE_PATH"
+                # ...
             fi
         else
             OWNERS=$(cut -d ' ' -f 3) 
             PERM=$(cut -d ' ' -f 4) 
+            # ...
         fi
     fi
 done < <(cat "$SYS_STATUS_FILE")
-
-
-# ------------------
- case "$TYPE" in
-    "file")
-    ;;
-    "dir")
-    ;;
-    "symlink")
-    ;;
-    "nonexistant")
-    ;;
-    *)
-    echo "Unknown type - $LINE";;
-    esac
