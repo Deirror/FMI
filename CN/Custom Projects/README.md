@@ -1,6 +1,6 @@
 # Concepts of Computer Networking
 
-1. Computer Networking
+1. **Computer Networking**
 -
 
 - Represents a graph with physical devices and connections between them
