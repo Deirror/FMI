@@ -1,6 +1,6 @@
 # Concepts of Computer Networking
 
-Computer Networking
+1. Computer Networking
 -
 
 - Represents a graph with physical devices and connections between them
@@ -53,3 +53,6 @@ Commutation
 
 - The responsibility to maintain a connection
 - **Commutation of packets** - transfering segments of the data with numbering each transfer
+
+2. OSI Model
+-
