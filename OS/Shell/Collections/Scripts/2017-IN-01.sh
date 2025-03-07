@@ -12,28 +12,19 @@
 
 #!/bin/bash
 
-if [[ $# -ne 3 ]]; then
-    echo "Exactly three arguments required"
+if [[ $# -ne 3 ]] ; then
+    echo "Expected 3 arguments"
     exit 1
 fi
 
-FILE="$1"
-STR1="$2"
-STR2="$3"
+args1=$(cat "${1}" | egrep  "^${2}=" | awk -F '=' '{print $2}' | tr ' ' '\n')
+args2=$(cat "${1}" | egrep  "^${3}=" | awk -F '=' '{print $2}' | tr ' ' '\n')
 
-if [[ ! -f "$FILE" ]]; then
-    echo "File doesn't exist"
-fi
+while read line ; do
+    echo "${args1}" | grep -q -F "${line}"
+    if [[ ${?} -ne 0 ]] ; then
+                result+=$(echo "${line} ")
+        fi
+done < <(echo "${args2}")
 
-LINE1="$(grep "$STR1")"
-LINE2="$(grep "$STR2")"
-
-if [[ -z "$LINE1" || -z "$LINE2" ]]; then
-    echo "Strings not found in the file"
-    exit 1
-fi
-
-ARGS1=$(cut -d '=' -f 2 < <(echo "$LINE1"))
-ARGS2=$(cut -d '=' -f 2 <<< "$LINE2")
-
-UNION=$(echo "$ARGS1 $ARGS2" | sed -e "s/ /\n/g" | sort | uniq -c | awk)# ...
+sed -i -E "s/(${3}=).*/\1${result}/g" ${1}
