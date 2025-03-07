@@ -37,4 +37,4 @@ Topologies
 
 - **Logical Topology** is defined the networking architecture
 
-<img src="https://github.com/user-attachments/assets/4cd6bc4d-c4e1-4cd0-a03a-c9fc37e7499d" height=300 width=450/>
+<img src="https://github.com/user-attachments/assets/4cd6bc4d-c4e1-4cd0-a03a-c9fc37e7499d" height=300 width=480/>
