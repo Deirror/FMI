@@ -54,7 +54,7 @@ Commutation
 - The responsibility to maintain a connection
 - **Commutation of packets** - transfering segments of the data with numbering each transfer
 
-(2) OSI Model
+(2) OSI Model And TCP
 -
 
 Decomposing
