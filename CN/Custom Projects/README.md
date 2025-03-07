@@ -75,12 +75,12 @@ Layers
 -
 
 
-| Name | Description | Devices | Realization |
-| --- | --- | --- | --- |
-| **Physical** | Decoding and encoding the signals | **Networking cards**, **Switch** or modems | Hardware |
-| **Data Link** | Controlling the **P2P** model. The data is exchanged with portions(**PDU**) | **MAC** | Hardware |
-| **Network** | Responsible for the functioning of the communication subnet. Assigns IP adresses and manages packages | **Routers**, **Firewalls** | Program |
-| **Transport** | Ensures the transportation of the data from sender to reciever (using ports, *end-to-end*), by accepting from or passing the segments(**PDU**) to the **Network Layer** | **Computers** | Program |
-| **Session** | | |
+| Name | Description | Devices | Protocols | Realization |
+| --- | --- | --- | --- | --- |
+| **Physical** | Decoding and encoding the signals | **Networking cards**, **Modems** | **Ethernet**, **Wi-Fi** | Hardware |
+| **Data Link** | Controlling the **P2P** model. The data is exchanged with portions(**PDU**) | **Switch** | **MAC** | Hardware |
+| **Network** | Responsible for the functioning of the communication subnet. Assigns IP adresses and manages packages | **Routers**, **Firewalls** | **IP** | Program |
+| **Transport** | Ensures the transportation of the data from sender to reciever (using ports, *end-to-end*), by accepting segments(**PDU**) from or passing them to the **Network Layer** | **Computers** | **TCP**, "UDP" | Program |
+| **Session** | | | |
 |**Presentation** | | | 
 | **Application** | | |
