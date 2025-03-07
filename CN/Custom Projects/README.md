@@ -79,8 +79,8 @@ Layers
 | --- | --- | --- | --- | --- |
 | **Physical** | Decoding and encoding the signals | **Networking cards**, **Modems** | **Ethernet**, **Wi-Fi** | Hardware |
 | **Data Link** | Controlling the **P2P** model. The data is exchanged with portions(**PDU**) | **Switch** | **MAC** | Hardware |
-| **Network** | Responsible for the functioning of the communication subnet. Assigns IP adresses and manages packages | **Routers**, **Firewalls** | **IP** | Program |
-| **Transport** | Ensures the transportation of the data from sender to reciever (using ports, *end-to-end*), by accepting segments(**PDU**) from or passing them to the **Network Layer** | **Computers** | **TCP**, "UDP" | Program |
-| **Session** | | | |
-|**Presentation** | | | 
-| **Application** | | |
+| **Network** | Responsible for the functioning of the communication subnet. Assigns IP adresses and manages packages | **Routers**, **Firewalls** | **IP** | Hardware/Program |
+| **Transport** | Ensures the transportation of the data from sender to reciever (using ports, *end-to-end*), by accepting segments(**PDU**) from or passing them to the **Network Layer** | **Computers** | **TCP**, **UDP** | Program |
+| **Session** | Responsible for establishing, maintaining, and terminating communication sessions between applications | **** | **RPC** | Program |
+|**Presentation** | | | **SSL/TSL** | Program |
+| **Application** | | | **HTTP**, **FTP**, **DNS** | Program |
