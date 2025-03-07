@@ -16,7 +16,6 @@ Networking Hardware
 
 - PCI cards
 - USB/CardBus adapter
-- 
 
 ### Modem
 
