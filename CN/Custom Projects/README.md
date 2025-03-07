@@ -1,6 +1,6 @@
 # Concepts of Computer Networking
 
-(1)Computer Networking
+(1) Computer Networking
 -
 
 - Represents a graph with physical devices and connections between them
@@ -54,7 +54,7 @@ Commutation
 - The responsibility to maintain a connection
 - **Commutation of packets** - transfering segments of the data with numbering each transfer
 
-(2)OSI Model
+(2) OSI Model
 -
 
 Decomposing
@@ -74,10 +74,13 @@ Multilayer network architecture
 Layers
 -
 
-- Physical
-- Data Link
-- Network
-- Transport
-- Session
-- Presentation
-- Application
+
+| Name | Description | Devices
+| --- | --- | -- |
+| **Physical** | Decoding and encoding bits | **Networking cards**, **Switch** |
+| **Data Link** | Controlling the **P2P** model. The data is shared with portions(**PDU**)| **MAC**|
+| **Network** | | |
+| **Transport** |  | |
+| **Session** | | |
+|**Presentation** | | | 
+| **Application** | | |
