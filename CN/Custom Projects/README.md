@@ -1,11 +1,11 @@
 # Concepts of Computer Networking
 
-**Computer Networking**
+Computer Networking
 -
 
 - Represents a graph with physical devices and connections between them
 - The physical devices are the **nodes**
-- The connections are the **edges**
+- The connections are the **edges**(aka channels)
  
 Networking Hardware
 -
@@ -29,3 +29,12 @@ Protocols
 
 Topologies
 -
+
+- It is about how the physical devices should be organized
+  - **Physical** - defines the layout of the physical devices
+  - **Signal** - defines how the signals travel(electrical or wirelessly)
+  - **Logical** - defines how data flows(Ethernet, switch LAN/WAN and etc.)
+
+- **Logical Topology** is defined the networking architecture
+
+<img src="https://github.com/user-attachments/assets/4cd6bc4d-c4e1-4cd0-a03a-c9fc37e7499d" height=300 width=450/>
