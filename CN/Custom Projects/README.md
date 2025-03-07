@@ -1,6 +1,6 @@
 # Concepts of Computer Networking
 
-1. **Computer Networking**
+(1)Computer Networking
 -
 
 - Represents a graph with physical devices and connections between them
@@ -54,5 +54,30 @@ Commutation
 - The responsibility to maintain a connection
 - **Commutation of packets** - transfering segments of the data with numbering each transfer
 
-2. OSI Model
+(2)OSI Model
 -
+
+Decomposing
+-
+
+- Breaking down a complex task into several simpler tasks – modules
+
+Multilayer network architecture
+-
+
+- Each layer offers an interface for the next layer
+- If we change the implementation of one layer, this shouldn't break the oder ones - **transparency** and **flexibility**
+- **Service** - defines the functionalities of the layer
+- **Interface** - defines the way which the layer can be accessed
+- **Protocol** - defines the realization of the service
+
+Layers
+-
+
+- Physical
+- Data Link
+- Network
+- Transport
+- Session
+- Presentation
+- Application
