@@ -43,3 +43,14 @@ Standarts
 -
 
 - ISO/IEEE 802
+
+Metropolitan Area Networks(MAN)
+-
+
+- backbone and client interface
+
+Commutation
+-
+
+- The responsibility to maintain a connection
+- **Commutation of packets** - transfering segments of the data with numbering each transfer
