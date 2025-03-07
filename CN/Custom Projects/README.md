@@ -35,7 +35,7 @@ Topologies
   - **Signal** - defines how the signals travel(electrical or wirelessly)
   - **Logical** - defines how data flows(Ethernet, switch LAN/WAN and etc.)
 
-- **Logical Topology** is defined the *networking architecture*
+- **Logical Topology** is defined by the *networking architecture*
 
 <img src="https://github.com/user-attachments/assets/4cd6bc4d-c4e1-4cd0-a03a-c9fc37e7499d" height=300 width=480/>
 
