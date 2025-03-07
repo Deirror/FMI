@@ -9,3 +9,5 @@
  
 **Networking Hardware**
 -
+<img src="https://github.com/user-attachments/assets/bd2a3455-35fe-46a9-b442-816f204c2c8d" height=60 width=100/>
+![Screenshot (648)]()
