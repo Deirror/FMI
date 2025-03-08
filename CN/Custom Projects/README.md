@@ -1,6 +1,9 @@
 # Concepts of Computer Networking
 
-## (1) Computer Networking
+> [!NOTE]
+> Contains basic concepts of protocols, networking, IP adresses and etc.
+
+# (1) Computer Networking
 
 
 - Represents a graph with physical devices and connections between them
