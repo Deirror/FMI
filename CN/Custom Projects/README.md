@@ -93,7 +93,7 @@ TCP/IP
 | Protocol | Description | Type |
 | --- | --- | -- |
 | **IP** | Packets are sent without prior setup of a session between sender and receiver and can take different paths to reach the destination | **Connectionless** |
-| **UDP** | Runs on top of IP. Used for real-time applications like VoIP, video streaming, and online gaming | **Connectionless** |
+| **UDP** | Runs on top of **IP**. Used for real-time applications like VoIP, video streaming, and online gaming | **Connectionless** |
 | **TCP** | Establishes a connection before sending data (via handshake). It ensures reliable delivery, correct order, and error correction | **Connection-based** |
 
 Random Linear Network Coding
@@ -101,4 +101,37 @@ Random Linear Network Coding
 
 - Encodes each package in a linear equation, meaning decoding needs N packages to decode whole data
 
-# (3) Channel level
+# (3) Channel(Data Link) Level And Protocols
+
+| Protocol Types |
+| --- |
+| Synchornous/Asynchornous sending of bits |
+| Symbol/Bit oriented |
+| Pre-established connection/datagram |
+| Detection/Ignoring of corrupted data |
+| Making/Ignoring lost data |
+| Recovery/Ignoring of lost and damaged data |
+| (Without)Support for dynamic data compression |
+
+| Channel Types | Description |
+| --- | --- |
+| **Simplex** | Allows only one-directional transmissions |
+| **Half-Duplex** | Allows one and bidirectional transmissions |
+| **Duplex** | Allows only bidirectional transmissions |
+
+Main Services
+-
+
+- Data transfer. It can be (un)acknowledged connection(less|-oriented) service
+
+  Flow Control
+  -
+
+  - Sometimes the source to send frames faster than they can be received by the recipient. This is resolved in the **Transport Layer**
+
+  Formation of frames
+  -
+
+  - **Network Layer** sends data as packages and then the **Data Link Layer** is responsible for converting it into a **frame**, which consists of *header*, *payload* and *trailer*(stores checksum)
+ 
+  
