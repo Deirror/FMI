@@ -54,7 +54,7 @@ Commutation
 - The responsibility to maintain a connection
 - **Commutation of packets** - transfering segments of the data with numbering each transfer
 
-# (2) OSI Model And TCP
+# (2) OSI Model And TCP/IP
 
 
 Decomposing
@@ -124,14 +124,34 @@ Main Services
 
 - Data transfer. It can be (un)acknowledged connection(less|-oriented) service
 
-  Flow Control
-  -
+Flow Control
+ -
 
-  - Sometimes the source to send frames faster than they can be received by the recipient. This is resolved in the **Transport Layer**
+- Sometimes the source to send frames faster than they can be received by the recipient. This is resolved in the **Transport Layer**
 
-  Formation of frames
-  -
+Formation of frames
+ -
 
-  - **Network Layer** sends data as packages and then the **Data Link Layer** is responsible for converting it into a **frame**, which consists of *header*, *payload* and *trailer*(stores checksum)
- 
-  
+- **Network Layer** sends data as packages and then the **Data Link Layer** is responsible for converting it into a **frame**, which consists of *header*, *payload* and *trailer*(stores checksum)
+
+| Formation Method | Description |
+| --- | --- |
+| **Character count** | Stores the bytes of the *payload* in the *header* |
+| **Character stuffing** | Adds **STX**(start of text), **ЕТX**(end of text) or **ESC**(escape) before the two special ones, which marks the borders of the *payload* |
+| **Bit stuffing** | The beginning and end of each payload are marke with the flag *01111110* |
+
+Procedure of work
+-
+
+- Timeout, resending, numbering frames, duplicates removing
+- Cyclic Redundancy Check - calculating checksums
+
+Sliding Window
+-
+
+- **Stop-And-Wait**, **Go Back N**, **Selective Repeat** - Sending data methods
+- Protocols - **SDLC**, **HDLC**, **PPP**, **LCP**, **PAP/CHAP**, **NCP**, **IP**, **MPLS** and etc. - A way to structure data in a frame
+
+# (4) Channel(Data Link) Level In LAN
+
+- Medium Access Control - MAC
