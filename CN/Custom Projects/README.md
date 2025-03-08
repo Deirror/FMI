@@ -95,3 +95,8 @@ TCP/IP
 | **IP** | Packets are sent without prior setup of a session between sender and receiver and can take different paths to reach the destination | **Connectionless** |
 | **UDP** | Runs on top of IP. Used for real-time applications like VoIP, video streaming, and online gaming | **Connectionless** |
 | **TCP** | Establishes a connection before sending data (via handshake). It ensures reliable delivery, correct order, and error correction | **Connection-based** |
+
+Random Linear Network Coding
+-
+
+- Encodes each package in a linear equation
