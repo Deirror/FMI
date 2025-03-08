@@ -160,8 +160,22 @@ Sliding Window
 
 - Slotted/Pure **ALOHA**
 
-- **CSMA** - Carrier Sense Multiple Access - (Golang channels)
+- **(Nonpersistent) CSMA** - Carrier Sense Multiple Access - sending data based on a time interval
 
 - **Ethernet** - from **LAN**
 - **MTU** - Maximum Transmission Unit - max size of *payload*
-- 
+- **Jumbo Frames** - max size 9000 bytes
+
+- Straight/Crossed Ethernet cabel
+
+- **Hub** and **repeater** - If one device sends data, these devices send the data to the other devices
+- **Bridge** and **switch** - same as **hub**, but analyzes recieved data and sends data **ONLY** to one other device
+
+Spanning Tree
+-
+
+- **STP** - Spanning Tree Protocol - topology without cycles
+- **STP** Algorithm - finds a path witout a cycle
+  - Selecting Root Bridge - finds the lowest bridge ID (MAC address)
+  - Selecting Root Ports - From the alternative paths, those with the lowest cost to Root Bridge are selected
+  - Selecting Designated Ports - Port that sends and receives traffic from the Root Bridge – with the lowest value to the Root Bridge
