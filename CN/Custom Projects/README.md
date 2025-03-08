@@ -54,8 +54,8 @@ Commutation
 - The responsibility to maintain a connection
 - **Commutation of packets** - transfering segments of the data with numbering each transfer
 
-(2) OSI Model And TCP
--
+# (2) OSI Model And TCP
+
 
 Decomposing
 -
@@ -102,4 +102,3 @@ Random Linear Network Coding
 - Encodes each package in a linear equation, meaning decoding needs N packages to decode whole data
 
 # (3) Channel level
--
