@@ -88,4 +88,4 @@ Layers
 TCP/IP
 -
 
-- Communication protocol that defines how data is transmitted and received over networks
+- Communication protocol that defines how data is transmitted, received over networks and establishes connection
