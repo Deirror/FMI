@@ -99,4 +99,4 @@ TCP/IP
 Random Linear Network Coding
 -
 
-- Encodes each package in a linear equation
+- Encodes each package in a linear equation, meaning decoding needs N packages to decode whole data
