@@ -1,8 +1,5 @@
 # Concepts of Computer Networking
 
-> [!NOTE]
-> Contains basic concepts of protocols, networking, IP adresses and etc.
-
 # (1) Computer Networking
 
 
