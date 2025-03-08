@@ -84,3 +84,8 @@ Layers
 | **Session** | Responsible for establishing, maintaining, and terminating communication sessions between applications | **Gateways** | **RPC** | Program |
 | **Presentation** | Formats, (d)encrypts/ and compresses data | **VPN**, **Proxy** | **SSL/TSL** | Program |
 | **Application** | Handles user interactions and application services | **Web servers** | **HTTP**, **FTP**, **DNS** | Program |
+
+TCP/IP
+-
+
+- Communication protocol that defines how data is transmitted and received over networks
