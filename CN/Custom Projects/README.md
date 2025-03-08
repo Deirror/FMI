@@ -154,4 +154,14 @@ Sliding Window
 
 # (4) Channel(Data Link) Level In LAN
 
-- Medium Access Control - MAC
+- **LAN** - Public Broadcasting Networks
+- **MAC** - Medium Access Control
+- **Determined** and **racing**
+
+- Slotted/Pure **ALOHA**
+
+- **CSMA** - Carrier Sense Multiple Access - (Golang channels)
+
+- **Ethernet** - from **LAN**
+- **MTU** - Maximum Transmission Unit - max size of *payload*
+- 
