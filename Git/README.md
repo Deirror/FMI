@@ -4,6 +4,10 @@
 
 > [!NOTE]
 > Here are explained most used commands in **git** and some unique concepts
+>
+> Most of the commands here will be high-level - **`Porcelain`**, as they are more widely used then the low-level ones - **`Plumbing`**
+>  
 
 > [!IMPORTANT]
 > The syntax of the commands is **`command <required> [optional]`**
+
