@@ -86,3 +86,9 @@ Logs
 Branches
 -
 
+- A *branch* is just a named lightweight pointer to a specific commit
+
+- **`git branch`** => shows your current branch
+- **`git branch <name>`** => creates a new branch
+- **`git branch -m <oldname> <newname>`** => renames the branch's name
+- **`git switch -c <name>`** => switches to the branch and if nonexistant, creates a new branch
