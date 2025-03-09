@@ -42,3 +42,17 @@ Staging
 -
 
 - **`git add <path-to-file | pattern>`** => sets an index to the file (getting ready the file for saving the current state in history - *staging*). It is used before committing it
+
+Commits
+-
+
+- **`git commit <flags> <message>`** => saves the state of the repository, snapshot of the repository at a given point in time
+
+Git Logs
+-
+
+- **`git log <flags>`** => shows a history of the commits in a repository
+- It is useful for
+  - Who made a commit
+  - When the commit was made
+  - What was changed 
