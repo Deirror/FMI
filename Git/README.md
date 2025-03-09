@@ -19,10 +19,22 @@
 > **`~/.gitconfig`** stores your *global* configurations
 
 > [!WARNING]
-> The *hidden* directory **`.git`** stores absolutely all the changes for the project
+> The *hidden* directory **`.git`** stores absolutely all the information for the project
 
 Repos
 -
 
 - Simply said, *repo* is just a **SINGLE** project. One **`git init`** per one project
-- 
+- **`git init`** => initializes an empty project/repo
+
+Status
+-
+
+| State | Description |
+| --- | --- |
+| **`untracked`** | Not being tracked by Git. If you delete an *untracked* file, you lose it forever |
+| **`staged`** | Marked for inclusion in the next commit |
+| **`committed`** | Saved to the repository's history |
+
+- **`git status`** => shows you the current state of your repo
+
