@@ -46,7 +46,11 @@ Staging
 Commits
 -
 
-- **`git commit <flags> <message>`** => saves the state of the repository, snapshot of the repository at a given point in time
+- **`git commit <flags> <message>`** => saves the state of the repository, a snapshot of the repository at a given point in time
+
+- In order to optimize **git**
+  - compresses and packs files to store them more efficiently
+  - deduplicates files that are the same across different commits. If a file doesn't change between commits, **Git** will only store it once  
 
 Git Logs
 -
@@ -61,3 +65,9 @@ Git Logs
 
 > [!NOTE]
 > **Git** uses *SHA-1* for hashing commits
+
+- **`git cat-file -p <hash>`** => allows to see the contents of a commit without needing to search in **`.git/objects`** to manually read a file
+
+- **`tree`** => git's way of storing a directory
+- **`blob`** => git's way of storing a file
+
