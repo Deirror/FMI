@@ -52,7 +52,12 @@ Git Logs
 -
 
 - **`git log <flags>`** => shows a history of the commits in a repository
-- It is useful for
-  - Who made a commit
-  - When the commit was made
-  - What was changed 
+- It is useful, when you want to know
+  - who made a commit
+  - when the commit was made
+  - what was changed
+
+- *commit hash* => represents a unique identifier for each commit. Only the first 7 characters of the hash are important
+
+> [!NOTE]
+> **Git** uses *SHA-1* for hashing commits
