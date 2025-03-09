@@ -19,10 +19,12 @@
 - | **`<cmd>`** | Description |
   | --- | --- |
   | **`--add <vartype> <section>.<keyname> <str>`** | adds a **`vartype`** var |
-  | **`--unset(-all) <key>`** | removes variable(s) based on the **`<key>`** |
+  | **`--unset(-all) <section>.<keyname>`** | removes variable(s) based on the **`<keyname>`** |
   | **`--remove-section <section>`** | removes a section |  
   | **`--list --<vartype>`** | shows all **`vartype`** vars |
   | **`--get <key>`** | shows the var's value based on the **`<key>`** |
+
+- **`<vartype>`** => can be **`--local`** or **`--gloabl`**
 
 > [!NOTE]
 > **`~/.gitconfig`** stores your *global* configurations
