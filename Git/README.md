@@ -11,3 +11,9 @@
 > [!IMPORTANT]
 > The syntax of the commands is **`command <required> [optional]`**
 
+# Configurations
+
+- **Git** has to know your information (name, email and etc.) so that it can track your commits
+
+> [!NOTE]
+> **`~/.gitconfig`** stores your 'global' configurations
