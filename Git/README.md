@@ -13,7 +13,16 @@
 
 # Configurations
 
-- **Git** has to know your information (name, email and etc.) so that it can track your commits
+- **Git** has to know your information (name, email and etc.) so that it can track your changes
 
 > [!NOTE]
-> **`~/.gitconfig`** stores your 'global' configurations
+> **`~/.gitconfig`** stores your *global* configurations
+
+> [!WARNING]
+> The *hidden* directory **`.git`** stores absolutely all the changes for the project
+
+Repos
+-
+
+- Simply said, *repo* is just a **SINGLE** project. One **`git init`** per one project
+- 
