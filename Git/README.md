@@ -11,7 +11,8 @@
 > [!IMPORTANT]
 > The syntax of the commands is **`command <required> [optional]`**
 
-# Configurations
+Configurations
+-
 
 - **Git** has to know your information (name, email and etc.) so that it can track your changes
 
@@ -63,7 +64,7 @@ Commits
   - compresses and packs files to store them more efficiently
   - deduplicates files that are the same across different commits. If a file doesn't change between commits, **Git** will only store it once  
 
-Git Logs
+Logs
 -
 
 - **`git log <flags>`** => shows a history of the commits in a repository
@@ -81,3 +82,7 @@ Git Logs
 
 - **`tree`** => git's way of storing a directory
 - **`blob`** => git's way of storing a file
+
+Branches
+-
+
