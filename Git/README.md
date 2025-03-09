@@ -15,6 +15,15 @@
 
 - **Git** has to know your information (name, email and etc.) so that it can track your changes
 
+- **`git config <cmd> <vartype>`** => starts working with **`.git/config`**
+- | **`<cmd>`** | Description |
+  | --- | --- |
+  | **`--add <vartype> <section>.<keyname> <str>`** | adds a **`vartype`** var |
+  | **`--unset(-all) <key>`** | removes variable(s) based on the **`<key>`** |
+  | **`--remove-section <section>`** | removes a section |  
+  | **`--list --<vartype>`** | shows all **`vartype`** vars |
+  | **`--get <key>`** | shows the var's value based on the **`<key>`** |
+
 > [!NOTE]
 > **`~/.gitconfig`** stores your *global* configurations
 
@@ -70,4 +79,3 @@ Git Logs
 
 - **`tree`** => git's way of storing a directory
 - **`blob`** => git's way of storing a file
-
