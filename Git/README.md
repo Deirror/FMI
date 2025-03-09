@@ -6,4 +6,4 @@
 > Here are explained most used commands in **git** and some unique concepts
 
 > [!IMPORTANT]
-> Syntax of the commands **`command <required> [optional]`**
+> The syntax of the commands is **`command <required> [optional]`**
