@@ -38,3 +38,7 @@ Status
 
 - **`git status`** => shows you the current state of your repo
 
+Staging
+-
+
+- **`git add <path-to-file | pattern>`** => sets an index to the file (getting ready the file for saving the current state in history - *staging*). It is used before committing it
