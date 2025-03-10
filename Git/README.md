@@ -117,6 +117,19 @@ Reset
 - **`git reset --soft <COMMITHASH>`** => undoes the last commit(s) or any changes in the index (staged but not committed changes) and the worktree (unstaged and not committed changes)
 - **`git reset --hard <COMMITHASH>`** => goes back to a previous commit and discard all the changes
 
+Reflog
+-
+
+- **`git reflog`** => shows more info like what cmd has been executed on each commit to be added/modified/delete.
+
+> [!IMPORTANT]
+> **`reflog`** can help you retrieve deleted commit's info
+
+Clone
+-
+
+- **`git clone <repo>`** => creates a copy on your machine
+
 # Github
 
 Remote
@@ -137,16 +150,3 @@ Fork
 -
 
 - creates a copy of a *repo* in your *Github*
-
-Clone
--
-
-- **`git clone <repo>`** => creates a copy on your machine
-
-Reflog
--
-
-- **`git reflog`** => shows more info like what cmd has been executed on each commit to be added/modified/delete.
-
-> [!IMPORTANT]
-> **`reflog`** can help you retrieve deleted commit's info
