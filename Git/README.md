@@ -176,6 +176,9 @@ Tags
 - **`git tag`** => shows tags
 - **`git tag <tagname> -m <msg>`** => create a tag with a name and a message
 
+> [!NOTE]
+> Usage of tags in *Github* - versions of commits -> *v(major change).(safe feature).(bug fixes)*
+
 # Github
 
 Remote
