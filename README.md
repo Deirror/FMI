@@ -12,3 +12,5 @@ The following subjects are incldued
 - OS -> "***Operating systems***"
 - CN -> "***Computer networking***"
 - DB -> "***Databases***"
+- Git -> "***Git Concepts***"
+- Javaz -> "***Modern Java Coding***"
