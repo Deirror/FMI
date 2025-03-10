@@ -97,4 +97,11 @@ Branches
 - **`git branch`** => shows your current branch
 - **`git branch <name>`** => creates a new branch
 - **`git branch -m <oldname> <newname>`** => renames the branch's name
+- **`git branch -d <name>`** => deletes a branch
 - **`git switch -c <name>`** => switches to the branch and if nonexistant, creates a new branch
+
+Merges
+-
+
+- **`git merge <subbranch>`** => merges the the branches into one, which is the main one, but with applied changes
+- 
