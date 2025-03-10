@@ -122,3 +122,5 @@ Remote
 
 - **`git remote add <name> <uri>`** => creates another *repo* ( a reference to a *repo* that is hosted on another location)
 - **`git fetch`** => downloads copies of all the contents of the .git/objects directory (and other book-keeping information) from the remote repository into your current one
+- **`git log <remote>/<branch>`** => shows the commits from the repo **`<remote>`**
+- **`git merge <remote>/<branch>`** => merges the commits from the repo **`<remote>`** to your current branch
