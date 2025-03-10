@@ -145,6 +145,11 @@ Stash
 - **`git stash apply`** => *stack.peek()*
 - **`git stash drop`** => removes without applying *stash*
 
+Revert
+-
+
+- **`git revert <commit-hash>`** => doesn't remove the commit (like reset), but instead creates a new commit that does the exact opposite of the commit being reverted
+
 # Github
 
 Remote
