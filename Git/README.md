@@ -117,6 +117,8 @@ Reset
 - **`git reset --soft <COMMITHASH>`** => undoes the last commit(s) or any changes in the index (staged but not committed changes) and the worktree (unstaged and not committed changes)
 - **`git reset --hard <COMMITHASH>`** => goes back to a previous commit and discard all the changes
 
+# Github
+
 Remote
 -
 
@@ -130,3 +132,8 @@ Push/Pull
 
 - **`git push <localbranch>:<remotebranch>`** => sends local changes to any "remote"
 - **`git pull [<remote>/<branch>]`** => gets the actual file changes from a remote repo, not just the metadata
+
+Fork
+-
+
+- It is a copy of a *repo*
