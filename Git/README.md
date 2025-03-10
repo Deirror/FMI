@@ -68,6 +68,10 @@ Logs
 -
 
 - **`git log <flags>`** => shows a history of the commits in a repository
+- | **`<flag>`** | Description |
+  | --- | --- |
+  | **`--oneline`** | shows super brief info of the commits (Most used flag) |
+  | **`--decorate <type>`** | renders much nicer outlook. **`<type>`** can be *full*, *short* or *no* |
 - It is useful, when you want to know
   - who made a commit
   - when the commit was made
