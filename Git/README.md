@@ -89,6 +89,8 @@ Logs
 - **`tree`** => git's way of storing a directory
 - **`blob`** => git's way of storing a file
 
+- **`git diff <state>`** => shows the new and the old content, highlighting the differences
+
 Branches
 -
 
@@ -108,3 +110,15 @@ Merges
 
 - **`git merge <subbranch>`** => merges the the branches into one branch, but with applied changes
 - **`git rebase <branch>`** => moves the merge base of the subbranch to the merge tip
+
+Reset
+-
+
+- **`git reset --soft <COMMITHASH>`** => undoes the last commit(s) or any changes in the index (staged but not committed changes) and the worktree (unstaged and not committed changes)
+- **`git reset --hard <COMMITHASH>`** => goes back to a previous commit and discard all the changes
+
+Remote
+-
+
+- **`git remote add <name> <uri>`** => creates another *repo* ( a reference to a *repo* that is hosted on another location)
+- **`git fetch`** => downloads copies of all the contents of the .git/objects directory (and other book-keeping information) from the remote repository into your current one
