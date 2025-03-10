@@ -124,3 +124,9 @@ Remote
 - **`git fetch`** => downloads copies of all the contents of the .git/objects directory (and other book-keeping information) from the remote repository into your current one
 - **`git log <remote>/<branch>`** => shows the commits from the repo **`<remote>`**
 - **`git merge <remote>/<branch>`** => merges the commits from the repo **`<remote>`** to your current branch
+
+Push/Pull
+-
+
+- **`git push <localbranch>:<remotebranch>`** => sends local changes to any "remote"
+- **`git pull [<remote>/<branch>]`** => gets the actual file changes from a remote repo, not just the metadata
