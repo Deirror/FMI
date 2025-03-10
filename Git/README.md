@@ -130,6 +130,11 @@ Clone
 
 - **`git clone <repo>`** => creates a copy on your machine
 
+Conflicts
+-
+
+- **`git checkout --(ours | theirs) <path>`** => selects which change to apply if a conflict is present
+
 # Github
 
 Remote
