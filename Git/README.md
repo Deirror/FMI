@@ -160,6 +160,12 @@ Bisect
 
 - **`git bisect`** => finds bugs and performance regressions quickly using binary search
 
+Worktree
+-
+
+- **`git worktree list`** => prints all *working directories* - where the code you're tracking with Git lives
+- **`git worktree add <path>`** => add a *linked* worktree - pointer to another worktree, not a clone!
+  
 # Github
 
 Remote
