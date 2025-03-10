@@ -168,6 +168,14 @@ Worktree
 - **`git worktree remove <worktreename>`** => removes a worktree
 - **`git worktree prune`** => removes the worktree and the references (*linked* worktree)
 
+Tags
+-
+
+- Represents a name linked to a commit that doesn't move between commits
+  
+- **`git tag`** => shows tags
+- **`git tag <tagname> -m <msg>`** => create a tag with a name and a message
+
 # Github
 
 Remote
