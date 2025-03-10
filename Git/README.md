@@ -135,6 +135,16 @@ Conflicts
 
 - **`git checkout --(ours | theirs) <path>`** => selects which change to apply if a conflict is present
 
+Stash
+-
+
+- **`git stash -m <msg>`** => pushes *current* changes to the *stash* (aka stack)
+- **`git stash list (-p)`** => lists all *stashed* changes
+- **`git stash pop`** => retrieves *current* changes from the *stash* (aka stack) and removes it
+
+- **`git stash apply`** => *stack.peek()*
+- **`git stash drop`** => removes without applying *stash*
+
 # Github
 
 Remote
