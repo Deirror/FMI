@@ -136,4 +136,9 @@ Push/Pull
 Fork
 -
 
-- It is a copy of a *repo*
+- creates a copy of a *repo* in your *Github*
+
+Clone
+-
+
+- **`git clone <repo>`** => creates a copy on your machine
