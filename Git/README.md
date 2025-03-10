@@ -142,3 +142,11 @@ Clone
 -
 
 - **`git clone <repo>`** => creates a copy on your machine
+
+Reflog
+-
+
+- **`git reflog`** => shows more info like what cmd has been executed on each commit to be added/modified/delete.
+
+> [!IMPORTANT]
+> **`reflog`** can help you retrieve deleted commit's info
