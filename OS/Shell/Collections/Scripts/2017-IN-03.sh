@@ -4,9 +4,10 @@
 
 #!/bin/bash
 
-
+MAX_CURRFILE_STAT=""
 while read USR_HOME_DIR; do
-    MAX_CURRFILE_STAT="$(find "$USR_HOME_DIR" -type f 2>/dev/null | xargs -r -I{} stat -c "%Z\|%p" {} | sort -rn | head -n 1)"
-    TIMESTMP=$(cut -d '\|' -f 1 < <(echo "$MAX_CURRFILE_STAT"))
-    PATH=$(cut -d '\|' -f 2 < <(echo "$MAX_CURRFILE_STAT"))
-done < <(cut -d ':' -f 6 etc/passwd)
+    USRNM=$(cut -d ':' -f 1 < <(echo "$USR_HOME_DIR"))
+    MAX_CURRFILE_STAT+=$(find "$USR_HOME_DIR" -type f 2>/dev/null -exec stat -c "%Z|$USRNM|%p" {} +)$'\n'
+done < <(cut -d ':' -f 6 /etc/passwd)
+
+WINNER=$(sort -k '|' -t 1 -nr | head -n 1 | cut -d '|' -f 2,3 | tr '|' ' ')
