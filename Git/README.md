@@ -72,6 +72,8 @@ Logs
   | --- | --- |
   | **`--oneline`** | shows super brief info of the commits (Most used flag) |
   | **`--decorate <type>`** | renders much nicer outlook. **`<type>`** can be *full*, *short* or *no* |
+  | **`--graph`** | shows a graph of the tree commits |
+  
 - It is useful, when you want to know
   - who made a commit
   - when the commit was made
