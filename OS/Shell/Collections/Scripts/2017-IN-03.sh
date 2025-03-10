@@ -7,7 +7,8 @@
 MAX_CURRFILE_STAT=""
 while read USR_HOME_DIR; do
     USRNM=$(cut -d ':' -f 1 < <(echo "$USR_HOME_DIR"))
-    MAX_CURRFILE_STAT+=$(find "$USR_HOME_DIR" -type f 2>/dev/null -exec stat -c "%Z|$USRNM|%p" {} +)$'\n'
+    MAX_CURRFILE_STAT+="$(find "$USR_HOME_DIR" -type f 2>/dev/null -exec stat -c "%Z|$USRNM|%n" {} +)"$'\n'
 done < <(cut -d ':' -f 6 /etc/passwd)
 
-WINNER=$(sort -k '|' -t 1 -nr | head -n 1 | cut -d '|' -f 2,3 | tr '|' ' ')
+WINNER=$(sort -t '|' -k 1 -nr < <(echo "$MAX_CURRFILE_STAT") | head -n 1 | cut -d '|' -f 2,3 | tr '|' ' ')
+echo "$WINNER"
