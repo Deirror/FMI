@@ -150,6 +150,16 @@ Revert
 
 - **`git revert <commit-hash>`** => doesn't remove the commit (like reset), but instead creates a new commit that does the exact opposite of the commit being reverted
 
+Checky Pick
+-
+
+- **`git cherry-pick <commit-hash>`** => applies a specific commit from one branch to other branch
+
+Bisect
+-
+
+- **`git bisect`** => finds bugs and performance regressions quickly using binary search
+
 # Github
 
 Remote
