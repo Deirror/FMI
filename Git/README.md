@@ -103,5 +103,8 @@ Branches
 Merges
 -
 
-- **`git merge <subbranch>`** => merges the the branches into one, which is the main one, but with applied changes
-- 
+> [!WARNING]
+> Conflicts in **git** - lines which have been modified twice in two different commits which are from two different branches 
+
+- **`git merge <subbranch>`** => merges the the branches into one branch, but with applied changes
+- **`git rebase <branch>`** => moves the merge base of the subbranch to the merge tip
