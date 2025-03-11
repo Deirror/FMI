@@ -31,9 +31,13 @@ if [ ! -d "$DIR_PATH" ]; then
     mkdir -p "$DIR_PATH"
 fi
 
-touch "$RES_FILE"
+if [[ ! -f "$RES_FILE" ]]; then
+    touch "$RES_FILE"
+else
+    > "$RES_FILE"
+fi
 
 while read UNIQ_ROW; do
-    UID=$(grep -e "$UNIQ_ROW$" "$READ_FILE" | sort -n -k 1 -t ',' | head -n 1 | cut -d ',' -f 1)
-    echo "${UID},${UNIQ_ROW}" >> $RES_FILE
-done < <(cat "$READ_FILE" | sed "s/^[0-9]+,//" | sort | uniq)
+	ROW_UID=$(grep "$UNIQ_ROW$" "$READ_FILE" | sort -t ',' -k 1 -n | head -n 1 | cut -d ',' -f 1)
+ 	echo "${ROW_UID},${UNIQ_ROW}" >> $RES_FILE
+done < <(sed -E "s/^[0-9]+,//"  "$READ_FILE" | sort | uniq)
