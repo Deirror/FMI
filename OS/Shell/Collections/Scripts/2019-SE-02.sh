@@ -20,5 +20,30 @@ fi
 N=10 # default value
 
 if [[ "$1" == "-n" ]]; then
-    if [[ "$2" =~ "^(0|[1-9][0-9]*)$" ]]
+    shift
+    if [[ $# -eq 0 ]]; then
+        echo "there must be a param after -n"
+        exit 2
+    fi
+    if [[ ! "$1" =~ ^(0|[1-9][0-9]*)$ ]]; then
+        echo "param after -n must be a valid number"
+        exit 3
+    fi
+    N=$1
+    shift
+    if [[ $# -eq 0 ]]; then
+        echo "there must be filenames after the number"
+        exit 4
+    fi
 fi
+
+MOD_LINES=""
+
+for FILENAME in $@; do
+    while read LINE; do
+        IDF="$(echo "$LINE" | sed "s/.log//g")"
+        DATE="$(echo "$LINE" | cut -d ' ' -f 1,2)"
+        DATA="$(echo "$LINE" | sed "s/^.{10} .{8} //g")"
+        MOD_LINES+='\n'$
+    done < <(cat "$FILENAME")
+done 
