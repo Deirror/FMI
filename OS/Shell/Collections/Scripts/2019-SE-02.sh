@@ -40,8 +40,11 @@ fi
 MOD_LINES=""
 
 for FILENAME in "$@"; do
+    if [[ ! -f "$FILENAME" ]]; then
+        continue
+    fi
+    IDF="$(echo "$FILENAME" | sed 's/\.log$//')"
     while read -r LINE; do
-        IDF="$(echo "$LINE" | sed 's/\.log$//')"
         DATE="$(echo "$LINE" | cut -d ' ' -f 1,2)"
         DATA="$(echo "$LINE" | cut -d ' ' -f 3-)"      
         if [[ -z "$MOD_LINES" ]]; then
@@ -51,5 +54,10 @@ for FILENAME in "$@"; do
         fi
     done < <(tail -n "$N" "$FILENAME")
 done 
+
+if [[ -z $MOD_LINES ]]; then
+    echo "Opps, any lines weren't found"
+    exit 0
+fi
 
 echo "$MOD_LINES" | sort -k1,1 -k2,2 -t ' '
