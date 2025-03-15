@@ -13,7 +13,7 @@
 #!/bin/bash
 
 if [[ $# -eq 0 ]]; then
-    echo "Atleast one param must be passed"
+    echo "At least one parameter must be passed"
     exit 1
 fi
 
@@ -22,30 +22,34 @@ N=10 # default value
 if [[ "$1" == "-n" ]]; then
     shift
     if [[ $# -eq 0 ]]; then
-        echo "there must be a param after -n"
+        echo "There must be a parameter after -n"
         exit 2
     fi
     if [[ ! "$1" =~ ^(0|[1-9][0-9]*)$ ]]; then
-        echo "param after -n must be a valid number"
+        echo "Parameter after -n must be a valid number"
         exit 3
     fi
     N=$1
     shift
     if [[ $# -eq 0 ]]; then
-        echo "there must be filenames after the number"
+        echo "There must be filenames after the number"
         exit 4
     fi
 fi
 
 MOD_LINES=""
 
-for FILENAME in $@; do
-    while read LINE; do
-        IDF="$(echo "$LINE" | sed "s/.log//g")"
+for FILENAME in "$@"; do
+    while read -r LINE; do
+        IDF="$(echo "$LINE" | sed 's/\.log$//')"
         DATE="$(echo "$LINE" | cut -d ' ' -f 1,2)"
-        DATA="$(echo "$LINE" | sed "s/^.{10} .{8} //g")"
-        MOD_LINES+=$'\n'"$DATE $IDF $DATA"
-    done < <(cat "$FILENAME" | tail -n $N)
+        DATA="$(echo "$LINE" | cut -d ' ' -f 3-)"      
+        if [[ -z "$MOD_LINES" ]]; then
+            MOD_LINES="$DATE $IDF $DATA"
+        else
+            MOD_LINES+=$'\n'"$DATE $IDF $DATA"
+        fi
+    done < <(tail -n "$N" "$FILENAME")
 done 
 
-echo "$MOD_LINES" | sort -k 1,1 -k 2,2 -t ' '
+echo "$MOD_LINES" | sort -k1,1 -k2,2 -t ' '
