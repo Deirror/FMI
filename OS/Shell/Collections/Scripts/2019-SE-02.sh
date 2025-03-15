@@ -44,6 +44,8 @@ for FILENAME in $@; do
         IDF="$(echo "$LINE" | sed "s/.log//g")"
         DATE="$(echo "$LINE" | cut -d ' ' -f 1,2)"
         DATA="$(echo "$LINE" | sed "s/^.{10} .{8} //g")"
-        MOD_LINES+='\n'$
-    done < <(cat "$FILENAME")
+        MOD_LINES+=$'\n'"$DATE $IDF $DATA"
+    done < <(cat "$FILENAME" | tail -n $N)
 done 
+
+echo "$MOD_LINES" | sort -k 1,1 -k 2,2 -t ' '
