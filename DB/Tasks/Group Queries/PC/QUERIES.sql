@@ -34,19 +34,44 @@ FROM (
 	WHERE maker = 'B'
 ) AS Combined
 GROUP BY(Combined.maker)
+-- или
+SELECT (SUM(PC.price) + SUM(Laptop.price)) / COUNT(*) AS AvgPrice FROM Product
+FULL JOIN PC ON Product.model=PC.model
+FULL JOIN Lalptop ON Product.model=Lalptop.model
+WHERE product.maker = 'B'
 
 -- Напишете заявка, която извежда средната цена на персоналните компютри според различните им честоти
-
+SELECT PC.speed, AVG(PC.price) AS AvgPrcie FROM PC
+GROUP BY(PC.speed)
 
 -- Напишете заявка, която извежда производителите, които са произвели поне 3 различни персонални компютъра (с различен код)
-
+SELECT Product.maker, COUNT(PC.code) AS Number_Of_PC FROM Product
+JOIN PC
+ON PC.model=Product.model
+GROUP BY Product.maker
+HAVING COUNT(PC.code) >= 3
 
 -- Напишете заявка, която извежда производителите с най-висока цена на персонален компютър
-
+SELECT Product.maker, MAX(PC.price) AS price FROM Product
+JOIN PC
+ON PC.model=Product.model
+WHERE PC.price=(SELECT MAX(PC.price) FROM PC)
+GROUP BY Product.maker
 
 -- Напишете заявка, която извежда средната цена на персоналните компютри за всяка честота по-голяма от 800
-
+SELECT PC.speed, AVG(PC.price) AS AvgPrcie FROM PC
+GROUP BY(PC.speed)
+HAVING PC.speed>800
 
 -- Напишете заявка, която извежда средния размер на диска на тези персонални компютри, 
 -- произведени от производители, които произвеждат и принтери
 -- Резултатът да се изведе за всеки отделен производител
+SELECT Product.maker, AVG(PC.hd) AS AvgHDD FROM Product
+JOIN PC
+ON PC.model=Product.model
+WHERE Product.maker IN (
+	SELECT Product.maker FROM Product
+	JOIN Printer
+	ON Printer.model=Product.model
+)
+GROUP BY Product.maker
