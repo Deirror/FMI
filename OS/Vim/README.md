@@ -54,7 +54,8 @@
   - **`Ctrl+D/U`** => spacing increasingly through the page, starting from *10* lines, respectively **↓**  | **↑**
   - **`Shift+$/^`** => going respectively to the end and the beginning of the current line
   - **`Shift+#/n`** => iterating through all same words on the given position
-  - **`f/t+<char>`** => going to the next charachter/one character before
+  - **`f/t+<char>`** => going to the next charachter/one character
+  - **`F/T+<char>`** => going to the previous charachter/one character
   - **`Shift+=`** => **↓** in the beginning of the line
   - **`_`** => **↑** in the beginning of the line
   - **`Shift+%`** => going to the beginning/end of the given block
