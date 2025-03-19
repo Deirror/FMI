@@ -46,6 +46,7 @@
   - **`)`** => moving to the beginning of the line
   - **`w/W`** => spacing forwards to the beginning of a word
   - **`e/E`** => spacing forwards to the end of a word
+  - **`ge`** => spacing backwards to the end of a word
   - **`b/B`** => spacing backwards to the end of a word
   - **`Shift+{/}`** => spacing through paragraphs(empty lines)
   - **`Shift+(/)`** => spacing through paragraphs and their beginning
