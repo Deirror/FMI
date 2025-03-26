@@ -66,3 +66,6 @@ WHERE sm1.num_movies = (
 
 -- Напишете заявка, която извежда заглавие и година на филма, и брой на
 -- актьорите, участвали в този филм за тези филми с повече от двама актьори
+WITH RES AS (SELECT StarsIn.movietitle, StarsIn.movieyear, COUNT(*) as num_actors FROM StarsIn
+GROUP BY StarsIn.movietitle, StarsIn.movieyear) SELECT * FROM RES R1
+WHERE R1.num_actors > 2
