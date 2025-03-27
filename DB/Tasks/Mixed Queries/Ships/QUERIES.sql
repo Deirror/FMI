@@ -45,12 +45,36 @@ WHERE Outcomes.battle='Surigao Strait') < (SELECT COUNT(*) AS battles FROM Outco
 WHERE O1.battle=Outcomes.battle) AND Outcomes.battle!='Surigao Strait'
 
 -- Напишете заявка, която извежда имената на най-леките кораби с най-много оръдия
-
+WITH MINDISP AS (
 SELECT DISTINCT Ships.name, Classes.displacement, Classes.numguns FROM Classes
 JOIN Ships
 ON Ships.class=Classes.class
 WHERE Classes.displacement=(
 SELECT MIN(Classes.displacement) FROM Classes
-) AND Classes.numguns=(
-SELECT MAX(Classes.numguns) FROM Classes
+)
+) SELECT MINDISP.name, MINDISP.displacement, MINDISP.numguns FROM MINDISP
+WHERE MINDISP.numguns=(
+SELECT MAX(MINDISP.numguns) FROM MINDISP
+)
+
+-- Изведете броя на корабите, които са били увредени в битка, но са били
+-- поправени и по-късно са победили в друга битка
+SELECT COUNT(O1.ship) AS num_ships FROM Outcomes O1
+JOIN Outcomes O2
+ON O2.ship=O1.ship
+WHERE O1.result='damaged' AND O2.result='ok'
+
+-- Изведете име на корабите, които са били увредени в битка, но са били
+-- поправени и по-късно са победили в по-мащабна битка (с повече кораби)
+SELECT O1.ship FROM Outcomes O1
+JOIN Outcomes O2
+ON O2.ship=O1.ship
+WHERE O1.result='damaged' AND O2.result='ok'
+AND (
+SELECT COUNT(*) FROM Outcomes O3
+WHERE O3.battle=O2.battle
+)=(
+SELECT TOP 1 COUNT(*) as cnt FROM Outcomes O3
+GROUP BY O3.battle
+ORDER BY cnt DESC
 )
