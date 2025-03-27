@@ -29,3 +29,28 @@ LEFT JOIN Outcomes
 ON Outcomes.ship=Ships.name
 WHERE Outcomes.result='sunk' OR Outcomes.result IS NULL
 GROUP BY Classes.country
+
+-- Напишете заявка, която извежда име на битките, които са по-мащабни (с
+-- повече участващи кораби) от битката при Guadalcanal
+SELECT DISTINCT Outcomes.battle FROM Outcomes
+WHERE (SELECT COUNT(*) AS battles FROM Outcomes
+WHERE Outcomes.battle='Guadalcanal') < (SELECT COUNT(*) AS battles FROM Outcomes O1
+WHERE O1.battle=Outcomes.battle) AND Outcomes.battle!='Guadalcanal'
+
+-- Напишете заявка, която извежда име на битките, които са по-мащабни (с
+-- повече участващи страни) от битката при Surigao Strait
+SELECT DISTINCT Outcomes.battle FROM Outcomes
+WHERE (SELECT COUNT(*) AS battles FROM Outcomes
+WHERE Outcomes.battle='Surigao Strait') < (SELECT COUNT(*) AS battles FROM Outcomes O1
+WHERE O1.battle=Outcomes.battle) AND Outcomes.battle!='Surigao Strait'
+
+-- Напишете заявка, която извежда имената на най-леките кораби с най-много оръдия
+
+SELECT DISTINCT Ships.name, Classes.displacement, Classes.numguns FROM Classes
+JOIN Ships
+ON Ships.class=Classes.class
+WHERE Classes.displacement=(
+SELECT MIN(Classes.displacement) FROM Classes
+) AND Classes.numguns=(
+SELECT MAX(Classes.numguns) FROM Classes
+)
