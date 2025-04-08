@@ -7,13 +7,6 @@ HTTP Server
 -
 
 ```go
-package main
-
-import (
-	"fmt"
-	"net/http"
-)
-
 func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello from Go server!")
 }
@@ -24,5 +17,15 @@ func main() {
 	if err != nil {
 		fmt.Println("Server error:", err)
 	}
+}
+```
+```go
+func main() {
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "Custom router in action!")
+	})
+
+	http.ListenAndServe(":8080", mux)
 }
 ```
