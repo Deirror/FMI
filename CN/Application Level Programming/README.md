@@ -6,6 +6,8 @@
 HTTP Server
 -
 
+### Using Default Server
+
 ```go
 func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello from Go server!")
@@ -19,6 +21,9 @@ func main() {
 	}
 }
 ```
+
+### Using a Custom http.ServeMux (Basic Router)
+
 ```go
 func main() {
 	mux := http.NewServeMux()
