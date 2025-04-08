@@ -34,3 +34,39 @@ func main() {
 	http.ListenAndServe(":8080", mux)
 }
 ```
+
+### Using a Third-Party Router (e.g., chi)
+
+```go
+func main() {
+	r := chi.NewRouter()
+
+	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("Welcome with Chi!"))
+	})
+
+	http.ListenAndServe(":8080", r)
+}
+```
+
+### TCP Server using net Package (Lower-Level Network Programming)
+
+```go
+func handleConnection(conn net.Conn) {
+	defer conn.Close()
+	message, _ := bufio.NewReader(conn).ReadString('\n')
+	fmt.Print("Message Received:", string(message))
+	conn.Write([]byte("Message received\n"))
+}
+
+func main() {
+	listener, _ := net.Listen("tcp", ":9000")
+	defer listener.Close()
+	fmt.Println("TCP server running on port 9000")
+
+	for {
+		conn, _ := listener.Accept()
+		go handleConnection(conn)
+	}
+}
+```
