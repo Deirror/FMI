@@ -1,7 +1,7 @@
 # Вие сте част от екип от физици от бъдещето, които анализират данни, събрани от различни наблюдателни точки в космоса. 
 # Разполагате с файлове с данни, които съдържат информация за разстоянието от наблюдателната точка до различни черни дупки в космоса
 
-#!/bin/bash
+ #!/bin/bash
 
 if [[ $# -ne 3 ]]; then
     echo "Three args needed"
@@ -22,11 +22,7 @@ if [[ ! -f "$POINT_2" ]]; then
     exit 2
 fi
 
-LINES=$(mktemp)
+LINES=$(grep "${BLACK_HOLE}" "${POINT_1}" | cut -d ':' -f2 | cut -d ' ' -f2- | sed "s/megaparsecs/${POINT_1}/g")
+LINES+=$'\n'"$(grep "${BLACK_HOLE}" "${POINT_2}" | cut -d ':' -f2 | cut -d ' ' -f2- | sed "s/megaparsecs/${POINT_2}/g")"
 
-grep "^${BLACK_HOLE}" "${POINT_1}" | cut -d ':' -f2 | cut -d ' ' -f2- | sed "s/megaparsecs/${POINT_1}/g" >> "$LINES"
-grep "^${BLACK_HOLE}" "${POINT_2}" | cut -d ':' -f2 | cut -d ' ' -f2- | sed "s/megaparsecs/${POINT_2}/g" >> "$LINES"
-
-sort -n "$LINES" | head -n 1 | cut -d ' ' -f2
-
-rm $LINES
+echo "$LINES" | sort -n | head -n 1
