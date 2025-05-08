@@ -8,8 +8,8 @@
 | Merge Sort | O(n*log(n)) | O(n*log(n)) | O(n*log(n)) | O(n) | O(n*log(n)) | O(n*log(n)) | Yes | No | No |
 | Quick Sort | O(n) | O(n*log(n)) | O(n<sup>2</sup>) | O(n) | O(n*log(n)) | O(n*log(n)) | No | Yes | Yes |
 | Counting Sort | O(n + k) | O(n + k) | O(n + k) | O(n + k) | O(1) | O(1) | Yes | Yes | No |
-| Tree Sort | O(n*long(n)) | O(n*long(n)) | O(n*long(n)) | O(n) | O(n*long(n)) | O(1) | No | No | No |
-| Heap Sort | O(n*long(n)) | O(n*long(n)) | O(n*long(n)) | O(n) | O(n*long(n)) | O(n*long(n)) | No | Yes | Yes |
+| Tree Sort | O(n*log(n)) | O(n*log(n)) | O(n*log(n)) | O(n) | O(n*log(n)) | O(1) | No | No | No |
+| Heap Sort | O(n*log(n)) | O(n*log(n)) | O(n*log(n)) | O(n) | O(n*log(n)) | O(n*log(n)) | No | Yes | Yes |
 | Topo Sort | O(v + e) | O(v + e) | O(v + e) | O(v + e) | O(v + e) | O(1) | No | Yes | No |
 
 Notes
