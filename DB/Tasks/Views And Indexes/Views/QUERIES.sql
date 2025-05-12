@@ -28,3 +28,43 @@ WHERE B.STATUS = 1
     GROUP BY B2.CUSTOMER_ID
     ORDER BY COUNT(*) DESC
   );
+
+-- Създайте изглед за таблицата Agencies, който извежда всички данни за агенциите от град
+-- София. Дефинирайте изгледa с CHECK OPTION
+
+CREATE VIEW v_sofia_agencies
+AS 
+SELECT * FROM AGENCIES
+WHERE CITY='Sofia'
+WITH CHECK OPTION;
+
+-- Създайте изглед за таблицата Agencies, който извежда всички данни за агенциите, такива
+-- че телефонните номера на тези агенции да имат стойност NULL. Дефинирайте изгледa с CHECK OPTION
+CREATE VIEW v_ph_agencies
+AS 
+SELECT * FROM AGENCIES
+WHERE PHONE IS NULL
+WITH CHECK OPTION;
+
+-- Опитайте се да вмъкнете следните редове през изгледите от задачи 3 и 4. Какво се
+-- случва?
+INSERT INTO v_SF_Agencies
+VALUES('T1 Tour', 'Bulgaria', 'Sofia','+359'); -- OK
+INSERT INTO v_SF_PH_Agencies
+VALUES('T2 Tour', 'Bulgaria', 'Sofia',null); -- OK
+INSERT INTO v_SF_Agencies
+VALUES('T3 Tour', 'Bulgaria', 'Varna','+359'); -- FAIL
+INSERT INTO v_SF_PH_Agencies
+VALUES('T4 Tour', 'Bulgaria', 'Varna',null); -- OK
+INSERT INTO v_SF_PH_Agencies
+VALUES('T4 Tour', 'Bulgaria', 'Sofia','+359'); -- FAIL
+
+-- Кои от горните изгледи са updateable (т.е. върху тях могат да се изпълняват DML оператори)?
+-- Отговор: sofia и phone - другите имат group by, join ...
+
+-- Изтрийте създадените изгледи
+DROP VIEW v_flight_clients;
+DROP VIEW v_top_client;
+DROP VIEW v_sofia_agencies;
+DROP VIEW v_SF_Agencies;
+DROP VIEW v_SF_PH_Agencies;
