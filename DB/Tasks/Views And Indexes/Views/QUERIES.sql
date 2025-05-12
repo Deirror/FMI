@@ -11,5 +11,4 @@ ON BOOKINGS.FLIGHT_NUMBER=FLIGHTS.FNUMBER
 WHERE BOOKINGS.STATUS==1
 GROUP BY FLIGHTS.AIRLINE_OPERATOR, FLIGHTS.FNUMBER;
 
--- Test
-SELECT * FROM v_flight_clients;
+-- Създайте изглед, който за всяка агенция извежда името на клиента с най-много резервации
