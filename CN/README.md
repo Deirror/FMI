@@ -227,3 +227,6 @@ IPv4 Classes
 Classless Inter-Domain Routing
 -
 
+- A method for allocating IP addresses and routing IP packets more efficiently than the old class-based system (Class A/B/C)
+
+- Example: 192.168.1.0/24 -> /24 means the first 24 bits are the network portion 
