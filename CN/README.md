@@ -242,7 +242,7 @@ Unicast, Multicast, Anycast, Broadcast
 
 # (6) Converting IP addresses to physical ones
 
-Special IP addresses
+Special and Partial IP addresses
 -
 
 | Address Range       | Name / Purpose              | Description                                                                 | Routable on Internet? |
