@@ -256,3 +256,27 @@ Special and Partial IP addresses
 | `255.255.255.255`   | Broadcast                   | Broadcast address to all hosts on a local network                           | ❌ No                 |
 | `224.0.0.0/4`       | Multicast                   | Reserved for multicast traffic                                              | ❌ No                 |
 | `240.0.0.0/4`       | Reserved for future use     | Experimental or future definition                                           | ❌ No                 |
+
+NAT
+-
+
+- **NAT (Network Address Translation)** is a function built into routers that allows multiple devices on a private network to share a single public IP address when accessing the internet
+- Devices inside your network have **private IP addresses** (e.g., `192.168.x.x`)
+- Your router has a **public IP address** from your internet provider
+- NAT translates internal IPs to the public IP using different **port numbers**
+- Responses from the internet are routed back to the correct internal device
+
+| Device       | Private IP     | NAT Translation       | Public IP Appearance      |
+|--------------|----------------|------------------------|----------------------------|
+| Laptop       | 192.168.1.2    | → 203.0.113.42:45001   | Seen as 203.0.113.42:45001 |
+| Phone        | 192.168.1.3    | → 203.0.113.42:45002   | Seen as 203.0.113.42:45002 |
+
+
+- NAT runs on your **Wi-Fi router**, which:
+ - Acts as a **gateway** between your private network and the public internet
+ - Keeps track of connections using **port numbers**
+ - Ensures traffic goes to the right device
+
+- Saves IPv4 addresses
+- Adds a layer of privacy
+- Enables many devices to share one internet connection
