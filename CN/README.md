@@ -276,7 +276,6 @@ NAT
   - Acts as a **gateway** between your private network and the public internet
   - Keeps track of connections using **port numbers**
   - Ensures traffic goes to the right device
-
 - Saves IPv4 addresses
 - Adds a layer of privacy
 - Enables many devices to share one internet connection
