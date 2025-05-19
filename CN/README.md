@@ -427,3 +427,56 @@ Multicast vs Broadcast
 
 
 - IPv6 improves performance, scalability, and security, especially by removing broadcast traffic and eliminating the need for NAT
+
+# (8) Introduction to Routing
+
+| **Category**                | **Description**                                                                                                                                 |
+|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Main Function**          | The network layer routes packets from source to destination over multiple hops. Each router uses a **routing table** to forward packets.       |
+| **Routing Decision Basis** | - **Datagram networks**: Route selected per-packet. <br> - **Virtual circuit networks**: Route chosen during circuit setup.                    |
+
+
+| **Requirement**                              | **Purpose**                                                                                     |
+|---------------------------------------------|-------------------------------------------------------------------------------------------------|
+| Simplicity & reliability                    | Easy configuration and stable network operation                                                 |
+| Fault detection                              | Reacts quickly to router or link failures                                                       |
+| Alternate path discovery                     | Finds other routes when failures occur                                                          |
+| Delay vs. Throughput trade-off              | Low delay vs. high throughput—often competing optimization goals                                |
+| Fair resource usage                         | Ensures all users have fair access to network resources                                         |
+
+| **Type**            | **Description**                                                                                     | **Use Case**                            |
+|---------------------|-----------------------------------------------------------------------------------------------------|-----------------------------------------|
+| Static (Non-adaptive) | Precomputed routes, manually updated if topology changes.                                          | Small, stable networks                  |
+| Dynamic (Adaptive)  | Routing tables update automatically based on current network state.                                 | Medium to large, changing networks      |
+
+
+| **Concept**      | **Explanation**                                                                                                  |
+|------------------|------------------------------------------------------------------------------------------------------------------|
+| **Convergence**  | Time taken for all routers to synchronize their routing tables after a change.                                  |
+| **Metric**       | Criteria used to compute best path: hops, delay, cost, reliability, etc.                                         |
+| **Optimization Principle** | Every sub-path of an optimal path is also optimal (used in shortest path algorithms).                 |
+
+
+| **Algorithm**        | **Type**        | **Key Features**                                                                            |
+|----------------------|----------------|---------------------------------------------------------------------------------------------|
+| Dijkstra's Algorithm | Link-state     | Finds shortest path from one node to all others; works with positive edge weights only.     |
+| Bellman-Ford         | Distance-vector| Handles negative weights; slower convergence.                                               |
+
+| **Metric**    | **Definition**                                                     |
+|---------------|--------------------------------------------------------------------|
+| Hop Count     | Number of routers between source and destination                  |
+| Delay         | Time to forward a packet                                           |
+| Reliability   | Probability of link being available                               |
+| Cost          | Administratively assigned value                                   |
+
+| **Concept**     | **Description**                                                                                         |
+|------------------|--------------------------------------------------------------------------------------------------------|
+| **Sink Tree**    | Optimal paths from all nodes to a destination form a tree.                                             |
+| **SPF Tree**     | Shortest Path First Tree – result of Dijkstra’s algorithm.                                             |
+
+
+| **Tool**        | **Use**                                                                 |
+|------------------|------------------------------------------------------------------------|
+| `iproute2`       | Linux networking toolkit (`ip`, `ss`, `tc`, etc.)                      |
+| **Quagga / FRR** | Routing daemons for dynamic protocols (OSPF, BGP, RIP, etc.)           |
+| **Bird**         | Lightweight routing daemon often used in IXPs                         |
