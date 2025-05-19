@@ -239,3 +239,20 @@ Unicast, Multicast, Anycast, Broadcast
 | **Multicast** | One-to-many communication for a group of interested receivers.              | 1 to many         | Streaming video to multiple subscribers   |
 | **Anycast**   | One-to-one-of-many; data is sent to the nearest (or best) receiver in a group. | 1 (closest)       | CDN servers selecting the nearest node    |
 | **Broadcast** | One-to-all communication on a local network (IPv4 only).                    | All on subnet     | ARP requests on a LAN                     |
+
+# (6) Converting IP addresses to physical ones
+
+Special IP addresses
+-
+
+| Address Range       | Name / Purpose              | Description                                                                 | Routable on Internet? |
+|---------------------|-----------------------------|-----------------------------------------------------------------------------|------------------------|
+| `127.0.0.0/8`       | Loopback                    | Used to send packets to self (e.g., `127.0.0.1` = `localhost`)              | ❌ No                 |
+| `169.254.0.0/16`    | Link-Local                  | Auto-assigned if no DHCP; for local communication only                      | ❌ No                 |
+| `10.0.0.0/8`        | Private Network             | Large private network space                                                 | ❌ No                 |
+| `172.16.0.0/12`     | Private Network             | Medium private network space                                                | ❌ No                 |
+| `192.168.0.0/16`    | Private Network             | Small private network space (common in home routers)                        | ❌ No                 |
+| `0.0.0.0/8`         | "This host"                 | Represents the current device (used in routing or DHCP requests)            | ❌ No                 |
+| `255.255.255.255`   | Broadcast                   | Broadcast address to all hosts on a local network                           | ❌ No                 |
+| `224.0.0.0/4`       | Multicast                   | Reserved for multicast traffic                                              | ❌ No                 |
+| `240.0.0.0/4`       | Reserved for future use     | Experimental or future definition                                           | ❌ No                 |
