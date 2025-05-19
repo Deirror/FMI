@@ -223,3 +223,7 @@ IPv4 Classes
 | C     | 192.0.0.0 – 223.255.255.255 | 192 – 223      | 255.255.255.0          | 110xxxxx     | Small networks             |
 | D     | 224.0.0.0 – 239.255.255.255 | 224 – 239      | Not applicable         | 1110xxxx     | Multicast groups           |
 | E     | 240.0.0.0 – 255.255.255.255 | 240 – 255      | Not applicable         | 1111xxxx     | Experimental (reserved)    |
+
+Classless Inter-Domain Routing
+-
+
