@@ -474,9 +474,157 @@ Multicast vs Broadcast
 | **Sink Tree**    | Optimal paths from all nodes to a destination form a tree.                                             |
 | **SPF Tree**     | Shortest Path First Tree – result of Dijkstra’s algorithm.                                             |
 
+# (9) Static routing
 
-| **Tool**        | **Use**                                                                 |
-|------------------|------------------------------------------------------------------------|
-| `iproute2`       | Linux networking toolkit (`ip`, `ss`, `tc`, etc.)                      |
-| **Quagga / FRR** | Routing daemons for dynamic protocols (OSPF, BGP, RIP, etc.)           |
-| **Bird**         | Lightweight routing daemon often used in IXPs                         |
+- Static routing involves manually defining fixed paths in a router's configuration. It’s commonly used in small, stable networks where routes rarely change
+
+Key Characteristics
+-
+- Routes are manually added and do not change automatically
+- Simple and fast, but lacks fault tolerance
+- Best suited for networks with one path to external networks (stub networks)
+
+Stub Networks
+-
+
+- Stub networks have only one exit point. In these setups:
+  - Static routes direct all outbound traffic to the main router
+  - Branch routers only need to know how to reach the core (e.g., HQ)
+  - Reduces the need for dynamic routing protocols on WAN links
+
+Interface Static Routes
+-
+- A static route can reference only the outbound interface, treating the destination as directly connected
+
+Network Functions Virtualization (NFV)
+-
+
+- **Network Functions Virtualization (NFV)** is a transformative approach to building and operating networks by virtualizing traditional network functions
+- NFV replaces dedicated network hardware (like routers and firewalls) with software-based functions
+- These functions run on **standard high-performance servers, switches, and storage**, removing the need for specialized equipment
+
+Key Benefits
+-
+
+- **Dynamic deployment**: Functions can be moved or replicated across the network without new hardware
+- **Efficiency**: Consolidates various network devices onto shared infrastructure
+- **Scalability**: Rapid scaling and provisioning of services via software
+
+NFV and SDN
+-
+- NFV and SDN (Software-Defined Networking) are **complementary technologies**:
+- **SDN** separates the control plane from the data plane, providing a centralized view of the network
+- **NFV** focuses on virtualizing and optimizing network services themselves
+
+# (10) Distance Vector Routing
+
+- **Distance Vector (DV) Routing** is a distributed routing method where routers share information about the direction and distance to network destinations
+
+## Core Concepts
+
+- Each router advertises its routing table as a vector:
+  - **Direction**: The next hop address and outgoing interface
+  - **Distance (Metric)**: Typically the number of hops to the destination
+
+- Routers using DV do **not** know the full path to the destination — only the next hop and cost
+
+Bellman-Ford Algorithm
+-
+
+- DV routing is based on the **Bellman-Ford algorithm**
+- Each node periodically sends its distance vector to immediate neighbors
+- Each router builds a **routing table** that stores:
+  - Destination address
+  - Next hop
+  - Metric (cost of best-known path)
+
+Metrics
+-
+
+- The metric can be:
+  - **Hop count**: Each hop has a cost of 1
+  - **Load**: Based on the number of packets in the outgoing queue
+  - **Delay**: Measured via echo packets and response time from neighbors
+
+Advantages
+-
+
+- Lightweight on CPU and memory
+- Simple to implement and maintain
+
+Disadvantages
+-
+
+- **Slow convergence**, especially for "bad news" (e.g., link failures)
+- Periodic updates consume bandwidth
+- Susceptible to routing loops and outdated information
+
+# (11) Routing with connection status monitoring
+
+- Link-State (LS) routing protocols provide each router with a complete map of the network
+- Unlike Distance Vector (DV), which relies on periodic rumor-based updates, LS routing is more precise and faster to converge
+
+Key Characteristics
+-
+
+- **LS packets**: Routers share info about directly connected neighbors and link states
+- **Flooding**: Each router broadcasts link-state packets across the network
+- **Database**: All routers construct an identical link-state database
+- **Computation**: Each router independently computes shortest paths using Dijkstra's algorithm
+
+Main LS Protocols
+-
+
+- **OSPF** (Open Shortest Path First)
+- **IS-IS** (Intermediate System to Intermediate System)
+- **OLSR** (Optimized Link State Routing Protocol, RFC 3626)
+
+Steps in LS Routing
+-
+
+1. **Neighbor Discovery**: Send echo packets and identify adjacent routers
+2. **Link Measurement**: Determine link cost (e.g., delay, load)
+3. **LS Packet Generation**: Package local link info with a unique ID and TTL
+4. **Flooding**: Distribute LS packets across the network
+5. **Shortest Path Calculation**: Use Dijkstra’s algorithm to build routing tables
+
+Comparison: Link-State vs Distance Vector
+-
+
+| Feature            | Distance Vector (DV)         | Link-State (LS)                |
+|--------------------|-------------------------------|--------------------------------|
+| Info Scope         | Next hop + metric only        | Full network topology          |
+| Update Trigger     | Periodic                      | On topology change or interval |
+| Convergence        | Slow                          | Fast                           |
+| Computation        | Bellman-Ford                  | Dijkstra                       |
+
+- LS routing adapts efficiently to changes in network topology, offering faster convergence and more informed path selection
+
+Flooding of Link-State Packets
+-
+
+- To reliably distribute link-state information across the network, routers use **flooding**:
+  - Each link-state packet is sent on **all interfaces except the one it was received on**
+  - If a router receives a packet with a **newer sequence number** than previously seen from that origin, it updates its link-state database and forwards the packet
+  - If the sequence number is **equal or lower**, the packet is discarded
+
+Time-to-Live (TTL) for Link-State Data
+-
+
+- Link-state packets include a **TTL field**, indicating how long the information is valid:
+  - TTL is decremented by **1 each second** and each time the packet is forwarded
+  - When TTL reaches **0**, the data is discarded
+  - This prevents stale routing data from lingering and being used incorrectly
+
+Hierarchical Routing
+-
+
+- As networks grow, full topological awareness becomes inefficient. **Hierarchical routing** addresses this:
+  - The network is split into **areas** (regions)
+  - Routers know full topology **within their own area**
+  - Between areas, routers only maintain **summary routes**, reducing table size and complexity
+
+- Benefits:
+  - **Scalability**: Smaller routing tables and reduced update overhead
+  - **Efficiency**: Faster convergence within local areas
+  - **Modularity**: Changes in one area don’t impact others
