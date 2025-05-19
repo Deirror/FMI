@@ -196,8 +196,6 @@ Characteristics of IPv4
 Format of an IPv4's packet
 -
 
-## IPv4 Packet Header Structure
-
 | Field Name             | Size (Bits) | Description                                     |
 |------------------------|-------------|-------------------------------------------------|
 | Version                | 4           | IPv version (always 4 for IPv4)                 |
