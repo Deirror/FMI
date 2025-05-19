@@ -628,3 +628,4 @@ Hierarchical Routing
   - **Scalability**: Smaller routing tables and reduced update overhead
   - **Efficiency**: Faster convergence within local areas
   - **Modularity**: Changes in one area don’t impact others
+
