@@ -212,3 +212,14 @@ Format of an IPv4's packet
 | Destination IP Address | 32          | Receiver's IP address                           |
 | Options (optional)     | Variable    | Extra options (rarely used)                     |
 | Data (Payload)         | Variable    | Actual encapsulated data (e.g., TCP/UDP)        |
+
+IPv4 Classes
+-
+
+| Class | Address Range          | First Octet Range | Default Subnet Mask   | Leading Bits | Usage                      |
+|-------|------------------------|-------------------|------------------------|--------------|----------------------------|
+| A     | 0.0.0.0 – 127.255.255.255 | 0 – 127          | 255.0.0.0              | 0xxxxxxx     | Large networks             |
+| B     | 128.0.0.0 – 191.255.255.255 | 128 – 191      | 255.255.0.0            | 10xxxxxx     | Medium networks            |
+| C     | 192.0.0.0 – 223.255.255.255 | 192 – 223      | 255.255.255.0          | 110xxxxx     | Small networks             |
+| D     | 224.0.0.0 – 239.255.255.255 | 224 – 239      | Not applicable         | 1110xxxx     | Multicast groups           |
+| E     | 240.0.0.0 – 255.255.255.255 | 240 – 255      | Not applicable         | 1111xxxx     | Experimental (reserved)    |
