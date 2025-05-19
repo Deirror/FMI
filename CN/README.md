@@ -230,3 +230,13 @@ Classless Inter-Domain Routing
 - A method for allocating IP addresses and routing IP packets more efficiently than the old class-based system (Class A/B/C)
 
 - Example: 192.168.1.0/24 -> /24 means the first 24 bits are the network portion 
+
+Unicast, Multicast, Anycast, Broadcast
+-
+
+| Type      | Description                                                                 | Destination Count | Example Use Case                          |
+|-----------|-----------------------------------------------------------------------------|-------------------|-------------------------------------------|
+| **Unicast**   | One-to-one communication between a single sender and a single receiver.     | 1                 | Accessing a website from a user's PC      |
+| **Multicast** | One-to-many communication for a group of interested receivers.              | 1 to many         | Streaming video to multiple subscribers   |
+| **Anycast**   | One-to-one-of-many; data is sent to the nearest (or best) receiver in a group. | 1 (closest)       | CDN servers selecting the nearest node    |
+| **Broadcast** | One-to-all communication on a local network (IPv4 only).                    | All on subnet     | ARP requests on a LAN                     |
