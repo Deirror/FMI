@@ -138,7 +138,7 @@ Formation of frames
 | --- | --- |
 | **Character count** | Stores the bytes of the *payload* in the *header* |
 | **Character stuffing** | Adds **STX**(start of text), **ЕТX**(end of text) or **ESC**(escape) before the two special ones, which marks the borders of the *payload* |
-| **Bit stuffing** | The beginning and end of each payload are marke with the flag *01111110* |
+| **Bit stuffing** | The beginning and end of each payload are marked with the flag *01111110* |
 
 Procedure of work
 -
@@ -179,3 +179,38 @@ Spanning Tree
   - Selecting Root Bridge - finds the lowest bridge ID (MAC address)
   - Selecting Root Ports - From the alternative paths, those with the lowest cost to Root Bridge are selected
   - Selecting Designated Ports - Port that sends and receives traffic from the Root Bridge – with the lowest value to the Root Bridge
+
+# (5) Network Protocol - IPv4
+
+Characteristics of IPv4
+-
+
+- IPv4 implements information exchange through packets, which are called IP datagrams
+- IPv4 is a protocol for interaction without establishing a logical connection
+- IPv4 provides fragmentation of the IP datagram if necessary (the maximum size of the IP fragment is 65535 bytes, but we use max around 1500 bytes)
+- IPv4 datagrams have a specified lifetime in the network
+- IPv4 does not guarantee the reliability of IP datagram delivery from the recipient
+- IPv4 does not have any means of controlling the intensity of IP datagram transmission from the sender (flow control)
+- IPv4 does not guarantee the correct sequence of IP datagrams from the recipient
+
+Format of an IPv4's packet
+-
+
+## IPv4 Packet Header Structure
+
+| Field Name             | Size (Bits) | Description                                     |
+|------------------------|-------------|-------------------------------------------------|
+| Version                | 4           | IPv version (always 4 for IPv4)                 |
+| IHL (Header Length)    | 4           | Header length in 32-bit words                   |
+| Type of Service (ToS)  | 8           | Service priority and delay/throughput hints     |
+| Total Length           | 16          | Total length of packet (header + data)          |
+| Identification         | 16          | Used to identify fragments of the same packet   |
+| Flags                  | 3           | Fragmentation control flags                     |
+| Fragment Offset        | 13          | Position of this fragment in the original packet|
+| Time to Live (TTL)     | 8           | Max hops before the packet is discarded         |
+| Protocol               | 8           | Indicates payload type (e.g., TCP, UDP, ICMP)   |
+| Header Checksum        | 16          | Error-checking for the header only              |
+| Source IP Address      | 32          | Sender's IP address                             |
+| Destination IP Address | 32          | Receiver's IP address                           |
+| Options (optional)     | Variable    | Extra options (rarely used)                     |
+| Data (Payload)         | Variable    | Actual encapsulated data (e.g., TCP/UDP)        |
