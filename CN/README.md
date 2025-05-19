@@ -257,7 +257,7 @@ Special and Partial IP addresses
 | `224.0.0.0/4`       | Multicast                   | Reserved for multicast traffic                                              | ❌ No                 |
 | `240.0.0.0/4`       | Reserved for future use     | Experimental or future definition                                           | ❌ No                 |
 
-NAT
+Network Address Translation (NAT)
 -
 
 - **NAT (Network Address Translation)** is a function built into routers that allows multiple devices on a private network to share a single public IP address when accessing the internet
@@ -279,3 +279,71 @@ NAT
 - Saves IPv4 addresses
 - Adds a layer of privacy
 - Enables many devices to share one internet connection
+
+Address Resolution Protocol (ARP)
+-
+
+- **ARP (Address Resolution Protocol)** is a network protocol used to map an IP address (Layer 3) to a MAC address (Layer 2) within a local network
+- Operates between the Network Layer and Data Link Layer
+- Enables devices on the same LAN to discover each other's hardware (MAC) addresses
+- When a device wants to send data to an IP address, it broadcasts an **ARP Request** asking:  
+  *"Who has this IP? Tell me your MAC address."*
+- The device with the matching IP responds with an **ARP Reply** containing its MAC address
+- The requester caches the MAC address for future use to improve efficiency
+- Essential for IPv4 communication on Ethernet networks
+- IPv6 uses a similar mechanism called **Neighbor Discovery Protocol (NDP)** instead of ARP
+
+Reverse Address Resolution Protocol (RARP)
+-
+
+- **RARP (Reverse Address Resolution Protocol)** is a network protocol used to map a MAC address (Layer 2) to an IP address (Layer 3) within a local network
+- Works opposite to ARP by resolving hardware (MAC) addresses to IP addresses
+- Mainly used by diskless or bootstrapping devices that know their MAC address but need to discover their IP address
+- The device broadcasts a **RARP Request** asking:  
+  *"Who has this MAC? Tell me the IP address."*
+- A RARP server on the network replies with the corresponding IP address
+- Largely obsolete today, replaced by more advanced protocols such as BOOTP and DHCP
+
+Dynamic Host Configuration Protocol (DHCP)
+-
+
+- DHCP automatically assigns IP addresses and network settings (gateway, DNS, domain, etc.) to devices on a network, simplifying configuration
+- Client-server protocol standardized
+- Clients broadcast a request at startup; the DHCP server replies with IP and config info (DORA and DDD)
+- IP allocation methods:
+  - **Dynamic:** IPs leased temporarily from a pool
+  - **Automatic:** Permanent IPs assigned from a pool
+  - **Static:** Manual MAC-to-IP mapping (also called DHCP reservation)
+- DHCP enables easy network management and device mobility
+
+Internet Control Message Protocol (ICMP)
+-
+
+- ICMP is a core protocol of the IP suite used mainly for network error detection and diagnostic messaging
+- ICMP messages are carried inside standard IP packets
+- When a router decrements the IP packet's TTL to zero, it sends an ICMP "Time Exceeded" message back to the sender
+- Common diagnostic tools use ICMP:
+  - `ping` uses ICMP Echo Request and Echo Reply messages
+  - `traceroute` sends UDP packets with varying TTLs, relying on ICMP Time Exceeded and Destination Unreachable replies
+- IPv4 uses ICMPv4; IPv6 uses ICMPv6 (a related protocol)
+- ICMP helps troubleshoot and manage IP networks effectively
+
+Ping
+-
+
+- Ping is a network tool used to test the reachability of a host over an IP network
+- Sends ICMP **Echo Request** packets to the target host
+- Waits for ICMP **Echo Reply** responses
+- Measures round-trip time (RTT) and packet loss
+- Provides statistics including minimum, average, maximum, and sometimes standard deviation of RTT
+
+Traceroute
+-
+
+- Traceroute is a network diagnostic tool used to discover the path packets take to reach a destination host
+- Sends packets in sets of three, incrementing the TTL (Time To Live) starting from 1
+- Each router decrements TTL by 1; when TTL reaches 0, the router discards the packet and sends back an ICMP "Time Exceeded" message
+- Traceroute uses these ICMP replies to map each hop along the route
+- Reports round-trip delay (latency) for each packet in milliseconds
+- If no response is received before timeout, prints `*` (asterisk)
+- May not show all intermediate hosts due to network routing or filtering
