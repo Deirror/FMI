@@ -240,7 +240,7 @@ Unicast, Multicast, Anycast, Broadcast
 | **Anycast**   | One-to-one-of-many; data is sent to the nearest (or best) receiver in a group. | 1 (closest)       | CDN servers selecting the nearest node    |
 | **Broadcast** | One-to-all communication on a local network (IPv4 only).                    | All on subnet     | ARP requests on a LAN                     |
 
-# (6) Converting IP addresses to physical ones
+# (6) Converting IPv4 addresses to physical ones
 
 Special and Partial IP addresses
 -
@@ -347,3 +347,83 @@ Traceroute
 - Reports round-trip delay (latency) for each packet in milliseconds
 - If no response is received before timeout, prints `*` (asterisk)
 - May not show all intermediate hosts due to network routing or filtering
+
+# (7) Network Protocol - IPv6
+
+- Enable access to the global network for billions of hosts, even with inefficient use of the address space
+- Reduce the size of routing tables
+- Simplify the protocol to speed up packet processing during routing
+- Enhance the security level of the protocol
+- Ensure compatibility and coexistence between IPv6 and IPv4 protocols
+
+Key IPv6 Features
+-
+
+- **Traffic Class:** Replaces IPv4’s Type of Service (ToS) for packet prioritization
+- **Flow Label:** New field for Quality of Service (QoS) management
+- **Payload Length:** Supports up to 64 KB payload per packet
+- **Next Header:** Identifies the type of header following the IPv6 header
+- **Hop Limit:** Replaces IPv4’s TTL (Time To Live)
+
+Quality of Service (QoS)
+-
+
+- IPv4 treats packets equally using a "best effort" delivery model
+- TCP guarantees delivery but does not control delay or bandwidth
+- IPv6 supports QoS through Differentiated Services and Integrated Services
+- Enables traffic prioritization policies and better network management
+
+IPv6 Address Format
+-
+
+- IPv6 addresses consist of three parts:
+  - **Network Prefix:** Identifies the network, assigned by ISPs or registries
+  - **Subnet ID:** Identifies sub-networks within a larger network, assigned by administrators
+  - **Host ID:** Identifies a specific interface on a host
+
+Prefix Notation
+-
+
+- IPv6 uses prefix length notation, similar to IPv4 subnet masks
+- Address Compression Rules:
+  - Consecutive 16-bit groups of zeros can be compressed as `::` (only once per address)
+  - Leading zeros in each group can be omitted
+ 
+IPv6 vs IPv4
+-
+
+| Feature                     | IPv4                                              | IPv6                                                  |
+|----------------------------|---------------------------------------------------|-------------------------------------------------------|
+| **Address Length**         | 32-bit (e.g., `192.168.0.1`)                      | 128-bit (e.g., `2001:db8::1`)                         |
+| **NAT**                    | Widely used due to address exhaustion             | Not required – large address space eliminates need   |
+| **Auto Configuration**     | Manual or DHCP                                    | Stateless (SLAAC) and/or stateful (DHCPv6)           |
+| **Neighbor Discovery**     | Uses ARP                                          | Uses **Neighbor Solicitation** (part of ND protocol) |
+| **ICMP**                   | ICMPv4 (RFC 792), limited functionality           | ICMPv6 (RFC 4443), handles errors, discovery, etc.    |
+| **Multicast Support**      | Limited multicast; heavy reliance on broadcast    | Extensive multicast; **broadcast removed**           |
+| **Broadcast**              | Supported (`255.255.255.255`)                     | **Not supported** – replaced by multicast             |
+| **Mobility and Extensibility** | Limited; requires NAT traversal and workarounds | Built-in features for mobile IP and extensibility     |
+| **Header Complexity**      | Variable size, many fields                        | Simplified, fixed header size                         |
+
+ICMPv4 vs ICMPv6
+-
+
+- **ICMPv4**: Primarily used for error reporting and tools like `ping` and `traceroute`.
+- **ICMPv6**: Much more comprehensive; supports:
+  - Router Solicitation & Advertisement
+  - Neighbor Solicitation & Advertisement (replaces ARP)
+  - Redirects
+  - Multicast Listener Discovery (MLD)
+  - Packet too big, Time exceeded, etc
+
+Multicast vs Broadcast
+-
+
+| Type         | IPv4                     | IPv6                              |
+|--------------|--------------------------|------------------------------------|
+| **Broadcast**| Used for ARP, DHCP, etc. | **Not available**                 |
+| **Multicast**| Limited use              | Core mechanism for discovery and services |
+| **Unicast**  | Supported                | Supported                          |
+| **Anycast**  | Rare                     | **Native support** in IPv6         |
+
+
+- IPv6 improves performance, scalability, and security, especially by removing broadcast traffic and eliminating the need for NAT
