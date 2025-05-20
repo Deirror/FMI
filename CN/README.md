@@ -729,4 +729,126 @@ Reflectors
 - Reduces the *full mesh* problem (n^2)
 - Just sends signals only to given routers, not all
 
-# (15)
+# (15) Transport layer and TCP/UDP
+
+- The **transport layer** ensures message delivery from the source to the destination
+- It is the lowest layer that provides **end-to-end communication** between systems
+- This layer establishes a **logical (software) channel** between the **ports** of applications communicating over the network
+
+Purpose
+-
+
+- The main goal of the transport layer is to provide **efficient and reliable services** to application-level processes 
+- It handles the transfer of **arbitrarily long messages** between endpoints using the network layer below
+- It offers two types of service:  
+  - **Connection-oriented** (reliable)  
+  - **Connectionless** (unreliable)
+
+Connection-Oriented Protocols (e.g., TCP)
+-
+
+- These protocols go through **three phases**:  
+  1. **Connection Setup**  
+  2. **Data Transfer**  
+  3. **Connection Teardown**
+
+Application Interface
+-
+
+- The transport layer exposes primitives like: `LISTEN`, `CONNECT`, `SEND`, `RECEIVE`, `DISCONNECT`
+
+- 1. Connection Setup
+  - **Server** calls `LISTEN` and blocks until a client connects
+  - **Client** calls `CONNECT`, sends a request, and blocks
+  - **Server**, upon receiving the request, responds with a confirmation
+  - The connection is now established
+
+- 2. Data Transfer
+  - Both sides use `SEND` and `RECEIVE`
+  - Every data packet sent must be **acknowledged**
+  - This ensures **reliability** and **ordering**
+
+- 3. Connection Teardown
+- Two options:
+  - **Asymmetric**: Only the client calls `DISCONNECT`, which tears down the connection
+  - **Symmetric**: Both sides independently call `DISCONNECT`
+
+Transport Protocols
+-
+
+- Transport services are implemented by transport protocols, which operate between the transport layers of two end hosts  
+- They are similar to data link layer protocols in that they handle error correction, sequencing, and flow control  
+
+Key Differences from Data Link Protocols
+-
+
+- **Data Link Layer**: Works over a direct physical link  
+- **Transport Layer**: Operates over the entire network, through routers and subnets  
+- Data link frames either arrive or are lost  
+- Transport packets may be delayed, rerouted, or reordered  
+
+- Multiplexing: Ports and Sockets
+
+- Multiple processes on the same host use the transport protocol simultaneously  
+- Each process uses a **port** (16-bit number)  
+- Combined with the host's IP, this forms a **socket**: `IP:port`  
+- A pair of sockets identifies a unique connection
+
+Port Types (RFC 6335)
+-
+
+| Type            | Port Range   | Assigned By | Usage Example                           |
+|-----------------|--------------|-------------|------------------------------------------|
+| Well-known      | 0–1023       | IANA        | HTTP (80), HTTPS (443), SMTP (25)       |
+| Registered      | 1024–49151   | IANA        | User apps and proprietary protocols      |
+| Dynamic/Ephemeral | 49152–65535 | Not Assigned | Temporary client-side sessions (e.g., VoIP) |
+
+Comparison: TCP vs UDP
+-
+
+| Feature                         | TCP (RFC 793)                         | UDP (RFC 768)                            |
+|----------------------------------|---------------------------------------|-------------------------------------------|
+| **Connection**                  | Connection-oriented                   | Connectionless                             |
+| **Reliability**                 | Reliable, ordered, no duplicates      | Unreliable, unordered, possible duplicates |
+| **Error Handling**              | Yes (ACKs, retransmissions)           | Minimal (optional checksum only)           |
+| **Flow Control**                | Yes (Sliding window)                  | No                                         |
+| **Header Size**                 | 20 bytes                              | 8 bytes                                    |
+| **Data Type**                   | Stream (continuous byte flow)         | Datagram (independent packets)             |
+| **Use Cases**                   | Web (HTTP), Email (SMTP), FTP         | DNS, VoIP, Video Streaming, SNMP           |
+| **Urgent Data Support**         | Yes                                   | No                                         |
+| **Port Numbers**                | 16-bit                                | 16-bit                                     |
+| **Delivery Guarantee**          | Yes                                   | Best-effort only                           |
+| **Order Preservation**          | Yes                                   | No                                         |
+
+| Protocol | Maintains Segment Order? | Sequence Number? | Notes                                               |
+| -------- | ----------------------- | ---------------- | --------------------------------------------------- |
+| **TCP**  | Yes                     | Yes              | Uses sequence numbers in the header to reorder segments at the destination |
+| **UDP**  | No                      | No               | Simpler and faster, but does not guarantee order; application must handle this |
+
+- **Summary:**  
+  - TCP ensures reliable, ordered delivery using sequence numbers  
+  - UDP is lightweight and fast but does not guarantee data order or reliability
+
+TCP 3-Way Handshake
+-
+
+- When initializing a TCP connection, both endpoints synchronize their Initial Sequence Numbers (ISN) by exchanging segments with the SYN flag set.
+
+- Steps:
+  1. **A → B:** SYN, sequence number = X
+  2. **B → A:** SYN + ACK, acknowledges X, sequence number = Y
+  3. **A → B:** ACK, acknowledges Y
+ 
+# (16) Protocol and Traffic Management (TCP and UDP)
+
+TCP Loss Reduction
+-
+
+- TCP dynamically adjusts the **window size** to control data flow
+- When network resources are limited, TCP **reduces the window size**, which lowers the data transmission rate
+- The receiver informs the sender of how many bytes it can accept
+- Example: on segment loss, window size reduces from 3000 to 1500 bytes
+- After periods without loss or resource shortages,
+  the receiver gradually **increases the window size** to improve throughput
+- This continuous increase and decrease of the window size helps TCP
+  optimize transmission speed and reduce packet loss
