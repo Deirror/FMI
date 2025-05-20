@@ -640,6 +640,7 @@ Hierarchical Routing
 # (13) Routing Protocol OSPF
 
 - Open Shortest Path First (OSPF) is dynamic protocol for routing, which uses link-state routing (LS)
+- *Metric* is the path cost - it is influenced by the bandwidth
 
 - Topology:
   - Network represented as a graph:
@@ -650,21 +651,82 @@ Hierarchical Routing
  
 - Operation Phases:
   1. Hello Protocol:
-     - Used to discover and maintain neighbor relationships.
-     - Periodic Hello packets sent via active interfaces.
+     - Used to discover and maintain neighbor relationships
+     - Periodic Hello packets sent via active interfaces
  
   2. Adjacency Formation (on LAN):
-     - Routers elect a Designated Router (DR) and Backup DR (BDR).
-     - Reduces OSPF update traffic by centralizing link-state exchanges.
+     - Routers elect a Designated Router (DR) and Backup DR (BDR)
+     - Reduces OSPF update traffic by centralizing link-state exchanges
  
   3. OSPF Neighbor States:
-     - DOWN: No Hello received yet.
-     - INIT: One-way Hello received.
-     - 2-WAY: Bidirectional communication established; DR/BDR election.
-     - EXSTART: Master/Slave roles set; start Database Descriptor (DBD) exchange.
-     - EXCHANGE: Routers exchange DBD packets to describe their LSDB.
-     - LOADING: Routers request missing LSAs (Link-State Advertisements).
-     - FULL: LSDBs are synchronized; routers are fully adjacent.
+     - DOWN: No Hello received yet
+     - INIT: One-way Hello received
+     - 2-WAY: Bidirectional communication established; DR/BDR election
+     - EXSTART: Master/Slave roles set; start Database Descriptor (DBD) exchange
+     - EXCHANGE: Routers exchange DBD packets to describe their LSDB
+     - LOADING: Routers request missing LSAs (Link-State Advertisements)
+     - FULL: LSDBs are synchronized; routers are fully adjacent
 
 - Multicast Support:
-  - OSPF uses both unicast and multicast (e.g., 224.0.0.5 for all OSPF routers).
+  - OSPF uses both unicast and multicast (e.g., 224.0.0.5 for all OSPF routers)
+
+ OSPF Areas
+-
+
+- OSPF networks are divided into logical areas, each identified by a 32-bit ID (e.g., 0.0.0.1)
+- Area IDs are not IP addresses, but use similar dotted decimal notation
+- Each area maintains its own link-state database (LSDB)
+- Internal topology is hidden from other areas to reduce routing overhead
+
+Backbone Area (Area 0.0.0.0)
+-
+
+- Central area to which all other areas must connect
+- Inter-area routing is done via Area Border Routers (ABRs)
+- External routing to non-OSPF networks is handled by Autonomous System Border Routers (ASBRs)
+
+Area Types
+-
+
+- Standard Area: Default area type, supports full LSDB and all route types
+- Stub Area: Blocks external routes, uses a default route for outside traffic
+- Totally Stubby Area (TSA): Cisco-specific, blocks both external and summary (inter-area) routes
+- Not-So-Stubby Area (NSSA): Like stub, but can import external routes and advertise them internally
+- Virtual Link: Logical connection used to link a non-direct area to the backbone
+
+Area Design Notes
+-
+
+- Virtual links are required when a non-backbone area needs to connect to the backbone indirectly
+- Stub and TSA areas reduce router workload, ideal for edge networks
+- NSSA is used when an edge area needs to connect to external routes (e.g., other AS)
+
+# (14) Routing Protocol BGP
+
+- Border Gateway Protocol (BGP) is protocol which serves as routing protocol between ASs(iBGP and eBGP - interior and exterior)
+- Autonomous system (AS) is sum of connected IP networks, but under the control of one administrative org
+- In AS only *inner* protocols for routing are used (IGP)
+- ASs have their own ID(public and private ones)
+- BGP uses *Path Vector Protocol*
+
+
+Origin
+-
+
+- How BGP knows about other routes:
+  - IGB
+  - EGB
+  - Incomplete
+
+Community
+-
+
+- Sharing routes to other BGPs(BGP Peer Groups)
+
+Reflectors
+-
+
+- Reduces the *full mesh* problem (n^2)
+- Just sends signals only to given routers, not all
+
+# (15)
