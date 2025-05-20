@@ -852,3 +852,80 @@ TCP Loss Reduction
   the receiver gradually **increases the window size** to improve throughput
 - This continuous increase and decrease of the window size helps TCP
   optimize transmission speed and reduce packet loss
+
+UDP
+-
+
+- UDP (RFC 768) is a simple, connectionless protocol
+- Reliability is provided by higher layers
+- Used when low latency and sync are critical, e.g. online games, VoIP
+- Apps like DNS or TFTP resend requests if no reply
+
+- UDP Datagram
+
+- Consists of UDP header + data
+- Uses pseudoheader from IP (protocol, source/dest IP, length)
+
+Datagram Handling
+-
+
+- No sessions or connection setup
+- Small data fits one packet; larger data split into multiple
+- Packets may arrive out of order; app handles ordering if needed
+
+UDP Port Queue
+-
+
+- Incoming datagrams queued per port (application)
+- Full queue leads to dropped packets
+- No flow control
+
+Client Process
+-
+
+- Sends requests selecting random dynamic port
+- Random ports improve security
+- No session creation; datagram sent directly to network layer
+
+# (17) Traffic and Network Stream (level 2, 3 and 4) Management   
+
+Congestion Control and Resource Allocation
+-
+
+- Congestion control and resource allocation are two sides of the same coin
+- Precise resource allocation is difficult due to distributed buffers and bandwidth across the network
+
+Congestion Control Overview
+-
+
+- Sending unlimited packets and retransmitting disrupts normal network operation
+- Congestion control ensures predictability and stability
+
+Components
+-
+
+- Applies to both end hosts and network devices (routers, switches)
+- Network devices manage queues, buffer overflow, and packet dropping policies
+- Hosts control sending rate to avoid or recover from congestion
+
+Terminology
+-
+
+- **Resource Allocation:** Meeting application requirements for bandwidth, buffer space, and processing power
+- **Congestion Control:** Actions by network nodes to prevent or handle overload, e.g., limiting sender transmissions
+- Fairness often requires combining congestion control with resource allocation
+
+Flow Control vs Congestion Control
+-
+
+| Feature              | Flow Control                            | Congestion Control                          |
+|----------------------|---------------------------------------|---------------------------------------------|
+| Scope                | Between sender and receiver            | Across entire network (multiple senders)    |
+| Purpose              | Prevent sender from overwhelming receiver | Prevent network overload                      |
+| Shared Mechanisms    | Yes                                   | Yes                                          |
+
+- FIFO, Fair Queuing, Weighted Fair Queuing and more
+- Algorithms:
+  - Slow Start
+  - Fast Retransmit/Fast Recovery
+  
