@@ -629,3 +629,42 @@ Hierarchical Routing
   - **Efficiency**: Faster convergence within local areas
   - **Modularity**: Changes in one area don’t impact others
 
+# (12) Routing Protocol RIP
+
+- RIP (Routing Information Protocol) and the widely used distance vector routing protocol (DV)
+- It is mainly suitable for small networks in which topology changes occur relatively rarely
+- The max count of hops in a RIP Network is 15 - fixes "Count to infinity" problem
+- Also has a TTL field
+- There are a lot of configurations
+
+# (13) Routing Protocol OSPF
+
+- Open Shortest Path First (OSPF) is dynamic protocol for routing, which uses link-state routing (LS)
+
+- Topology:
+  - Network represented as a graph:
+    - Nodes: Routers
+    - Edges: Direct communication links
+  - Cost values are inversely proportional to link speed
+  - Each router maintains a complete Link-State Database (LSDB)
+ 
+- Operation Phases:
+  1. Hello Protocol:
+     - Used to discover and maintain neighbor relationships.
+     - Periodic Hello packets sent via active interfaces.
+ 
+  2. Adjacency Formation (on LAN):
+     - Routers elect a Designated Router (DR) and Backup DR (BDR).
+     - Reduces OSPF update traffic by centralizing link-state exchanges.
+ 
+  3. OSPF Neighbor States:
+     - DOWN: No Hello received yet.
+     - INIT: One-way Hello received.
+     - 2-WAY: Bidirectional communication established; DR/BDR election.
+     - EXSTART: Master/Slave roles set; start Database Descriptor (DBD) exchange.
+     - EXCHANGE: Routers exchange DBD packets to describe their LSDB.
+     - LOADING: Routers request missing LSAs (Link-State Advertisements).
+     - FULL: LSDBs are synchronized; routers are fully adjacent.
+
+- Multicast Support:
+  - OSPF uses both unicast and multicast (e.g., 224.0.0.5 for all OSPF routers).
