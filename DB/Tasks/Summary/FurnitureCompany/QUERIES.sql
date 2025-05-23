@@ -48,6 +48,7 @@ CREATE TABLE Order_line (
 	CONSTRAINT PK_Order_Customer_ID PRIMARY KEY (Order_ID, Product_ID)
 );
 
+-- Copy-pasted.
 insert into CUSTOMER values
 ('Иван Петров', 'ул. Лавеле 8', 'София', '1000'),
 ('Камелия Янева', 'ул. Иван Шишман 3', 'Бургас', '8000'),
@@ -80,3 +81,23 @@ insert into ORDER_LINE values
 (104, 4000, 1),
 (105, 4000, 1),
 (107, 4000, 1);
+
+-- Напишете заявка, която извежда id и описание на продукт, както и колко пъти е бил поръчан,
+-- само за тези продукти, които са били поръчвани
+
+SELECT Product.Product_ID, Product.Product_Description, COUNT(Order_line.Product_ID) FROM Product
+JOIN Order_line
+ON Order_line.Product_ID=Product.Product_ID
+GROUP BY Product.Product_ID, Product.Product_Description
+HAVING COUNT(Order_line.Product_ID) > 0;
+
+-- Напишете заявка, която извежда id и описание на продукт, както и поръчано количество, за всички продукти
+
+SELECT Product.Product_ID, Product.Product_Description, COUNT(Order_line.Product_ID) FROM Product
+LEFT JOIN Order_line
+ON Order_line.Product_ID=Product.Product_ID
+GROUP BY Product.Product_ID, Product.Product_Description
+
+-- Напишете заявка, която извежда име на клиента и обща стойност на направените от него
+-- поръчки, само за клиентите с поръчки
+
