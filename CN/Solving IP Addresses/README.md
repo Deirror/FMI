@@ -46,3 +46,13 @@ How to calculate the number of subnets and Host Addresses based on an IP Class a
 - **Mask**: *[0-255].[0-255].[0-255].[0-255]*
 - The number of subnets is *(**CIDR** of **Mask** - (Default Mask))*
 - Host Addresses are *(2^(32 - **CIDR**))*
+
+How to calculate the max count of the subnets in a net if each subnet has N hosts. What's the net mask?
+-
+
+- **Net Address**: *[0-255].[0-255].[0-255].[0-255] (/[0-32])*
+- **N**: a natural number
+- **Count Of IP Address In Each Subnet**: *(2^(32 - /[0-32]))*
+- We round N to the nearest power of 2
+- The result is *((2^(32 - /[0-32])) / roundToP2(N))*
+- The mask is the obviuos one - *(32 - /[0-32])* 0s from the end and all the other bits are 1s
