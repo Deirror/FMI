@@ -42,5 +42,7 @@ Examples: [*View HW2.pdf*](https://github.com/Deirror/FMI/blob/main/CN/Solving%2
 How to calculate the number of subnets and Host Addresses based on an IP Class and a given mask?
 -
 
-- **IP Class**: *[A-C]*
-- 
+- **IP Class**: *[A-C]* (Has default mask)
+- **Mask**: *[0-255].[0-255].[0-255].[0-255]*
+- The number of subnets is *(**CIDR** of **Mask** - (Default Mask))*
+- Host Addresses are *(2^(32 - **CIDR**))*
