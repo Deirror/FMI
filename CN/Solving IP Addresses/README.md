@@ -11,3 +11,13 @@ In what subnet is located the IP Address?
 - The subnet of the IP Address is the starting IP of the given subnet where the IP Address itself is located (<= the starting IP Addr and >= the end of the subnet)
 
 Examples: *View HW1.pdf*
+
+How to devide a net into N equally separated subnets?
+-
+
+- **Net IP Address**: *[0-255].[0-255].[0-255].[0-255] (/[0-32])*
+- **N**: a natural number
+- First, we solve (2^X) = N, and get X
+- Then we do (/[0-32]) += X and *(32 - /[0-32])* is the result
+- Based on the result we get how many IP addresses will be there for each N subnet (the count of the zeros converted into a decimal number)
+- The final result is the N subnets with the corresponding equally set IP Addresses
