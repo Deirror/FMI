@@ -12,6 +12,22 @@ In what subnet is located the IP Address?
 
 Examples: [*View HW1.pdf*](https://github.com/Deirror/FMI/blob/main/CN/Solving%20IP%20Addresses/Homeworks/HW1.pdf)
 
+How to devide a net into subnets based on how many IPs each router needs?
+-
+
+- **Net IP Address**: *[0-255].[0-255].[0-255].[0-255] (/[0-32])*
+- **Nr1, Nr2 ...**: natural numbers
+- First, we solve (2^X) = N, and get X
+- Then we do (/[0-32]) += X and *(32 - /[0-32])* is the result
+- Based on the result we get how many IP addresses will be there for each N subnet (the count of the zeros converted into a decimal number)
+- The final result is the N subnets with the corresponding equally set IP Addresses
+
+> [!WARNING]
+> The *(32 - /[0-32])* bits from the end to the start must be all zeros.
+> If not, then we changed the Net IP Address by substracting by 1, until we get a valid number in binary format 
+
+Examples: [*View HW2.pdf*](https://github.com/Deirror/FMI/blob/main/CN/Solving%20IP%20Addresses/Homeworks/HW2.pdf)
+
 How to devide a net into N equally separated subnets?
 -
 
