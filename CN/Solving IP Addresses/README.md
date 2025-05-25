@@ -10,7 +10,7 @@ In what subnet is located the IP Address?
 - We start from 0 in the octet, where the position of the bit *(32 - /[0-32])* is, and count one by one, by adding *(2^(32 - /[0-32]))*
 - The subnet of the IP Address is the starting IP of the given subnet where the IP Address itself is located (<= the starting IP Addr and >= the end of the subnet)
 
-Examples: *View HW1.pdf*
+Examples: [*View HW1.pdf*](https://github.com/Deirror/FMI/blob/main/CN/Solving%20IP%20Addresses/Homeworks/HW1.pdf)
 
 How to devide a net into N equally separated subnets?
 -
