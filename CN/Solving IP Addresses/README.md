@@ -21,3 +21,5 @@ How to devide a net into N equally separated subnets?
 - Then we do (/[0-32]) += X and *(32 - /[0-32])* is the result
 - Based on the result we get how many IP addresses will be there for each N subnet (the count of the zeros converted into a decimal number)
 - The final result is the N subnets with the corresponding equally set IP Addresses
+
+Examples: [*View HW2.pdf*](https://github.com/Deirror/FMI/blob/main/CN/Solving%20IP%20Addresses/Homeworks/HW2.pdf)
