@@ -22,7 +22,7 @@ How to devide a net into N equally separated subnets?
 - Based on the result we get how many IP addresses will be there for each N subnet (the count of the zeros converted into a decimal number)
 - The final result is the N subnets with the corresponding equally set IP Addresses
 
-[!WARNING]
+[WARNING]
 > The *(32 - /[0-32])* bits from the end to the start must be all zeros.
 > If not, then we changed the Net IP Address by substracting by 1, until we get a valid number in binary format 
 
