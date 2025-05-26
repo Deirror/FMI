@@ -13,3 +13,4 @@ The following subjects are incldued
 - CN -> "***Computer networking***" - *Homeworks, projects and lectures* 
 - DB -> "***Databases***" - *Tasks/Queries*
 - Git -> "***Git Concepts***" - *Git in a nutshell*
+- CG-> "***Computer Graphics***" - *Gaining knowledge through watching CG stuff and developing projects*
