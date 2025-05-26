@@ -13,6 +13,9 @@
 #include "VertexBufferLayout.h"
 #include "Texture.h"
 
+#include "glm/glm.hpp"
+#include "glm/gtc/matrix_transform.hpp"
+
 int main()
 {
     GLFWwindow* window;
@@ -26,7 +29,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    window = glfwCreateWindow(960, 540, "Hello World", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
@@ -44,10 +47,10 @@ int main()
     {
         float positions[] = {
             // X,    Y,    U,   V
-            -0.5f, -0.5f, 0.0f, 0.0f,  // bottom-left
-             0.5f, -0.5f, 1.0f, 0.0f,  // bottom-right
-             0.5f,  0.5f, 1.0f, 1.0f,  // top-right
-            -0.5f,  0.5f, 0.0f, 1.0f   // top-left
+            100.0f, 100.0f, 0.0f, 0.0f,  // bottom-left
+             200.0f, 100.0f, 1.0f, 0.0f,  // bottom-right
+             200.5f,  200.5f, 1.0f, 1.0f,  // top-right
+            100.5f,  200.5f, 0.0f, 1.0f   // top-left
         };
     unsigned int indices[] =
     {
@@ -68,9 +71,15 @@ int main()
 
     IndexBuffer ib(indices, 6);
 
+	glm::mat4 proj = glm::ortho(0.0f, 960.0f, 0.0f, 540.0f, -1.0f, 1.0f);
+	glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(-100, 0, 0));
+
+	glm::mat4 mvp = proj * view;
+
 	Shader shader("res/shaders/Basic.shader");
 	shader.Bind();
 	shader.SetUniform4f("u_Color", 1.0f, 0.0f, 1.0f, 0.0f);
+	shader.SetUniformMat4f("u_MVP", mvp);
 
 	Texture texture("res/textures/images.png");
 	texture.Bind();
