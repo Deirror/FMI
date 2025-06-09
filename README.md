@@ -17,4 +17,3 @@ The following subjects are incldued
 - CN -> "***Computer networking***" - *Homeworks, projects and lectures* 
 - DB -> "***Databases***" - *Tasks/Queries*
 - Git -> "***Git Concepts***" - *Git in a nutshell*
-- Go -> "***Golang***" - *Go networking knowledge*
