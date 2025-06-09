@@ -1,6 +1,6 @@
 # FMI Tasks
 
-This repo contains solutions to tasks from subjects, elective courses in FMI.
+This repo contains solutions to tasks from subjects, elective courses in FMI. It can also include any other information related to learning the basics of subjects
 
 The following subjects are incldued
 -
@@ -13,3 +13,4 @@ The following subjects are incldued
 - CN -> "***Computer networking***" - *Homeworks, projects and lectures* 
 - DB -> "***Databases***" - *Tasks/Queries*
 - Git -> "***Git Concepts***" - *Git in a nutshell*
+- Go -> "***Golang***" - *Go networking knowledge*
