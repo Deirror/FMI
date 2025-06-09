@@ -1,8 +1,10 @@
 # FMI Tasks
 
-This repo contains solutions to tasks from subjects, elective courses in FMI. 
+Description
+-
 
-It can also include any other information related to learning the basics of subjects
+- This repo contains solutions to tasks from subjects, elective courses in FMI
+- It can also include any other information related to learning the basics of subjects
 
 The following subjects are incldued
 -
